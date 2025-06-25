@@ -2,9 +2,9 @@ name: W3C HTML Validation with Gemini Suggestions
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
