@@ -1,14 +1,14 @@
-name: W3C HTML Validation with Gemini Suggestions
+name: W3C HTML Validator with Gemini
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
-  validate-html:
+  w3c-validator:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -114,7 +114,7 @@ jobs:
 
           messages_content=$(cat html-validation-report/messages-for-ai.txt)
 
-          echo "You are an expert web developer reviewing W3C HTML validation results. Analyze the following validation messages and provide specific, actionable suggestions to fix each issue. For each validation message, provide: 1. A brief explanation of what the issue means 2. A specific solution or fix 3. If applicable, provide a code example. Format your response as: **Issue:** [Original validation message] **Explanation:** [What this means] **Solution:** [How to fix it] **Example:** [Code example if applicable]. Validation Messages:" > prompt.txt
+          echo "${{ vars.GEMINI_PROMPT }}" > prompt.txt
           echo "$messages_content" >> prompt.txt
 
           prompt_text=$(cat prompt.txt)
@@ -166,7 +166,7 @@ jobs:
       - name: Upload validation report
         uses: actions/upload-artifact@v4
         with:
-          name: w3c-html-report-${{ steps.set-time.outputs.timestamp }}
+          name: w3c-validator-report-${{ steps.set-time.outputs.timestamp }}
           path: html-validation-report/
           retention-days: 30
 
