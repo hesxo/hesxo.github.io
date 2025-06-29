@@ -641,7 +641,7 @@ section {
 	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 	align-items: center;
 	gap: 2.5rem;
-	margin-top: 5rem;
+	margin-top: 1rem;
 }
 
 .row {
@@ -747,7 +747,7 @@ section {
 .sort-controls {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 2rem;
+	margin-bottom: 0.5rem;
 }
 
 .sort-wrapper {
