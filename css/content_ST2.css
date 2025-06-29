@@ -124,7 +124,7 @@ body {
     justify-content: flex-start;
 }
 
-.hero-section {
+.hero-sectionc {
     text-align: center;
     padding: 4rem 2rem 6rem;
     background: var(--gradient-forest);
@@ -133,9 +133,10 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    margin-top: 2rem;
 }
 
-.hero-section::before {
+.hero-sectionc::before {
     content: '';
     position: absolute;
     top: 0;
@@ -146,13 +147,13 @@ body {
     opacity: 0.3;
 }
 
-.hero-content {
+.hero-contentc {
     position: relative;
     z-index: 2;
 }
 
 
-.hero-title {
+.hero-titlec {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1.5rem;
@@ -160,7 +161,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.hero-description {
+.hero-descriptionc {
     font-size: 1.2rem;
     max-width: 900px;
     margin: 0 auto 2rem;
@@ -169,7 +170,7 @@ body {
     text-align: justify;
 }
 
-.hero-image {
+.hero-imagec {
     width: 100%;
     max-width: 900px;
     height: 400px;
@@ -183,11 +184,52 @@ body {
     justify-content: center;
 }
 
+.hero-sectionc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leaves" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M25,10 Q35,20 25,30 Q15,20 25,10" fill="white" opacity="0.1"/><path d="M10,35 Q20,45 10,55 Q0,45 10,35" fill="white" opacity="0.08"/></pattern></defs><rect width="100" height="100" fill="url(%23leaves)"/></svg>');
+    opacity: 0.3;
+}
 
-/* Section Styles */
-section {
-    margin-bottom: 4rem;
-    scroll-margin-top: 120px;
+.hero-contentc {
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-titlec {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 0.9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero-descriptionc {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.hero-imagec {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    background:
+        url('../img/360_F_1115009878_knzNAdu7KgXa6YQ8DdLNf3UAhoDe7U8A.jpg') center/cover;
+    border-radius: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-title {

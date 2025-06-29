@@ -124,7 +124,7 @@ body {
     justify-content: flex-start;
 }
 
-.hero-section {
+.hero-sectionc {
     text-align: center;
     padding: 4rem 2rem 6rem;
     background: var(--gradient-forest);
@@ -133,6 +133,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    margin-top: 2rem;
 }
 
 .hero-section::before {
