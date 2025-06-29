@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
+});
 
 // Profile button functionality
 function handleProfileClick() {
@@ -298,5 +299,4 @@ function toggleMobileMenu() {
 
 function scrollToTop() {
 	window.scrollTo({ top: 0, behavior: "smooth" });
-
 }
