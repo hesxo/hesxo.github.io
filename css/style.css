@@ -1,6 +1,7 @@
 @import url("https: //fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 @import url("https://unpkg.com/boxicons@latest/css/boxicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
 
 * {
 	margin: 0;
@@ -392,6 +393,7 @@ img {
 .hero-content .title {
 	font-size: clamp(2rem, 6vw, 4rem);
 	font-weight: 700;
+	font-family: 'Sonsie One', cursive;
 }
 
 .hero-content .subtitle {
@@ -399,10 +401,17 @@ img {
 	font-size: 1.2rem;
 }
 
-.sdg-icon {
-	margin-top: 2rem;
-	width: 80px;
+.hero-section .sdg-icon {
+	position: relative;
+	bottom: 40px;
+	left: 40px;
+	right: 40px;
+	width: 120px;
+	margin: 0 auto;
+	z-index: 2;
+	justify-content: center;
 }
+
 
 /* Sections */
 .main-text {
