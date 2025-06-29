@@ -51,26 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	// Back to top button functionality
-	const backToTopBtn = document.getElementById('backToTopBtn');
-	if (backToTopBtn) {
-		window.addEventListener('scroll', function () {
-			if (window.scrollY > 300) {
-				backToTopBtn.style.display = 'block';
-			} else {
-				backToTopBtn.style.display = 'none';
-			}
-		});
-
-		backToTopBtn.addEventListener('click', function () {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
-		});
-	}
-});
-
 // Profile button functionality
 function handleProfileClick() {
 	// Add your profile functionality here
@@ -312,3 +292,11 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 });
+function toggleMobileMenu() {
+	document.getElementById("header").classList.toggle("show-mobile-nav");
+}
+
+function scrollToTop() {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+
+}

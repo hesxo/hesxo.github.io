@@ -4,141 +4,461 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta author="Hasal Dharmagunawardana" />
+    <meta name="author" content="Hasal Dharmagunawardana" />
     <meta name="description"
         content="Explore SDG 15: Life on Land. Protect, restore, and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss." />
     <meta name="keywords"
         content="SDG 15, Life on Land, Sustainable Development Goals, Ecosystem Protection, Forest Conservation, Biodiversity, Desertification Combat, Sustainable Forestry" />
-    <title>Life on Land</title>
-    <link rel="icon" type="image/svg+xml" href="img/x-twitter.svg">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/pageeditor.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/edit.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
     <header>
-        <!-- Modern Navigation Bar -->
         <nav class="navbar" id="navbar">
             <div class="nav-container">
                 <a href="/index.html" class="logo">Eco<span>Xo</span></a>
-
+    
                 <!-- Desktop Navigation -->
                 <ul class="nav-menu" id="navMenu">
                     <li class="nav-item">
-                        <a href="/index.html" class="nav-link active">Home</a>
+                        <a href="/index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/index.html#about" class="nav-link">About Us</a>
+                        <a href="/index.html#about" class="nav-link">Volunteer</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/table.html" class="nav-link">Table</a>
+                        <a href="/table.html" class="nav-link active">Table</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/index.html#" class="nav-link">Content</a>
+                        <a href="/index.html#Content" class="nav-link">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">Sitemap</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#faq" class="nav-link">Feedback</a>
+                    </li>
+    
                 </ul>
                 <button class="profile-btn" onclick="handleProfileClick()">
                     <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
                 </button>
-
+    
+    
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
                     <span class="hamburger"></span>
                 </button>
             </div>
-
+    
             <!-- Mobile Navigation -->
             <div class="mobile-nav" id="mobileNav">
                 <ul class="mobile-nav-menu">
-                    <li><a href="/index.html" class="mobile-nav-link active">Home</a></li>
-                    <li><a href="/index.html#about" class="mobile-nav-link">About Us</a></li>
-                    <li><a href="/table.html" class="mobile-nav-link">Table</a></li>
-                    <li><a href="/index.html#Content" class="mobile-nav-link">Content</a></li>
-                    <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                    <li><a href="/index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="/index.html#about" class="mobile-nav-link">Volunteer</a></li>
+                    <li><a href="/table.html" class="mobile-nav-link active">Table</a></li>
+                    <li><a href="/index.html#Content" class="mobile-nav-link">Team</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">Sitemap</a></li>
+                    <li><a href="#faq" class="mobile-nav-link">Feedback</a></li>
                 </ul>
                 <button class="mobile-profile-btn" onclick="handleProfileClick()">
                     <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
                 </button>
             </div>
         </nav>
-    </header>
-
+        </header>
     <section class="student">
-        <h4>Validation ( Hasal Dharmagunawardana - Student 2 )</h4>
+        <h4>Page Editor ( Hasal Dharmagunawardana - Student 2 )</h4>
     </section>
 
     <div class="container">
         <main>
             <section id="template">
-                <h2>Template Page Validation</h2>
+                <h2>Template Development</h2>
 
-                <h3 class="page-label">Validation</h3>
+                <h3 class="page-label">Technical Description</h3>
                 <p>
-                    Informational messages are caused by Prettier escaping quotes with
-                    backslashes in attribute values, which is invalid in standard HTML
-                    and flagged by the W3C validator.
+                    The base template was crafted using semantic HTML5 structure
+                    combined with modern design practices. It includes:
                 </p>
-                <img src="./validationSnapshots_ST2/template.png" alt="Template Page Validation Snapshot" />
+                <ul>
+                    <li>
+                        Semantic elements: <code>&lt;header&gt;</code>,
+                        <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, and
+                        <code>&lt;section&gt;</code>
+                    </li>
+                    <li>
+                        Responsive navigation bar using Flexbox for alignment and
+                        mobile-first media queries for layout adjustments
+                    </li>
+                    <li>
+                        Mobile menu toggle implemented via JavaScript and controlled with
+                        CSS visibility logic
+                    </li>
+                    <li>
+                        Glassmorphism effects applied to the header and footer using
+                        <code>backdrop-filter</code> and <code>rgba()</code> transparency
+                    </li>
+                    <li>
+                        Scroll-to-top feature with smooth scrolling and animated icon
+                        interaction
+                    </li>
+                    <li>
+                        Custom font integration via Google Fonts and @font-face (e.g.,
+                        "Astro" and "Helvetica Neue")
+                    </li>
+                </ul>
 
-                <h3 class="page-label">Back to Page Editor</h3>
+                <h3 class="page-label">Accessibility</h3>
+                <p>Accessibility considerations included:</p>
+                <ul>
+                    <li>
+                        ARIA labels applied to interactive buttons (e.g., scroll-to-top)
+                    </li>
+                    <li>
+                        Keyboard-accessible navigation through proper HTML structure
+                    </li>
+                    <li>
+                        Clear visual hierarchy using semantic tags and contrasting text
+                        colors
+                    </li>
+                    <li>
+                        Font sizes and spacing optimized for readability across screen
+                        sizes
+                    </li>
+                </ul>
+
+                <h3 class="page-label">Validation & Page Links</h3>
                 <p>
-                    <a href="./pageEditor_ST2.html#template">Student 2: Page Editor</a>
+                    <a href="./validation.html#template">Validation Report</a>
+                    |
+                    <a href="./template.html">View Template Page</a>
                 </p>
             </section>
 
             <section id="home">
-                <h2>Home Page Validation</h2>
+                <h2>Home Page</h2>
 
-                <h3 class="page-label">Validation</h3>
+                <h3 class="page-label">Technical Description</h3>
                 <p>
-                    Informational messages are caused by Prettier escaping quotes with
-                    backslashes in attribute values, which is invalid in standard HTML
-                    and flagged by the W3C validator.
+                    The home page was designed to create a modern, immersive user
+                    experience centered around climate action. It includes the following
+                    implementations:
                 </p>
-                <img src="./validationSnapshots_ST2/home.png" alt="Home Page Validation Snapshot" />
+                <ul>
+                    <li>
+                        Hero section with full-screen autoplay background video using
+                        <code>&lt;video&gt;</code> and <code>object-fit: cover</code>
+                    </li>
+                    <li>
+                        Animated title and subtitle with text shadows and linear-gradient
+                        effects via <code>-webkit-background-clip</code>
+                    </li>
+                    <li>
+                        Fixed-position SDG badge image placed with precision using
+                        absolute positioning
+                    </li>
+                    <li>
+                        Dynamic call-to-action bar with blurred background and soft drop
+                        shadows for a glassmorphism effect
+                    </li>
+                    <li>
+                        “About SDG 13” section with responsive two-column layout using CSS
+                        Grid and embedded YouTube video in a styled container
+                    </li>
+                    <li>
+                        Mission block styled with custom typography and centered layout
+                        inside a reusable <code>.block-section</code> component
+                    </li>
+                    <li>
+                        Quote-style callout with centered content and thematic colors
+                    </li>
+                    <li>
+                        Content Hub with 4 interactive cards using hover overlays,
+                        animated fade-in (via Intersection Observer), and responsive
+                        design
+                    </li>
+                </ul>
 
-                <h3 class="page-label">Back to Page Editor</h3>
+                <h3 class="page-label">Accessibility</h3>
+                <p>Accessibility practices included:</p>
+                <ul>
+                    <li>Meaningful alt text for all images and decorative elements</li>
+                    <li>
+                        Text contrast and font sizes compliant with WCAG 2.1 AA guidelines
+                    </li>
+                    <li>
+                        Keyboard focusability and smooth navigation through sections
+                    </li>
+                    <li>
+                        ARIA label on the scroll-to-top button for assistive technologies
+                    </li>
+                </ul>
+
+                <h3 class="page-label">Validation & Page Links</h3>
                 <p>
-                    <a href="./pageEditor_ST2.html#home">Student 2: Page Editor</a>
+                    <a href="./validation.html#home">Validation Report</a>
+                    |
+                    <a href="/index.html">View Home Page</a>
                 </p>
             </section>
 
             <section id="table">
-                <h2>Table Page Validation</h2>
+                <h2>Table Page</h2>
 
-                <h3 class="page-label">Validation</h3>
+                <h3 class="page-label">Technical Description</h3>
                 <p>
-                    Informational messages are caused by Prettier escaping quotes with
-                    backslashes in attribute values, which is invalid in standard HTML
-                    and flagged by the W3C validator.
+                    The climate data page presents an interactive and accessible data
+                    table visualizing key environmental metrics across multiple
+                    countries. This implementation includes:
                 </p>
-                <img src="./validationSnapshots_ST2/table.png" alt="Table Page Validation Snapshot" />
+                <ul>
+                    <li>
+                        Scrollable responsive table built inside a flex container with
+                        <code>overflow-x: auto</code> for horizontal navigation on smaller
+                        devices
+                    </li>
+                    <li>
+                        Sticky headers and sticky first column using
+                        <code>position: sticky</code> for enhanced readability during
+                        horizontal scrolling
+                    </li>
+                    <li>
+                        Glassmorphism effects applied to the scroll container and table
+                        cells using <code>backdrop-filter</code> and semi-transparent
+                        backgrounds
+                    </li>
+                    <li>
+                        Alternating row styling with <code>nth-child(even)</code> and
+                        hover highlights for better UX
+                    </li>
+                    <li>
+                        Flag images with country names inside a flexbox layout for visual
+                        clarity
+                    </li>
+                    <li>
+                        Table links styled with different states (hover, visited, active)
+                        and external data source citation
+                    </li>
+                    <li>
+                        Custom call-to-action section below the table encouraging user
+                        participation
+                    </li>
+                </ul>
 
-                <h3 class="page-label">Back to Page Editor</h3>
+                <h3 class="page-label">Accessibility</h3>
                 <p>
-                    <a href="./pageEditor_ST2.html#table">Student 2: Page Editor</a>
+                    Accessibility features ensured that the table and surrounding layout
+                    are user-friendly and compliant:
+                </p>
+                <ul>
+                    <li>
+                        ARIA labels on the scroll area and the table to improve screen
+                        reader compatibility
+                    </li>
+                    <li>Descriptive <code>alt</code> text on all country flags</li>
+                    <li>
+                        Clear visual contrast for header and cell content to meet WCAG 2.1
+                        AA color contrast standards
+                    </li>
+                    <li>
+                        Semantic <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>,
+                        and <code>&lt;tbody&gt;</code> structure with appropriate
+                        <code>&lt;th&gt;</code> usage
+                    </li>
+                </ul>
+
+                <h3 class="page-label">Validation & Page Links</h3>
+                <p>
+                    <a href="./validation.html#table">Validation Report</a>
+                    |
+                    <a href="/pages/table.html">View Table Page</a>
                 </p>
             </section>
 
             <section id="content">
-                <h2>Content Page Validation</h2>
+                <h2>Life on Land: Web Page Overview</h2>
 
-                <h3 class="page-label">Validation</h3>
-                <p>
-                    Informational messages are caused by Prettier escaping quotes with
-                    backslashes in attribute values, which is invalid in standard HTML
-                    and flagged by the W3C validator.
-                </p>
-                <img src="./validationSnapshots_ST2/content.png" alt="Content Page Validation Snapshot" />
+                <h3 class="page-label">Content Data Summary</h3>
+                <ul>
+                    <li>Forests cover approximately 31% of the Earth’s surface (~4.06 billion hectares).</li>
+                    <li>The world has lost over 420 million hectares of forest since 1990, primarily due to deforestation and agricultural expansion.</li>
+                    <li>Top countries with the highest forest loss since 2001 include Brazil, DR Congo, Indonesia, Russia, and France.</li>
+                    <li>Over 1 million species globally are at risk of extinction, with biodiversity declining at unprecedented rates.</li>
+                    <li>The IUCN Red List tracks over 150,000 species, with more than 42,000 classified as threatened.</li>
+                    <li>Only 15% of the world’s terrestrial ecosystems are formally protected under conservation areas.</li>
+                    <li>25% of Earth’s total land area is significantly degraded, affecting over 1.5 billion people globally.</li>
+                    <li>Drylands cover 41% of Earth’s surface and are home to more than 2 billion people, vulnerable to desertification and land degradation.</li>
+                    <li>Data sources include: UN Biodiversity, FAO Forestry, IUCN Red List, Global Forest Watch, and the World Bank.</li>
+                </ul>
 
-                <h3 class="page-label">Back to Page Editor</h3>
+                <h3 class="page-label">Page Highlights</h3>
+                <ul>
+                    <li>Dedicated hero section with thematic visuals illustrating SDG 15 priorities.</li>
+                    <li>Content segments presenting forest degradation, endangered species, and rehabilitation case studies.</li>
+                    <li>Interactive glossary for key SDG 15 terms to enhance understanding.</li>
+                    <li>Embedded educational video and animated infographics optimized for responsive display.</li>
+                </ul>
+
+                <h3 class="page-label">Accessibility & Responsive Design</h3>
+                <ul>
+                    <li>Semantic structure using header, main, section, and footer tags.</li>
+                    <li>High-contrast text and font sizes optimized for all screen types.</li>
+                    <li>Full keyboard navigation support and screen reader labels via ARIA roles.</li>
+                    <li>Mobile-first design with grid and flexbox layout adaptation.</li>
+                </ul>
+
+                <h3 class="page-label">Validation & Page Links</h3>
                 <p>
-                    <a href="./pageEditor_ST2.html#content">Student 2: Page Editor</a>
+                    <a href="./validation.html#content">Validation Report</a>
+                    |
+                    <a href="./content.html">View Content Page</a>
                 </p>
+            </section>
+
+            <section id="challenges">
+                <h2 class="header-for-content">Challenges & Lessons Learned</h2>
+
+                <h3 class="page-label">Challenges Faced</h3>
+                <ul class="content">
+                    <li>
+                        Responsive Layout Issues: Ensuring consistency across all devices
+                        was tricky, especially with sidebars and videos.<br />
+                        Solved using media queries, CSS Grid/Flexbox, and wrapper
+                        containers.
+                    </li>
+
+                    <li>
+                        Sticky Sidebar Navigation: The sidebar overlapped content and
+                        broke anchor navigation.<br />
+                        Fixed with <code>position: sticky</code> and
+                        <code>scroll-margin-top</code>.
+                    </li>
+
+                    <li>
+                        Glassmorphism Compatibility: Some browsers didn’t render
+                        <code>backdrop-filter</code> correctly.<br />
+                        Added fallback styles and
+                        <code>-webkit-backdrop-filter</code> prefixes.
+                    </li>
+
+                    <li>
+                        Table Overflow on Mobile: Tables stretched beyond screen width on
+                        small devices.<br />
+                        Solved using <code>overflow-x: auto</code> inside a responsive
+                        wrapper.
+                    </li>
+                </ul>
+
+                <h3 class="page-label">Lessons Learned</h3>
+                <ul class="content">
+                    <li>
+                        Mobile-first design simplifies responsive adjustments later.
+                    </li>
+                    <li>
+                        CSS Grid and Flexbox provide clean, scalable layout structures.
+                    </li>
+                    <li>
+                        Accessibility (alt text, contrast, semantic tags) enhances user
+                        experience.
+                    </li>
+                    <li>
+                        Testing across browsers and devices catches layout bugs early.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="compliance">
+                <h2 class="header-for-content">Compliance</h2>
+                <p class="content">
+                    The pages adhere to Janet web publishing standards, focusing on
+                    accessibility, privacy, and responsible content delivery.
+                </p>
+                <ul class="content">
+                    <li>
+                        Semantic HTML, alt text, keyboard support, and responsive design
+                        ensure WCAG 2.1 accessibility alignment.
+                    </li>
+                    <li>
+                        No personal data is collected, maintaining GDPR compliance and
+                        respecting user privacy.
+                    </li>
+                    <li>
+                        All content is educational and suitable for public academic
+                        contexts per Janet’s Acceptable Use Policy.
+                    </li>
+                    <li>
+                        Secure code practices avoid risky scripts and third-party tracking
+                        tools.
+                    </li>
+                    <li>
+                        Fonts, icons, and media are sourced with proper licensing via
+                        official CDNs.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="ref">
+                <h2 class="header-for-content">References</h2>
+                <div class="content">
+<div class="refs">
+    Food and Agriculture Organization (FAO). (2023). <i>Global Forest Resources Assessment</i>. Retrieved from
+    <a href="https://www.fao.org/forest-resources-assessment/en/" target="_blank" rel="noopener">
+        https://www.fao.org/forest-resources-assessment/en/
+    </a>
+</div>
+
+<div class="refs">
+    United Nations. (2023). <i>Life on Land – SDG 15 Progress Report</i>. Retrieved from
+    <a href="https://sdgs.un.org/goals/goal15" target="_blank" rel="noopener">
+        https://sdgs.un.org/goals/goal15
+    </a>
+</div>
+
+<div class="refs">
+    Global Forest Watch. (2023). <i>Forest Monitoring Data</i>. Retrieved from
+    <a href="https://www.globalforestwatch.org/" target="_blank" rel="noopener">
+        https://www.globalforestwatch.org/
+    </a>
+</div>
+
+<div class="refs">
+    IUCN Red List. (2024). <i>Threatened Species Index</i>. Retrieved from
+    <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener">
+        https://www.iucnredlist.org/
+    </a>
+</div>
+
+<div class="refs">
+    World Bank. (2024). <i>Forest Area (% of land area)</i>. Retrieved from
+    <a href="https://data.worldbank.org/indicator/AG.LND.FRST.ZS" target="_blank" rel="noopener">
+        https://data.worldbank.org/indicator/AG.LND.FRST.ZS
+    </a>
+</div>
+
+<div class="refs">
+    Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES). (2019). <i>Global Assessment Report on Biodiversity and Ecosystem Services</i>. Retrieved from
+    <a href="https://ipbes.net/global-assessment" target="_blank" rel="noopener">
+        https://ipbes.net/global-assessment
+    </a>
+</div>
+
+<div class="refs">
+    UNEP-WCMC & IUCN. (2023). <i>Protected Planet Report</i>. Retrieved from
+    <a href="https://www.protectedplanet.net/en/resources/protected-planet-report-2020" target="_blank" rel="noopener">
+        https://www.protectedplanet.net/en/resources/protected-planet-report-2020
+    </a>
+</div>
+
+<div class="refs">
+    UNCCD. (2022). <i>Global Land Outlook 2</i>. Retrieved from
+    <a href="https://www.unccd.int/resources/global-land-outlook/glo2" target="_blank" rel="noopener">
+        https://www.unccd.int/resources/global-land-outlook/glo2
+    </a>
+</div>
+                </div>
             </section>
         </main>
 
@@ -147,26 +467,36 @@
 
             <ul class="top-level-ul">
                 <li>Student 2</li>
-                <li><a href="#template">Template Page Validation</a></li>
-                <li><a href="#home">Home Page Validation</a></li>
-                <li><a href="#table">Table Page Validation</a></li>
-                <li><a href="#content">Content Page Validation</a></li>
+                <li>
+                    <ul>
+                        <li><a href="#template">Template Development</a></li>
+                        <li><a href="#home">Home Page</a></li>
+                        <li><a href="#table">Table Page</a></li>
+                        <li><a href="#content">Content Page</a></li>
+                    </ul>
+                </li>
+                <li><a href="#challenge">Challenges & Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
             </ul>
         </aside>
     </div>
+    
     <footer class="section footer">
         <div class="footer-cont-main">
             <div class="footer-logo">
-                <img src="img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
-                <div class="social-icons">
+                <a href="https://sdgs.un.org/goals/goal15" target="_blank" rel="noopener">
+                    <img src="/img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
+                </a>
+                <div class="social-icons">  
                     <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
-                        <img src="img/facebook-f.svg" alt="Facebook">
+                        <img src="/img/facebook-f.svg" alt="Facebook">
                     </a>
                     <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
-                        <img src="img/x-twitter.svg" alt="X">
+                        <img src="/img/x-twitter.svg" alt="X">
                     </a>
                     <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
-                        <img src="img/youtube.svg" alt="YouTube" class="youtube">
+                        <img src="/img/youtube.svg" alt="YouTube" class="youtube">
                     </a>
                 </div>
             </div>
@@ -175,11 +505,12 @@
                     <h4>Website Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="shop.html">Volunteer</a></li>
+                        <li><a href="./table.html">Table</a></li>
                         <li><a href="feedback.html">Feedback</a></li>
                         <li><a href="team.html">Team</a></li>
                         <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="volunteer.html">Profile</a></li>
                     </ul>
                 </div>
             </div>
@@ -213,7 +544,7 @@
                     <h4>Student Pages</h4>
                     <ul>
                         <li><a href="student01.html">Student 01</a></li>
-                        <li><a href="student02.html">Student 02</a></li>
+                        <li><a href="./pages/pageeditor.html">Student 02</a></li>
                         <li><a href="student03.html">Student 03</a></li>
                         <li><a href="student04.html">Student 04</a></li>
                     </ul>
@@ -224,17 +555,16 @@
             <div class="copyright">
                 <div class="copy-cont">
                     <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
-                        <b>Design By Group I5</b>
+                        <b>Design By Group 5</b>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Back to Top Button -->
     <button id="backToTopBtn" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <script src="./js/script.js"></script>
+    <script src="/js/script.js"></script>
 
 </body>
 
