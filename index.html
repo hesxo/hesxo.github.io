@@ -1,190 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Life on Land</title>
 	<link rel="icon" type="image/svg+xml" href="img/x-twitter.svg">
-	<!---custom css link---->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 
-	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet">
-	<!----header design--->
-	<header>
-		<a href="/index.html" class="logo">Eco<span>X</span>O.</a>
+<body>
+	<!-- Modern Navigation Bar -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="/index.html" class="logo">Eco<span>Xo</span></a>
 
-		<ul class="navlist">
-			<li><a href="/index.html" class="active">Home</a></li>
-			<li><a href="/index.html#about">About US</a></li>
-			<li><a href="/table.html">Table</a></li>
-			<li><a href="/index.html#Content">Content</a></li>
-			<li><a href="#contact">Contact Me</a></li>
-		</ul>
+			<!-- Desktop Navigation -->
+			<ul class="nav-menu" id="navMenu">
+				<li class="nav-item">
+					<a href="/index.html" class="nav-link active">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="/index.html#about" class="nav-link">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a href="/table.html" class="nav-link">Table</a>
+				</li>
+				<li class="nav-item">
+					<a href="/index.html#" class="nav-link">Content</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact" class="nav-link">Contact</a>
+				</li>
+			</ul>
+			<button class="profile-btn" onclick="handleProfileClick()">
+				<i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+			</button>
 
-		<div class="bx bx-menu" id="menu-icon">
-
+			<!-- Mobile Menu Toggle -->
+			<button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+				<span class="hamburger"></span>
+			</button>
 		</div>
-	</header>
 
+		<!-- Mobile Navigation -->
+		<div class="mobile-nav" id="mobileNav">
+			<ul class="mobile-nav-menu">
+				<li><a href="/index.html" class="mobile-nav-link active">Home</a></li>
+				<li><a href="/index.html#about" class="mobile-nav-link">About Us</a></li>
+				<li><a href="/table.html" class="mobile-nav-link">Table</a></li>
+				<li><a href="/index.html#Content" class="mobile-nav-link">Content</a></li>
+				<li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+			</ul>
+			<button class="mobile-profile-btn" onclick="handleProfileClick()">
+				<i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+			</button>
+		</div>
+	</nav>
 
 	<main>
-		<div class="hero-video-wrapper">
+		<section class="hero-section">
 			<video autoplay muted loop playsinline class="hero-video">
 				<source src="img/202506161014 (1).mp4" type="video/mp4" />
 			</video>
-			<div class="hero-overlay"></div>
-			<div class="hero-bottom-fade"></div>
-		</div>
-		<section class="hero">
-			<div class="text-wrapper">
-				<h1 class="hero-title">Life on Land</h1>
-				<p class="hero-subtitle">
+			<div class="overlay"></div>
+			<div class="hero-content">
+				<h1 class="title">Life on Land</h1>
+				<p class="subtitle">
 					Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests,
-					combat
-					desertification, and halt and reverse land degradation and halt biodiversity loss.
+					combat desertification, and halt and reverse land degradation and halt biodiversity loss.
+				</p>
+				<a href="https://sdgs.un.org/goals/goal15" target="_blank">
+					<img src="img/sdg15.png" alt="SDG 15" class="sdg-icon" />
+				</a>
+			</div>
+		</section>
+
+		<section class="about-section" id="about">
+			<h1 class="portfolio-title" style="text-align: center; font-size:2.7rem; margin-bottom: 2.5rem;">About Us
+			</h1>
+			<div class="container grid">
+				<div class="video-wrapper">
+					<iframe src="https://www.youtube.com/embed/UO6EM2gmuGY" title="SDG 15 - Life on Land"
+						frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="text-content">
+					<span class="label">SDG 15</span>
+					<h2 class="section-title">Guiding Goals for Change</h2>
+					<p>
+						SDG 15 focuses on protecting, restoring, and promoting sustainable use of terrestrial
+						ecosystems.
+						Our organization aligns with this goal by supporting forest conservation, combating
+						desertification,
+						and working to halt biodiversity loss through sustainable land management practices.
+						Our initiatives directly support ecosystem restoration, wildlife protection, and sustainable
+						forestry practices, ensuring that communities are equipped to preserve biodiversity,
+						combat land degradation, and engage in inclusive environmental planning.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="mission-section">
+			<div class="container">
+				<div style="text-align: center;">
+					<span class="label">Our Mission</span>
+					<h2 class="section-title">Driven by Purpose, United for Impact</h2>
+				</div>
+				<p style="text-align: justify;">
+					Our mission is to mobilize global action towards mitigating climate change, safeguarding the
+					planet's ecosystems, and
+					fostering sustainable development for present and future generations. Through collaboration,
+					innovation, and advocacy,
+					we strive to address the urgent challenges posed by environmental degradation and create a more
+					resilient and equitable
+					world for all.
+
+					We are committed to empowering communities, governments, and industries to embrace environmentally
+					responsible practices
+					by promoting science-based solutions, investing in clean technologies, and encouraging circular
+					economies. By raising
+					awareness and amplifying voices from the frontlines of climate impact, we aim to inspire systemic
+					change across all
+					levels of society.
 				</p>
 			</div>
-			<a href="https://sdgs.un.org/goals/goal15" target="_blank"><img src="img/sdg15.png" alt="SDG 13"
-					class="sdg-corner" /></a>
+		</section>
+
+		<section class="portfolio" id="Content">
+			<div class="main-text">
+				<h1 class="portfolio-title" style="text-align: center; font-size:2.7rem; margin-bottom: 2.5rem;">Content 
+				</h1>
+				
+				<!-- Modern Sort Controls -->
+				<div class="sort-controls">
+					<div class="sort-wrapper">
+						<i class='bx bx-sort-alt-2 sort-icon'></i>
+						<select id="sortSelect" onchange="sortContent()" class="modern-select">
+							<option value="default">Sort by</option>
+							<option value="name-desc">Name (Z-A)</option>
+							<option value="date">Date (Newest)</option>
+							<option value="date-old">Date (Oldest)</option>
+						</select>
+						<i class='bx bx-chevron-down select-arrow'></i>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="content" id="portfolioContent">
+				<div class="row" data-name="Forest Conservation" data-date="2025-01-15">
+					<img src="img/a6f0230c6b13649dbe707904e22ee6542cc08523-6016x4016.avif" alt="Forest Conservation">
+					<div class="layer">
+						<h5>Forest Conservation</h5>
+						<p>Protecting and restoring forest ecosystems for biodiversity and climate resilience.</p>
+						<a href="./content_ST1.html"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+
+				<div class="row" data-name="Wildlife Protection" data-date="2025-01-10">
+					<img src="img/360_F_1115009878_knzNAdu7KgXa6YQ8DdLNf3UAhoDe7U8A.jpg" alt="Wildlife Protection">
+					<div class="layer">
+						<h5>Wildlife Protection</h5>
+						<p>Safeguarding endangered species and their natural habitats through conservation efforts.</p>
+						<a href="./content2.html"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+
+				<div class="row" data-name="Desertification Combat" data-date="2025-01-20">
+					<img src="img/peakpx (3).jpg" alt="Desertification Combat">
+					<div class="layer">
+						<h5>Desertification Combat</h5>
+						<p>Implementing strategies to prevent and reverse land degradation in arid regions.</p>
+						<a href="#"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+
+				<div class="row" data-name="Sustainable Forestry" data-date="2025-01-05">
+					<img src="img/peakpx (4).jpg" alt="Sustainable Forestry">
+					<div class="layer">
+						<h5>Sustainable Forestry</h5>
+						<p>Promoting responsible forest management practices for long-term ecosystem health.</p>
+						<a href="#"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+
+				<div class="row">
+					<img src="img/peakpx (5).jpg" alt="Visual Design">
+					<div class="layer">
+						<h5>Visual Design</h5>
+						<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
+						<a href="#"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+
+				<div class="row">
+					<img src="img/peakpx (6).jpg" alt="Visual Design">
+					<div class="layer">
+						<h5>Visual Design</h5>
+						<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
+						<a href="#"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 
-
-
-	<!----about section design--->
-	<section class="sdg15-layout" id="about">
-		<h1 class="sdg15-heading reduced-space-heading"><span style="color: #00ff15;">About</span> Us</h1>
-		<div class="sdg15-container">
-			<div class="sdg15-video">
-				<div class="video-frame">
-					<iframe src="https://www.youtube.com/embed/UO6EM2gmuGY" title="SDG 15 - Life on Land"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-				</div>
-			</div>
-
-			<!-- Right Side: Content -->
-			<div class="sdg15-content">
-				<span class="sdg15-label">SDG 15</span>
-				<h2 class="sdg15-heading">Guiding Goals for Change</h2>
-				<p>
-					SDG 13 focuses on urgent actions to combat climate change and its
-					impacts. IMAGINE. aligns with this by supporting resilience
-					building, policy reform, and institutional readiness for natural
-					disasters and environmental risk.
-				</p>
-				<p>
-					Our initiatives directly support education, awareness, and local
-					capacity building ensuring that communities are equipped to mitigate
-					climate threats, adapt to change, and engage in inclusive climate
-					planning.
-				</p>
-			</div>
-		</div>
-	</section>
-	<section class="mission-section reduced-space-mission">
-		<div class="mission-container reduced-space-mission-container">
-			<div class="mission-content reduced-space-mission-content">
-				<span class="mission-label reduced-space-mission-label">OUR MISSION</span>
-				<h2 class="mission-heading reduced-space-mission-heading">Driven by Purpose, United for Impact</h2>
-				<p>
-					Our mission is to mobilize global action towards mitigating climate
-					change, safeguarding the planet's ecosystems, and fostering
-					sustainable development for present and future generations.
-				</p>
-				<p>
-					Through collaboration, innovation, and advocacy, we strive to
-					address the urgent challenges posed by climate change and create a
-					more resilient and equitable world for all.
-				</p>
-			</div>
-		</div>
-	</section>
-
-
-	<!----portfolio section design--->
-
-	<section class="portfolio" id="Content">
-		<div class="main-text">
-			<p>Content</p>
-			<h2><span>Latest</span> Content</h2>
-		</div>
-		<div class="sort-dropdown-container">
-			<label for="sort-blog">Sort by:</label>
-			<select id="sort-blog">
-				<option value="newest">Newest</option>
-				<option value="oldest">Oldest</option>
-				<option value="az">A-Z</option>
-			</select>
-		</div>
-
-
-		<div class="portfolio-content">
-			<div class="row">
-				<img src="img/content 1.jpg">
-				<div class="layer">
-					<h5>Visual Design</h5>
-					<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-					<a href="content_ST1.html"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="img/peakpx (2).jpg">
-				<div class="layer">
-					<h5>Visual Design</h5>
-					<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="img/peakpx (3).jpg">
-				<div class="layer">
-					<h5>Visual Design</h5>
-					<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="img/peakpx (4).jpg">
-				<div class="layer">
-					<h5>Visual Design</h5>
-					<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="img/peakpx (5).jpg">
-				<div class="layer">
-					<h5>Visual Design</h5>
-					<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="img/peakpx (6).jpg">
-				<div class="layer">
-					<h5>Visual Design</h5>
-					<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-	<!---- Footer section design--->
 	<footer class="section footer">
 		<div class="footer-cont-main">
 			<div class="footer-logo">
@@ -198,9 +221,6 @@
 					</a>
 					<a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
 						<img src="img/youtube.svg" alt="YouTube" class="youtube">
-					</a>
-					<a href="about.html" class="social-icon" aria-label="About Us">
-						<img src="img/flickr.svg" alt="About Us">
 					</a>
 				</div>
 			</div>
@@ -263,13 +283,9 @@
 		</div>
 	</footer>
 
-
-	<!----end section design--->
-	<!---custom js link--->
-	<script type="text/javascript" src="js/script.js"></script>
-	<script src="/js/script.js"></script>
-
-
-	</body>
-
-</html>
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" onclick="scrollToTop()">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+	<script src="./js/script.js"></script>
+</body>

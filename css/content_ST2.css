@@ -156,7 +156,7 @@ body {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1.5rem;
-    line-height: 1.1;
+    line-height: 0.9;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -174,7 +174,7 @@ body {
     max-width: 900px;
     height: 400px;
     background:
-        url('../img/a6f0230c6b13649dbe707904e22ee6542cc08523-6016x4016.avif') center/cover;
+        url('../img/360_F_1115009878_knzNAdu7KgXa6YQ8DdLNf3UAhoDe7U8A.jpg') center/cover;
     border-radius: 20px;
     margin-top: 2rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);

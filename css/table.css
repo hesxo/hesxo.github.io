@@ -1,237 +1,204 @@
-/* Additional table styles specific to this page */
-.conservation-table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #000000;
-    color: #000000;
-    /* Set table font color to black */
-}
-
-.conservation-table th {
-    position: relative;
-    /* padding-top: 60px; */
-    border: 1px solid #000000;
-    color: #000000;
-    /* Black font for table headers */
-}
-
-.conservation-table td {
-    border: 1px solid #000000;
-    color: #000000;
-    /* Black font for table cells */
-}
-
-.header-thumbnail {
-    /* position: absolute; */
-    /* top: 5px; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--neutral-light);
-    transition: transform 0.3s ease;
-}
-
-.header-thumbnail:hover {
-    transform: translateX(-50%) scale(1.2);
-    color: greenyellow;
-}
-
-.table-logo {
-    max-width: 120px;
-    margin: 0 auto;
-    display: block;
-}
-
-.conservation-table tr:hover td {
-    background-color: rgb(21, 120, 6);
-    cursor: pointer;
-    color: #000000;
-    /* Ensure font stays black on hover */
-}
-
-.status-icon {
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-    color: #000000;
-    /* Black font for status icons */
-}
-
-.success {
-    color: var(--success-color);
-}
-
-.warning {
-    color: red;
-}
-
-.danger {
-    color: red;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    color: #000000;
-    /* Black font for tooltip trigger */
-}
-
-.tooltip .tooltip-text {
-    visibility: hidden;
-    width: 220px;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
-    position: fixed;
-    z-index: 9999;
-    left: 50%;
-    top: 30px;
-    transform: translateX(-50%);
-    opacity: 0;
-    pointer-events: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: opacity 0.3s;
-    display: block;
-}
-
-.tooltip:hover .tooltip-text,
-.tooltip:focus .tooltip-text {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.table-link {
-    color: #000000;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-.table-link:hover {
-    color: rgb(3, 255, 3);
-}
-
-.table-caption {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    /* Black font for table caption */
-    text-align: center;
-}
-
-main {
-    margin-top: 140px;
-    /* Pushes content further below the navbar */
-    color: #000000;
-    /* Black font for main content */
-}
-
-.table-notes {
-    margin: 3rem auto;
-    max-width: 800px;
-    text-align: center;
-    color: #000000;
-    /* Black font for notes */
-}
-
-.table-notes h3 {
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #f9f9f9;
-    /* Black font for notes headings */
-}
-
-.table-notes ul {
-    margin-bottom: 2.5rem;
-    display: inline-block;
-    text-align: left;
-    color: #fffafa;
-    /* Black font for notes list */
-}
-
-.table-notes li {
-    margin-bottom: 1.5rem;
-    justify-content: center;
-    color: #fdfdfd;
-    /* Black font for notes list items */
-}
-
-.table-notes p {
-    margin-top: 2.5rem;
-    padding: 1.5rem 0;
-    text-align: center;
-    color: #ffffff;
-    /* Black font for notes paragraphs */
-}
-
-@media (max-width: 840px) {
-    #menu-icon {
-        display: block;
+* {
+        box-sizing: border-box;
     }
 
-    .navlist {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background: #333;
-        padding: 20px 0;
-        display: none;
-        z-index: 1000;
+    body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f9fdf9;
+        color: #333;
     }
 
-    .navlist.open {
-        display: flex;
+
+
+    /* ================= TABLE ================= */
+    .table-container {
+        max-width: 1140px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+        overflow-x: auto;
+        /* Enable horizontal scrolling on mobile */
     }
 
-    .navlist a {
-        padding: 10px 0;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
-        color: #fff;
-        transition: color 0.2s;
+    .conservation-table {
+        width: 100%;
+        min-width: 800px;
+        /* Minimum width to prevent squishing */
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        background-color: #f6fff7;
+        transition: all 0.3s ease;
     }
 
-    .navlist a.active,
-    .navlist a:hover {
-        color: #00ff15;
+    .conservation-table thead {
+        background-color: #e4f7e7;
     }
-}
 
-.table-scroll-wrapper {
-    overflow-x: auto;
-    width: 100%;
-}
+    .conservation-table thead th:first-child {
+        border-top-left-radius: 12px;
+    }
 
-@media (max-width: 768px) {
+    .conservation-table thead th:last-child {
+        border-top-right-radius: 12px;
+    }
 
     .conservation-table th,
     .conservation-table td {
-        font-size: 0.9rem;
-        padding: 10px;
-        white-space: nowrap;
+        padding: 14px 16px;
+        text-align: left;
+        font-size: 0.95rem;
+        color: #333;
+        border-bottom: 1px solid #d8e8da;
+        vertical-align: middle;
+        transition: background 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+
+        .conservation-table th,
+        .conservation-table td {
+            padding: 10px 12px;
+            font-size: 0.85rem;
+        }
+    }
+
+    .conservation-table th {
+        font-weight: 600;
+    }
+
+    .conservation-table tbody tr {
+        transition: all 0.3s ease;
+    }
+
+    .conservation-table tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    .conservation-table tbody tr:nth-child(even) {
+        background-color: #f1f9f1;
+    }
+
+    .conservation-table tbody tr:hover {
+        background-color: #d9f5dc;
+        transform: scale(1.01);
+        box-shadow: 0 3px 10px rgba(0, 128, 0, 0.1);
+        z-index: 1;
+        position: relative;
     }
 
     .table-caption {
-        font-size: 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #2c4e3c;
+        text-align: center;
+        background-color: #e9f8ed;
+        border-radius: 8px;
+        padding: 1rem;
     }
 
-    .table-notes {
-        font-size: 0.9rem;
+    @media (max-width: 480px) {
+        .table-caption {
+            font-size: 1rem;
+            padding: 0.75rem;
+        }
     }
-}
+
+    .header-thumbnail {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    @media (max-width: 480px) {
+        .header-thumbnail {
+            width: 20px;
+            height: 20px;
+            margin-right: 4px;
+        }
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: help;
+    }
+
+    .tooltip-text {
+        visibility: hidden;
+        width: 200px;
+        background-color: #3b3b3b;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    @media (max-width: 768px) {
+        .tooltip-text {
+            display: none;
+        
+        }
+    }
+
+    .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .status-icon.success {
+        color: #f73f3f;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .status-icon.warning {
+        color: #ff9d00;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .status-icon.danger {
+        color: #d32f2f;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .table-link {
+        color: #1b5e20;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    .table-link:hover {
+        text-decoration: none;
+        color: #388e3c;
+    }
+
+    .text-center {
+        text-align: center;
+        font-weight: 600;
+        padding: 1rem;
+        background-color: #e4f7e4;
+        color: #2b4b3a;
+    }
+
+    @media (max-width: 480px) {
+        .text-center {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+    }
+
