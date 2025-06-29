@@ -402,13 +402,12 @@ img {
 }
 
 .hero-section .sdg-icon {
-	position: relative;
-	bottom: 40px;
-	left: 40px;
-	right: 40px;
-	width: 120px;
-	margin: 0 auto;
+	position: absolute;
+	bottom: -200px;
+	right: 0px;
+	width: 80px;
 	z-index: 2;
+	display: flex;
 	justify-content: center;
 }
 
