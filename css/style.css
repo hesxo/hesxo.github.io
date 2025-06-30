@@ -113,6 +113,9 @@ img {
 	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	position: relative;
 	overflow: hidden;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
 }
 
 .nav-link::before {
@@ -127,13 +130,11 @@ img {
 	z-index: -1;
 }
 
-.nav-link:hover::before,
-.nav-link.active::before {
+.nav-link:hover::before {
 	left: 0;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
 	color: var(--white);
 	transform: translateY(-2px);
 }
