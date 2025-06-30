@@ -58,3 +58,22 @@
                 header.style.background = 'rgba(45, 80, 22, 0.95)';
             }
         });
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+window.addEventListener("scroll", () => {
+    const scrollBtn = document.querySelector(".scroll-to-top");
+    const heroSection = document.querySelector(".hero-sectionc");
+    if (!scrollBtn || !heroSection) return;
+
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    if (heroBottom > 0) {
+        scrollBtn.classList.add("hidden");
+    } else {
+        scrollBtn.classList.remove("hidden");
+    }
+});
