@@ -13,12 +13,13 @@
     <link rel="icon" type="image/svg+xml" href="img/x-twitter.svg">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/pageeditor.css">
 
 </head>
 
 <body>
     <header>
-        <nav class="navbar" id="navbar">
+        <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
             <div class="nav-container">
                 <a href="/index.html" class="logo">Eco<span>Xo</span></a>
     
@@ -50,13 +51,13 @@
     
     
                 <!-- Mobile Menu Toggle -->
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav">
                     <span class="hamburger"></span>
                 </button>
             </div>
     
             <!-- Mobile Navigation -->
-            <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav" id="mobileNav" aria-hidden="true">
                 <ul class="mobile-nav-menu">
                     <li><a href="/index.html" class="mobile-nav-link">Home</a></li>
                     <li><a href="/index.html#about" class="mobile-nav-link">Volunteer</a></li>
@@ -87,7 +88,7 @@
                     backslashes in attribute values, which is invalid in standard HTML
                     and flagged by the W3C validator.
                 </p>
-                <img src="./validationSnapshots_ST2/template.png" alt="Template Page Validation Snapshot">
+                <img src="../img/template.png" alt="Template Page Validation Snapshot">
 
                 <h3 class="page-label">Back to Page Editor</h3>
                 <p>
@@ -104,7 +105,7 @@
                     backslashes in attribute values, which is invalid in standard HTML
                     and flagged by the W3C validator.
                 </p>
-                <img src="./validationSnapshots_ST2/home.png" alt="Home Page Validation Snapshot">
+                <img src="../img/index.png" alt="Home Page Validation Snapshot">
 
                 <h3 class="page-label">Back to Page Editor</h3>
                 <p>
@@ -121,7 +122,7 @@
                     backslashes in attribute values, which is invalid in standard HTML
                     and flagged by the W3C validator.
                 </p>
-                <img src="./validationSnapshots_ST2/table.png" alt="Table Page Validation Snapshot">
+                <img src="../img/table.png" alt="Table Page Validation Snapshot">
 
                 <h3 class="page-label">Back to Page Editor</h3>
                 <p>
@@ -138,7 +139,7 @@
                     backslashes in attribute values, which is invalid in standard HTML
                     and flagged by the W3C validator.
                 </p>
-                <img src="./validation.html" alt="Content Page Validation Snapshot">
+                <img src="../img/validation.png" alt="Content Page Validation Snapshot">
 
                 <h3 class="page-label">Back to Page Editor</h3>
                 <p>
@@ -221,7 +222,7 @@
                     <h4>Student Pages</h4>
                     <ul>
                         <li><a href="student01.html">Student 01</a></li>
-                        <li><a href="student02.html">Student 02</a></li>
+                        <li><a href="pageeditor.html">Student 02</a></li>
                         <li><a href="student03.html">Student 03</a></li>
                         <li><a href="student04.html">Student 04</a></li>
                     </ul>
