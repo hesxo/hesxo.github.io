@@ -729,39 +729,26 @@ section {
 }
 
 /* Back to Top Button */
-#backToTopBtn {
+.scroll-to-top {
 	position: fixed;
-	bottom: 40px;
-	right: 32px;
-	z-index: 2000;
-	display: none;
-	background: whitesmoke;
-	color: #000000;
+	bottom: 2rem;
+	right: 2rem;
+	background: linear-gradient(135deg, #2d5016, #4a7c59);;
+	color: white;
 	border: none;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
-	width: 48px;
-	height: 48px;
-	font-size: 2rem;
 	cursor: pointer;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-	transition: background 0.3s, transform 0.2s;
+	box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
+	transition: all 0.3s ease;
+	z-index: 1000;
 }
 
-#backToTopBtn:hover {
-	background: var(--accent);
-	transform: scale(1.08);
+.scroll-to-top:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 25px rgba(45, 80, 22, 0.4);
 }
-
-@media (max-width: 600px) {
-	#backToTopBtn {
-		right: 16px;
-		bottom: 16px;
-		width: 40px;
-		height: 40px;
-		font-size: 1.5rem;
-	}
-}
-
 .sort-controls {
 	display: flex;
 	justify-content: center;
@@ -1061,7 +1048,4 @@ body {
 		height: 60px;
 		font-size: 0.8rem;
 	}
-}
-.scroll-to-top.hidden {
-	display: none !important;
 }
