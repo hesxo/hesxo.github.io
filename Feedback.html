@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="Global/Global/global.css">
+    <style>
+      /* Navigation link styles */
+      a.nav-link {
+        color: var(--primary) !important;
+      }
+      a.nav-link.scrolled {
+        color: var(--foreground) !important;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--white) !important;
+      }
+
+      /* Required fields */
+      .required-inputs {
+        color: red;
+      }
+      input:invalid:not(:placeholder-shown) {
+        border-color: red;
+        background-color: rgb(225, 145, 145);
+      }
+
+      /* Rating styles */
+      .rate_box {
+        display: flex;
+      }
+      .rate {
+        display: grid;
+        grid-template-columns: 100px;
+        background-color: mintcream;
+        text-align: center;
+        transition: 0.3s;
+      }
+      .rate:hover {
+        transform: scale(1.4);
+      }
+
+      /* Button styles */
+      .btn-container {
+        display: flex;
+        margin-top: 50px;
+      }
+      .sub-container4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1px;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #submission-time {
+        background-color: mintcream;
+        border: 2px inset #a5c2c4;
+        border-radius: 20px;
+        padding: 8px 16px;
+        color: #051f20;
+      }
+      #submit-btn,
+      #reset-btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: white;
+        background-color: #568d6c;
+        transition: 0.3s;
+      }
+      #submit-btn:hover,
+      #reset-btn:hover {
+        background-color: #235347;
+        transform: scale(1.04);
+      }
+
+      /* Body background */
+      body {
+        background-image: url(feedback_background.jpg) !important;
+        background-size: cover;
+      }
+
+      /* Hero section */
+      .hero {
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        padding: 100px 40px 30px 40px;
+      }
+
+      /* Form container styles */
+      .form-container {
+        width: 1000px;
+        margin: 15px auto 60px auto;
+        background-color: mintcream;
+        box-shadow: 0px 2px 12px rgba(149, 246, 202, 0.732);
+        border-radius: 25px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+
+      /* Fieldset and button container styles */
+      fieldset,
+      .btn-container {
+        border: none;
+        color: black;
+        opacity: 1;
+        padding: 10px;
+        border-radius: 0 10px 10px 10px;
+        margin-bottom: 10px;
+      }
+
+      legend {
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 40px;
+      }
+
+      /* Personal details grid */
+      .sub-container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        column-gap: 200px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .pair {
+        text-align: left;
+      }
+      .sub-container1 input,
+      .sub-container1 textarea {
+        text-align: center;
+        font-size: 16px;
+        width: 300px;
+        padding: 4px;
+        border: none;
+        background-color: mintcream;
+        border-bottom: 2px solid #a5c2c4;
+      }
+      .sub-container1 input:focus,
+      .sub-container1 textarea:focus,
+      .sub-container2 input:focus,
+      .sub-container2 textarea:focus,
+      .sub-container3 textarea:focus {
+        outline: none;
+        border-bottom-color: #197e6b;
+      }
+      input[type="radio"] {
+        accent-color: #a5c2c4;
+      }
+      /* Message section styles */
+      .sub-container2 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .sub-container2 input,
+      .sub-container2 textarea,
+      .sub-container2 select {
+        padding: 4px;
+        margin-bottom: 18px;
+        border: none;
+        border-bottom: 2px solid #a5c2c4;
+        background-color: mintcream;
+        font-size: 16px;
+      }
+      .sub-container2 select {
+        background-color: rgb(225, 245, 234);
+      }
+      .custom-button,
+      .notification-button {
+        width: fit-content;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: white;
+        background-color: #568d6c;
+        transition: 0.3s;
+      }
+      .custom-button:hover,
+      .notification-button:hover {
+        background-color: #235347;
+        transform: scale(1.04);
+      }
+      /* Feedback survey section */
+      .sub-container3 {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 50px;
+      }
+      .sub-container3 textarea {
+        width: 700px;
+        padding: 4px;
+        border: none;
+        background-color: mintcream;
+        border-bottom: 2px solid #a5c2c4;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar" id="navbar" aria-label="Main site navigation">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Go to homepage"
+          >Eco<span>Xo</span></a
+        >
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li class="nav-item" role="none">
+            <a
+              href="index.html"
+              class="nav-link active"
+              role="menuitem"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item" role="none">
+            <a href="index.html#about" class="nav-link" role="menuitem"
+              >About Us</a
+            >
+          </li>
+          <li class="nav-item" role="none">
+            <a href="table.html" class="nav-link" role="menuitem">Table</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="index.html#content" class="nav-link" role="menuitem"
+              >Content</a
+            >
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+        <!-- Profile button -->
+        <button class="profile-btn" onclick="handleProfileClick()">
+          <i class="bx bx-user"></i> Profile
+          <i class="bx bx-right-arrow-alt"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle mobile menu"
+        >
+          <span class="hamburger"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-menu">
+          <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+          <li>
+            <a href="index.html#about" class="mobile-nav-link">About Us</a>
+          </li>
+          <li><a href="table.html" class="mobile-nav-link">Table</a></li>
+          <li>
+            <a href="index.html#content" class="mobile-nav-link">Content</a>
+          </li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <!-- Mobile profile button -->
+        <button class="mobile-profile-btn" onclick="handleProfileClick()">
+          <i class="bx bx-user"></i> Profile
+          <i class="bx bx-right-arrow-alt"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <div class="hero">
+      <h1>We'd love to hear from you - how do you feel about our work?</h1>
+    </div>
+    <!-- Feedback Form Container -->
+    <div class="form-container">
+      <form>
+        <!-- Personal Details Section -->
+        <fieldset class="personal-details">
+          <legend>Personal Details</legend>
+          <div class="sub-container1">
+            <div class="pair">
+              <label for="name">
+                <span class="required-inputs">* </span>Full name
+              </label>
+              <br>
+              <input
+                aria-label="Enter your name"
+                type="text"
+                id="name"
+                name="name"
+                minlength="1"
+                required
+                placeholder="John Doe"
+              >
+            </div>
+
+            <div class="pair">
+              <label for="organisation">Organisation (if any)</label>
+              <br>
+              <input type="text" id="organisation" name="organisation">
+            </div>
+
+            <div class="pair">
+              <label for="email">
+                <span class="required-inputs">* </span>Email Address
+              </label>
+              <br>
+              <input
+                aria-label="Enter your email"
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="john.d@gmail.com"
+              >
+            </div>
+
+            <div class="pair">
+              <label for="country">
+                <span class="required-inputs">* </span>Country
+              </label>
+              <br>
+              <input
+                type="text"
+                id="country"
+                name="country"
+                required
+                placeholder="Sri Lanka"
+                title="please enter country"
+              >
+            </div>
+
+            <div class="pair">
+              <label for="telNum">
+                <span class="required-inputs">* </span>Telephone number
+              </label>
+              <br>
+              <input
+                type="tel"
+                id="telNum"
+                name="telNum"
+                required
+                pattern="[0-9]{3} [0-9]{4} [0-9]{3}"
+                placeholder="xxx xxxx xxx"
+              >
+            </div>
+
+            <div class="pair">
+              <label for="address">Address</label>
+              <br>
+              <textarea
+                id="address"
+                name="address"
+                rows="3"
+                cols="32"
+              ></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Recommendations & Proposals Section -->
+        <fieldset class="message-container">
+          <legend>Recommendations & Proposals</legend>
+          <div class="sub-container2">
+            <select id="message-type" name="message-type">
+              <option value="message-category" selected>
+                Select category of your message
+              </option>
+              <option value="general-queries">General Queries</option>
+              <option value="capacity-development-unit">
+                Capacity Development Support
+              </option>
+              <option value="HPLF-General-Queries">
+                HPLF - General Queries
+              </option>
+            </select>
+            <br>
+
+            <label for="subject"> Subject </label>
+
+            <input type="text" id="subject" name="subject">
+            <br>
+
+            <label for="message"> Message </label>
+
+            <textarea id="message" name="message" rows="5" cols="40"></textarea>
+            <br>
+
+            <label for="file-attachment">
+              Attachments
+              <span class="greyed-text"> (pdf, doc & docx only)</span>
+            </label>
+
+            <input
+              type="file"
+              id="file-attachment"
+              name="file-attachment"
+              accept=".pdf,.doc,.docx "
+              hidden
+            >
+            <!-- Custom button for file upload -->
+            <label for="file-attachment" class="custom-button"
+              >📄Add File</label
+            >
+          </div>
+        </fieldset>
+
+        <!-- Website Feedback Survey Section -->
+        <fieldset class="feedback-survey">
+          <legend>Website Feedback</legend>
+          <div class="sub-container3">
+            <label> Was this your first time visiting the website? </label>
+            <br>
+            <input type="radio" id="yes" name="new-comers" value="Yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="new-comers" value="No">
+            <label for="no">No</label>
+            <br>
+            <label>
+              Was the information on website helful and did you have a smooth
+              browsing experience?
+            </label>
+            <br>
+            <input type="radio" id="yes1" name="UX" value="Yes">
+            <label for="yes1">Yes</label>
+            <input type="radio" id="no1" name="UX" value="No">
+            <label for="no1">No</label>
+            <br>
+            <label> If "No", suggest improvements for the future </label>
+            <br>
+            <textarea
+              name="feedback-comment"
+              placeholder="Your suggestions..."
+              rows="5"
+              cols="40"
+              maxlength="10000"
+            ></textarea>
+            <br>
+            <label> Overall, how satisfied are you with our website? </label>
+            <br>
+            <!-- Emoji rating options -->
+            <div class="rate_box">
+              <div class="rate">
+                <label for="bad">☹️</label>
+                <input type="radio" id="bad" name="rating" value="bad">
+              </div>
+              <div class="rate">
+                <label for="fine">😕</label>
+                <input type="radio" id="fine" name="rating" value="fine">
+              </div>
+              <div class="rate">
+                <label for="average">🥱</label>
+                <input
+                  type="radio"
+                  id="average"
+                  name="rating"
+                  value="average"
+                >
+              </div>
+              <div class="rate">
+                <label for="good">😊</label>
+                <input type="radio" id="good" name="rating" value="good">
+              </div>
+              <div class="rate">
+                <label for="vgood">😃</label>
+                <input type="radio" id="vgood" name="rating" value="vgood">
+              </div>
+            </div>
+            <!-- Updates subscription option -->
+            <label for="get-updates"
+              >Would like to receive updates and new articles from us?</label
+            >
+            <br>
+            <select
+              id="get-updates"
+              name="get-updates"
+              class="notification-button"
+            >
+              <option value="via-email" selected>Yes - Via Email</option>
+              <option value="via-sms">Yes - Via SMS</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Form Buttons -->
+        <div class="btn-container">
+          <div class="sub-container4">
+            <input type="reset" value="Reset" id="reset-btn">
+            <input
+              type="datetime-local"
+              id="submission-time"
+              name="submission-time"
+              required
+              value="2025-06-21T14:30"
+            >
+            <input type="submit" value="Submit" id="submit-btn">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="section footer">
+      <div class="footer-cont-main">
+        <div class="footer-logo">
+          <img
+            src="img/sustainable-development-goals-un-seeklogo.png"
+            alt="Footer Logo"
+            class="footer-img"
+          >
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/SustDev"
+              class="social-icon"
+              aria-label="Facebook"
+            >
+              <img src="img/facebook-f.svg" alt="Facebook">
+            </a>
+            <a
+              href="https://twitter.com/SustDev"
+              class="social-icon"
+              aria-label="X"
+            >
+              <img src="img/x-twitter.svg" alt="X">
+            </a>
+            <a
+              href="https://www.youtube.com/user/uncsd2012/featured"
+              class="social-icon"
+              aria-label="YouTube"
+            >
+              <img src="img/youtube.svg" alt="YouTube" class="youtube">
+            </a>
+          </div>
+        </div>
+        <!-- Footer Links -->
+        <div class="footer-cont">
+          <div class="use-links">
+            <h4>Website Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-cont">
+          <div class="use-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <a href="https://www.globalgoals.org/terms-conditions/"
+                  >Conditions</a
+                >
+              </li>
+              <li>
+                <a href="https://www.globalgoals.org/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.globalgoals.org/cookies/">Cookies</a>
+              </li>
+              <li>
+                <a href="https://www.globalgoals.org/anti-corruption/"
+                  >Anti Corruption</a
+                >
+              </li>
+              <li>
+                <a href="https://www.globalgoals.org/asset-licence/"
+                  >Asset License</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-cont">
+          <div class="cont-pages">
+            <h4>Content Pages</h4>
+            <ul>
+              <li><a href="content01.html">Content 01</a></li>
+              <li><a href="Content02.html">Content 02</a></li>
+              <li><a href="content03.html">Content 03</a></li>
+              <li><a href="content04.html">Content 04</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-cont">
+          <div class="our-team">
+            <h4>Student Pages</h4>
+            <ul>
+              <li><a href="student01.html">Student 01</a></li>
+              <li><a href="student02.html">Student 02</a></li>
+              <li><a href="student03.html">Student 03</a></li>
+              <li><a href="student04.html">Student 04</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="section footer-2">
+        <div class="copyright">
+          <div class="copy-cont">
+            <p>
+              &copy; Copyright <b>United Nations</b>.2025, All rights
+              Reserved.<br>
+              <b>Design By Group I5</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Global JavaScript file -->
+    <script src="Global/Global/global.js"></script>
+  </body>
+</html>
