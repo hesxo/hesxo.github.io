@@ -291,15 +291,6 @@ img {
 	border-left-color: var(--white);
 }
 
-.mobile-nav-link.active {
-	color: var(--white);
-	transform: translateX(8px);
-	border-left-color: var(--white);
-}
-
-.mobile-nav-link.active::before {
-	left: 0;
-}
 
 /* Mobile Styles */
 @media (max-width: 768px) {
