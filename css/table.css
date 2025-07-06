@@ -17,13 +17,11 @@
         margin: 3rem auto;
         padding: 0 1rem;
         overflow-x: auto;
-        /* Enable horizontal scrolling on mobile */
     }
 
     .conservation-table {
         width: 100%;
         min-width: 800px;
-        /* Minimum width to prevent squishing */
         border-collapse: separate;
         border-spacing: 0;
         border-radius: 0;
@@ -104,6 +102,7 @@
         .table-caption {
             font-size: 1rem;
             padding: 0.75rem;
+            margin-bottom: 0.75rem;
         }
     }
 
