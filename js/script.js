@@ -53,11 +53,6 @@ function initMobileNavigation() {
 	}
 }
 
-// Profile button
-function handleProfileClick() {
-	console.log('Profile button clicked');
-	alert('Profile functionality coming soon!');
-}
 
 // Table Sorting
 function initTableSorting() {
