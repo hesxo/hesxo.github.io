@@ -1,8 +1,10 @@
+/* Import external fonts and icon libraries */
 @import url("https: //fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 @import url("https://unpkg.com/boxicons@latest/css/boxicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
 
+/* Reset default browser styles and apply base font */
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +12,7 @@
 	font-family: 'Outfit', sans-serif;
 }
 
+/* Define CSS variables for consistent theming */
 :root {
 	--primary: #4CAF50;
 	--accent: #6fbf73;
@@ -20,6 +23,7 @@
 	--nav-height: 70px;
 }
 
+/* Base body styling */
 body {
 	background: var(--background);
 	color: var(--foreground);
@@ -43,7 +47,7 @@ img {
 	padding: 0 1rem;
 }
 
-/* Modern Navigation Bar */
+/* Navigation bar styles */
 .navbar {
 	position: fixed;
 	top: 0;
@@ -139,7 +143,7 @@ img {
 	transform: translateY(-2px);
 }
 
-/* Mobile Menu Toggle */
+/* Mobile hamburger menu styles */
 .mobile-menu-toggle {
 	display: none;
 	flex-direction: column;
@@ -195,7 +199,7 @@ img {
 	transform: rotate(-45deg);
 }
 
-/* Profile Button */
+/* Profile button style for desktop */
 .profile-btn {
 	display: flex;
 	align-items: center;
@@ -222,6 +226,7 @@ img {
 	font-size: 1.1rem;
 }
 
+/* Mobile navigation drawer styles */
 .mobile-nav {
 	position: fixed;
 	top: var(--nav-height);
@@ -292,7 +297,7 @@ img {
 }
 
 
-/* Mobile Styles */
+/* Responsive adjustments for screen widths */
 @media (max-width: 768px) {
 	.nav-menu {
 		display: none;
@@ -361,7 +366,7 @@ img {
 	font-size: 1.1rem;
 }
 
-/* Hero Section */
+/* Hero section with video background and overlay */
 .hero-section {
 	position: relative;
 	height: 90vh;
@@ -421,7 +426,7 @@ img {
 }
 
 
-/* Sections */
+/* General section content styling */
 .main-text {
 	display: flex;
 	flex-direction: column;
@@ -468,6 +473,7 @@ section {
 	display: block;
 }
 
+/* Responsive adjustments for screen widths */
 @media (max-width: 480px) {
 	.video-wrapper iframe {
 		height: 200px;
@@ -483,7 +489,7 @@ section {
 }
 
 
-/* Portfolio Content */
+/* Portfolio content layout */
 .content {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
@@ -566,7 +572,7 @@ section {
 	height: 100%;
 }
 
-/* Back to Top Button */
+/* Scroll to top button */
 .scroll-to-top {
 	position: fixed;
 	bottom: 2rem;
@@ -587,6 +593,7 @@ section {
 	transform: translateY(-3px);
 	box-shadow: 0 8px 25px rgba(45, 80, 22, 0.4);
 }
+/* Sort dropdown UI */
 .sort-controls {
 	display: flex;
 	justify-content: center;
@@ -644,6 +651,7 @@ section {
 	transform: rotate(180deg);
 }
 
+/* Responsive adjustments for screen widths */
 @media (max-width: 768px) {
 	.sort-wrapper {
 		padding: 0.4rem 0.8rem;
@@ -655,6 +663,7 @@ section {
 	}
 }
 
+/* Reset default browser styles and apply base font (again for override) */
 * {
 	margin: 0;
 	padding: 0;
@@ -666,7 +675,7 @@ body {
 	overflow-x: hidden;
 }
 
-/* Hero Section */
+/* Alternate hero section styling */
 .hero {
 	min-height: 100vh;
 	position: relative;
@@ -741,6 +750,7 @@ body {
 	animation: fadeInUp 1s ease-out 1s both;
 }
 
+/* Primary button styling with hover effect */
 .btn-primary {
 	background: linear-gradient(135deg, #4ade80, #22c55e);
 	color: white;
@@ -796,7 +806,7 @@ body {
 	transform: translateY(-3px);
 }
 
-/* Scroll Indicator */
+/* Vertical scroll progress indicator animation */
 .scroll-indicator {
 	position: absolute;
 	bottom: 1rem;
@@ -833,6 +843,7 @@ body {
 	}
 }
 
+/* Animated SDG badge fixed to bottom left */
 .sdg-badge {
 	position: fixed;
 	bottom: 2rem;
@@ -874,7 +885,7 @@ body {
 	}
 }
 
-/* Responsive */
+/* Responsive adjustments for screen widths */
 @media (max-width: 768px) {
 	.hero-actions {
 		flex-direction: column;
@@ -888,7 +899,7 @@ body {
 	}
 }
 
-/* Footer */
+/* Footer layout and styling */
 .footer {
 	background: #fff;
 	color: #111;
@@ -988,7 +999,7 @@ body {
 	color: #111;
 }
 
-/* Responsive styles for mobile devices */
+/* Responsive footer grid adjustments */
 @media (max-width: 1024px) {
 	.footer-cont-main {
 		grid-template-columns: repeat(3, 1fr);
@@ -1004,6 +1015,7 @@ body {
 	}
 }
 
+/* Responsive footer grid adjustments */
 @media (max-width: 768px) {
 	.footer-cont-main {
 		grid-template-columns: repeat(2, 1fr);
@@ -1021,6 +1033,7 @@ body {
 	}
 }
 
+/* Responsive footer grid adjustments */
 @media (max-width: 480px) {
 	.footer-cont-main {
 		grid-template-columns: 1fr;
@@ -1048,4 +1061,4 @@ body {
 	.copy-cont {
 		font-size: 11px;
 	}
-} 
+}

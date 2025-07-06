@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head section with metadata, favicon, and linked stylesheet -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +17,11 @@
 </head>
 
 <body>
+	<!-- Header with navigation bar -->
 	<header>
 		<nav class="navbar" id="navbar">
 			<div class="nav-container">
+				<!-- Logo and main navigation links -->
 				<a href="splash.html" class="logo">Eco<span>Xo</span></a>
 
 				<!-- Desktop Navigation -->
@@ -48,30 +51,32 @@
 				</a>
 
 
-				<!-- Mobile Menu Toggle -->
+				<!-- Mobile menu toggle button -->
 				<button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
 					<span class="hamburger"></span>
 				</button>
-			</div>
 
-			<!-- Mobile Navigation -->
-			<div class="mobile-nav" id="mobileNav">
-				<ul class="mobile-nav-menu">
-					<li><a href="home.html" class="mobile-nav-link">Home</a></li>
-					<li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
-					<li><a href="table.html" class="mobile-nav-link active">Table</a></li>
-					<li><a href="team.html" class="mobile-nav-link">Team</a></li>
-					<li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
-					<li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
-				</ul>
-				<a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
-					<i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
-				</a>
+				<!-- Mobile navigation menu for smaller screens -->
+				<div class="mobile-nav" id="mobileNav">
+					<ul class="mobile-nav-menu">
+						<li><a href="home.html" class="mobile-nav-link">Home</a></li>
+						<li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
+						<li><a href="table.html" class="mobile-nav-link active">Table</a></li>
+						<li><a href="team.html" class="mobile-nav-link">Team</a></li>
+						<li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+						<li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
+					</ul>
+					<a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
+						<i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+					</a>
+				</div>
 			</div>
 		</nav>
 	</header>
 
+	<!-- Main content of the page -->
 	<main>
+		<!-- Hero section with background video and mission statement -->
 		<section class="hero-section">
 			<video autoplay muted loop playsinline class="hero-video">
 				<source src="img/202506161014.mp4" type="video/mp4">
@@ -100,6 +105,7 @@
 			</a>
 		</section>
 
+		<!-- About Us section explaining SDG 15 goals and efforts -->
 		<section class="about-section" id="about">
 			<h1 class="portfolio-title" style="text-align: center; font-size:2.7rem; margin-bottom: 2.5rem;">About Us
 			</h1>
@@ -125,6 +131,7 @@
 			</div>
 		</section>
 
+		<!-- Mission statement section -->
 		<section class="mission-section">
 			<div class="container">
 				<div style="text-align: center;">
@@ -165,12 +172,13 @@
 			</div>
 		</section>
 
+		<!-- Portfolio/Content section with sorting functionality -->
 		<section class="portfolio" id="Content">
 			<div class="main-text">
 				<h1 class="portfolio-title" style="text-align: center; font-size:2.7rem; margin-bottom: 2.5rem;">Content
 				</h1>
 
-				<!-- Modern Sort Controls -->
+				<!-- Sorting dropdown for content filtering -->
 				<div class="sort-controls">
 					<div class="sort-wrapper">
 						<i class='bx bx-sort-alt-2 sort-icon'></i>
@@ -185,6 +193,7 @@
 				</div>
 			</div>
 
+			<!-- Content cards displaying SDG-related topics -->
 			<div class="content" id="portfolioContent">
 				<div class="row" data-name="Forest Conservation" data-date="2025-06-12">
 					<img src="img/a6f0230c6b13649dbe707904e22ee6542cc08523-6016x4016.avif" alt="Forest Conservation">
@@ -209,12 +218,12 @@
 					<div class="layer">
 						<h5>Desertification Combat</h5>
 						<p>Implementing strategies to prevent and reverse land degradation in arid regions.</p>
-						<a href="#"><i class='bx bx-link-external'></i></a>
+						<a href="content_ST3,3.html"><i class='bx bx-link-external'></i></a>
 					</div>
 				</div>
 
 				<div class="row" data-name="Sustainable Forestry" data-date="2025-01-05">
-					<img src="img/peakpx(3).jpg" alt="Sustainable Forestry">
+					<img src="img/CMHA_tree_planting_523-1-scaled.jpg" alt="Sustainable Forestry">
 					<div class="layer">
 						<h5>Sustainable Forestry</h5>
 						<p>Promoting responsible forest management practices for long-term ecosystem health.</p>
@@ -223,26 +232,27 @@
 				</div>
 
 				<div class="row">
-					<img src="img/peakpx(5).jpg" alt="Visual Design">
+					<img src="img/bison-bison.jpg" alt="Visual Design">
 					<div class="layer">
-						<h5>Visual Design</h5>
-						<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-						<a href="#"><i class='bx bx-link-external'></i></a>
+						<h5>Terrestrial Ecosystem</h5>
+						<p>Human actions and systemic problems are destroying ecosystems and pushing more species toward extinction.</p>
+						<a href="content_ST1.html"><i class='bx bx-link-external'></i></a>
 					</div>
 				</div>
 
 				<div class="row">
-					<img src="img/peakpx(6).jpg" alt="Visual Design">
+					<img src="img/Leading-calf-cropped.jpg" alt="Visual Design">
 					<div class="layer">
-						<h5>Visual Design</h5>
-						<p>Check out 10 Best Design's updates for the top web design & development companies.</p>
-						<a href="#"><i class='bx bx-link-external'></i></a>
+						<h5>Woodland</h5>
+						<p>"Woodland" is often just another name for a forest.</p>
+						<a href="content_ST4.html"><i class='bx bx-link-external'></i></a>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 
+	<!-- Footer with links to other pages and social media -->
 	<footer class="section footer">
 		<div class="footer-cont-main">
 			<div class="footer-logo">
@@ -321,10 +331,11 @@
 		</div>
 	</footer>
 
-	<!-- Back to Top Button -->
+	<!-- Scroll to top button -->
 	<button class="scroll-to-top" onclick="scrollToTop()">
 		<i class="fas fa-arrow-up"></i>
 	</button>
+	<!-- JavaScript files -->
 	<script src="./js/script.js"></script>
 	<script src="./js/content_ST1.js"></script>
 </body>

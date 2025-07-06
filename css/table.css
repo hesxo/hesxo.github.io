@@ -1,3 +1,4 @@
+/* Global Reset and Base Styles */
 * {
         box-sizing: border-box;
     }
@@ -11,7 +12,9 @@
 
 
 
-    /* ================= TABLE ================= */
+    /* Table Container
+    Wraps and centers the table, allows horizontal scrolling on small screens
+    */
     .table-container {
         max-width: 1140px;
         margin: 3rem auto;
@@ -19,6 +22,9 @@
         overflow-x: auto;
     }
 
+    /* 
+    Main Table Styling Styles the table, including header, body, row colors, and hover effects
+    */
     .conservation-table {
         width: 100%;
         min-width: 800px;
@@ -31,10 +37,12 @@
         transition: all 0.3s ease;
     }
 
+    /* Table header background */
     .conservation-table thead {
         background-color: #e4f7e7;
     }
 
+    /* Rounded corners for first and last header cells */
     .conservation-table thead th:first-child {
         border-top-left-radius: 12px;
     }
@@ -43,6 +51,7 @@
         border-top-right-radius: 12px;
     }
 
+    /* Cell padding, font, border, and alignment */
     .conservation-table th,
     .conservation-table td {
         padding: 14px 16px;
@@ -54,6 +63,7 @@
         transition: background 0.3s ease;
     }
 
+    /* Responsive cell padding and font size for small screens */
     @media (max-width: 480px) {
 
         .conservation-table th,
@@ -63,14 +73,17 @@
         }
     }
 
+    /* Header font weight */
     .conservation-table th {
         font-weight: 600;
     }
 
+    /* Row transition */
     .conservation-table tbody tr {
         transition: all 0.3s ease;
     }
 
+    /* Zebra striping for better readability */
     .conservation-table tbody tr:nth-child(odd) {
         background-color: #ffffff;
     }
@@ -79,6 +92,7 @@
         background-color: #f1f9f1;
     }
 
+    /* Hover effect on rows */
     .conservation-table tbody tr:hover {
         background-color: #d9f5dc;
         transform: scale(1.01);
@@ -87,6 +101,7 @@
         position: relative;
     }
 
+    /* Caption styling with background and center alignment */
     .table-caption {
         font-size: 1.25rem;
         font-weight: 600;
@@ -98,6 +113,7 @@
         padding: 1rem;
     }
 
+    /* Responsive caption size */
     @media (max-width: 480px) {
         .table-caption {
             font-size: 1rem;
@@ -106,6 +122,7 @@
         }
     }
 
+    /* Image inside header cells */
     .header-thumbnail {
         width: 28px;
         height: 28px;
@@ -114,6 +131,7 @@
         vertical-align: middle;
     }
 
+    /* Responsive image size */
     @media (max-width: 480px) {
         .header-thumbnail {
             width: 20px;
@@ -122,12 +140,14 @@
         }
     }
 
+    /* Tooltip container (relative) */
     .tooltip {
         position: relative;
         display: inline-block;
         cursor: help;
     }
 
+    /* Tooltip content box */
     .tooltip-text {
         visibility: hidden;
         width: 200px;
@@ -145,6 +165,7 @@
         transition: opacity 0.4s;
     }
 
+    /* Hide tooltip content on small screens */
     @media (max-width: 768px) {
         .tooltip-text {
             display: none;
@@ -152,29 +173,34 @@
         }
     }
 
+    /* Show tooltip on hover */
     .tooltip:hover .tooltip-text {
         visibility: visible;
         opacity: 1;
     }
 
+    /* Status indicator colors and font */
     .status-icon.success {
         color: #f73f3f;
         font-size: 1.1rem;
         font-weight: bold;
     }
 
+    /* Status indicator colors and font */
     .status-icon.warning {
         color: #ff9d00;
         font-size: 1.1rem;
         font-weight: bold;
     }
 
+    /* Status indicator colors and font */
     .status-icon.danger {
         color: #d32f2f;
         font-size: 1.1rem;
         font-weight: bold;
     }
 
+    /* Link inside table cells */
     .table-link {
         color: #1b5e20;
         text-decoration: underline;
@@ -186,6 +212,7 @@
         color: #388e3c;
     }
 
+    /* Centered text row styling */
     .text-center {
         text-align: center;
         font-weight: 600;
@@ -194,10 +221,10 @@
         color: #2b4b3a;
     }
 
+    /* Responsive text row padding and font size */
     @media (max-width: 480px) {
         .text-center {
             padding: 0.75rem;
             font-size: 0.9rem;
         }
     }
-

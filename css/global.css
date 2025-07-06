@@ -1,7 +1,8 @@
+/* Import Google Fonts and icon libraries */
 @import url("https: //fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 @import url("https://unpkg.com/boxicons@latest/css/boxicons.min.css");
 
-
+/* Reset styles and apply base font */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@
     font-family: 'Outfit', sans-serif;
 }
 
+/* Define CSS variables for theme colors and sizes */
 :root {
     --primary: #4CAF50;
     --accent: #6fbf73;
@@ -19,6 +21,7 @@
     --nav-height: 70px;
 }
 
+/* Set base body styles including background, text color, and padding */
 body {
     background: var(--background);
     color: var(--foreground);
@@ -42,7 +45,7 @@ img {
     padding: 0 1rem;
 }
 
-/* Modern Navigation Bar */
+/* Sticky navigation bar styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -74,7 +77,7 @@ img {
     padding: 0 1.5rem;
 }
 
-/* Logo */
+/* Site logo styling with hover effect */
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -90,7 +93,7 @@ img {
     transform: scale(1.05);
 }
 
-/* Desktop Navigation */
+/* Desktop navigation menu styles */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -138,7 +141,7 @@ img {
     transform: translateY(-2px);
 }
 
-/* Mobile Menu Toggle */
+/* Hamburger menu icon for mobile */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -194,7 +197,7 @@ img {
     transform: rotate(-45deg);
 }
 
-/* Profile Button */
+/* Desktop profile button styling */
 .profile-btn {
     display: flex;
     align-items: center;
@@ -221,7 +224,7 @@ img {
     font-size: 1.1rem;
 }
 
-/* Mobile Navigation */
+/* Fullscreen mobile navigation drawer */
 .mobile-nav {
     position: fixed;
     top: var(--nav-height);
@@ -291,7 +294,7 @@ img {
     border-left-color: var(--white);
 }
 
-/* Mobile Styles */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -352,12 +355,13 @@ img {
 
 
 
-/* Footer */
+/* Footer styling including layout and social icons */
 .footer {
     background: #fff;
     color: #111;
 }
 
+/* Footer main grid layout */
 .footer-cont-main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -365,6 +369,7 @@ img {
     padding: 20px;
 }
 
+/* Footer logo and social icon styles */
 .footer-logo {
     grid-column: span 1;
 }
@@ -438,6 +443,7 @@ img {
     color: #4ad66d;
 }
 
+/* Secondary footer and copyright text */
 .footer-2 {
     background: #fff;
     color: #111;

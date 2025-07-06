@@ -1,9 +1,15 @@
+/* ================================================
+   Global Styles and CSS Variables
+   ================================================ */
+
+/* Reset default margin, padding, and box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define global color and gradient variables */
 :root {
     --primary-green: #2d5016;
     --forest-green: #4a7c59;
@@ -21,6 +27,7 @@
     --glass-border: rgba(255, 255, 255, 0.2);
 }
 
+/* Apply base font styles and layout for body */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -31,8 +38,7 @@ body {
 }
 
 
-
-/* Main Container */
+/* Main wrapper with glass effect and vertical stacking */
 .main-container {
     background: rgba(240, 248, 240, 0.95);
     backdrop-filter: blur(10px);
@@ -43,6 +49,7 @@ body {
     justify-content: flex-start;
 }
 
+/* Flex container for sidebar and main content */
 .blog-layout {
     display: flex;
     max-width: 1400px;
@@ -53,7 +60,7 @@ body {
 }
 
 
-/* Sidebar Styles */
+/* Sidebar styling with blur, border and sticky position */
 .sidebar-nav {
     width: 320px;
     padding: 2rem;
@@ -70,6 +77,7 @@ body {
     align-self: flex-start;
 }
 
+/* Sidebar heading/list/link styling */
 .sidebar-nav h3 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
@@ -83,14 +91,17 @@ body {
     gap: 0.5rem;
 }
 
+/* Sidebar heading/list/link styling */
 .sidebar-nav ul {
     list-style: none;
 }
 
+/* Sidebar heading/list/link styling */
 .sidebar-nav li {
     margin-bottom: 0.75rem;
 }
 
+/* Sidebar heading/list/link styling */
 .sidebar-nav a {
     color: var(--text-light);
     text-decoration: none;
@@ -114,7 +125,7 @@ body {
     width: 20px;
 }
 
-/* Content Styles */
+/* Main content container */
 .content {
     flex: 1;
     padding: 2rem;
@@ -124,6 +135,7 @@ body {
     justify-content: flex-start;
 }
 
+/* Hero section with gradient and SVG background */
 .hero-sectionc {
     text-align: center;
     padding: 4rem 2rem 6rem;
@@ -153,6 +165,7 @@ body {
 }
 
 
+/* Hero text and image presentation */
 .hero-titlec {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
@@ -161,6 +174,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Hero text and image presentation */
 .hero-descriptionc {
     font-size: 1.2rem;
     max-width: 900px;
@@ -170,6 +184,7 @@ body {
     text-align: justify;
 }
 
+/* Hero text and image presentation */
 .hero-image {
     width: 100%;
     max-width: 900px;
@@ -218,6 +233,7 @@ body {
     text-align: justify;
 }
 
+/* Hero text and image presentation */
 .hero-imagec {
     width: 100%;
     max-width: 900px;
@@ -232,6 +248,7 @@ body {
     justify-content: center;
 }
 
+/* Section headings and paragraphs */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -245,6 +262,7 @@ body {
     gap: 1rem;
 }
 
+/* Section headings and paragraphs */
 .section-content {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -253,7 +271,7 @@ body {
     text-align: justify;
 }
 
-/* Cards Grid */
+/* Info cards and layout grid */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -261,6 +279,7 @@ body {
     margin: 3rem 0;
 }
 
+/* Info cards and layout grid */
 .info-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -288,6 +307,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
+/* Info cards and layout grid */
 .card-title {
     font-size: 1.4rem;
     font-weight: 700;
@@ -298,12 +318,13 @@ body {
     gap: 0.75rem;
 }
 
+/* Info cards and layout grid */
 .card-content {
     color: var(--text-light);
     line-height: 1.6;
 }
 
-/* Threat Cards */
+/* Threat section cards */
 .threat-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -311,6 +332,7 @@ body {
     margin: 2rem 0;
 }
 
+/* Threat section cards */
 .threat-card {
     background: linear-gradient(135deg, rgba(220, 20, 60, 0.1), rgba(255, 69, 0, 0.1));
     border: 2px solid rgba(220, 20, 60, 0.2);
@@ -324,6 +346,7 @@ body {
     box-shadow: 0 15px 40px rgba(220, 20, 60, 0.2);
 }
 
+/* Threat section cards */
 .threat-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -334,7 +357,7 @@ body {
     gap: 0.5rem;
 }
 
-/* Services Grid */
+/* Services section styling */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -342,6 +365,7 @@ body {
     margin: 3rem 0;
 }
 
+/* Services section styling */
 .service-category {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -356,6 +380,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
+/* Services section styling */
 .service-title {
     font-size: 1.3rem;
     font-weight: 700;
@@ -366,13 +391,14 @@ body {
     gap: 0.75rem;
 }
 
+/* Services section styling */
 .service-examples {
     color: var(--text-light);
     font-style: italic;
     margin-top: 0.5rem;
 }
 
-/* Conservation Strategies */
+/* Conservation strategies layout */
 .strategy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -380,6 +406,7 @@ body {
     margin: 3rem 0;
 }
 
+/* Conservation strategies layout */
 .strategy-card {
     background: linear-gradient(135deg, rgba(45, 80, 22, 0.05), rgba(74, 124, 89, 0.05));
     border: 2px solid var(--light-green);
@@ -393,12 +420,14 @@ body {
     transform: translateY(-5px);
 }
 
+/* Conservation strategies layout */
 .strategy-icon {
     font-size: 2rem;
     color: var(--forest-green);
     margin-bottom: 1rem;
 }
 
+/* Conservation strategies layout */
 .strategy-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -406,7 +435,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Image Showcase */
+/* Image showcase cards */
 .image-showcase {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -414,6 +443,7 @@ body {
     margin: 3rem 0;
 }
 
+/* Image showcase cards */
 .image-item {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -427,6 +457,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
+/* Image showcase cards */
 .image-placeholder {
     width: 100%;
     height: 200px;
@@ -438,6 +469,7 @@ body {
     font-weight: 600;
 }
 
+/* Image showcase cards */
 .image-caption {
     padding: 1.5rem;
     font-weight: 600;
@@ -445,8 +477,7 @@ body {
 }
 
 
-
-/* Scroll to top button */
+/* Floating button for scrolling to top */
 .scroll-to-top {
     position: fixed;
     bottom: 2rem;
@@ -468,7 +499,7 @@ body {
     box-shadow: 0 8px 25px rgba(45, 80, 22, 0.4);
 }
 
-/* Responsive Design */
+/* Responsive styles for tablets and mobile */
 @media (max-width: 1024px) {
     .blog-layout {
         flex-direction: column;
@@ -501,6 +532,7 @@ body {
     }
 }
 
+/* Responsive styles for tablets and mobile */
 @media (max-width: 768px) {
     .header {
         padding: 1rem;
@@ -521,7 +553,7 @@ body {
     }
 }
 
-/* Animations */
+/* Fade-in animation effect */
 @keyframes fadeInUp {
     from {
         opacity: 0;
