@@ -3,6 +3,7 @@
 <html lang="en">
 
 <!-- Head section: Metadata, SEO tags, and stylesheet links -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +25,10 @@
     <header>
         <nav class="navbar" id="navbar">
             <div class="nav-container">
-                <!-- Site logo and navigation links for desktop -->
+                <!-- Logo and main navigation links -->
                 <a href="splash.html" class="logo">Eco<span>Xo</span></a>
+    
+                <!-- Desktop Navigation -->
                 <ul class="nav-menu" id="navMenu">
                     <li class="nav-item">
                         <a href="home.html" class="nav-link">Home</a>
@@ -45,32 +48,35 @@
                     <li class="nav-item">
                         <a href="feedback.html" class="nav-link">Feedback</a>
                     </li>
+    
                 </ul>
-                <!-- Profile link visible in desktop and mobile -->
                 <a href="profile.html" class="profile-btn">
                     <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
                 </a>
-                <!-- Mobile navigation menu and profile shortcut -->
-                <a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
-                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
-                </a>
-            </div>
-            <div class="mobile-nav" id="mobileNav">
-                <ul class="mobile-nav-menu">
-                    <li><a href="home.html" class="mobile-nav-link">Home</a></li>
-                    <li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
-                    <li><a href="table.html" class="mobile-nav-link active">Table</a></li>
-                    <li><a href="team.html" class="mobile-nav-link">Team</a></li>
-                    <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
-                    <li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
-                </ul>
-                <a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
-                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
-                </a>
+    
+    
+                <!-- Mobile menu toggle button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+    
+                <!-- Mobile navigation menu for smaller screens -->
+                <div class="mobile-nav" id="mobileNav">
+                    <ul class="mobile-nav-menu">
+                        <li><a href="home.html" class="mobile-nav-link">Home</a></li>
+                        <li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
+                        <li><a href="table.html" class="mobile-nav-link active">Table</a></li>
+                        <li><a href="team.html" class="mobile-nav-link">Team</a></li>
+                        <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+                        <li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
+                    </ul>
+                    <a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
+                        <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
-
     <!-- Page identity banner -->
     <section class="student">
         <h4>Page Editor ( Hasal Dharmagunawardana - Student 2 )</h4>
@@ -292,20 +298,29 @@
                 <h3 class="page-label">Content Data Summary</h3>
                 <ul>
                     <li>Forests cover approximately 31% of the Earth’s surface (~4.06 billion hectares).</li>
-                    <li>The world has lost over 420 million hectares of forest since 1990, primarily due to deforestation and agricultural expansion.</li>
-                    <li>Top countries with the highest forest loss since 2001 include Brazil, DR Congo, Indonesia, Russia, and France.</li>
-                    <li>Over 1 million species globally are at risk of extinction, with biodiversity declining at unprecedented rates.</li>
-                    <li>The IUCN Red List tracks over 150,000 species, with more than 42,000 classified as threatened.</li>
-                    <li>Only 15% of the world’s terrestrial ecosystems are formally protected under conservation areas.</li>
-                    <li>25% of Earth’s total land area is significantly degraded, affecting over 1.5 billion people globally.</li>
-                    <li>Drylands cover 41% of Earth’s surface and are home to more than 2 billion people, vulnerable to desertification and land degradation.</li>
-                    <li>Data sources include: UN Biodiversity, FAO Forestry, IUCN Red List, Global Forest Watch, and the World Bank.</li>
+                    <li>The world has lost over 420 million hectares of forest since 1990, primarily due to
+                        deforestation and agricultural expansion.</li>
+                    <li>Top countries with the highest forest loss since 2001 include Brazil, DR Congo, Indonesia,
+                        Russia, and France.</li>
+                    <li>Over 1 million species globally are at risk of extinction, with biodiversity declining at
+                        unprecedented rates.</li>
+                    <li>The IUCN Red List tracks over 150,000 species, with more than 42,000 classified as threatened.
+                    </li>
+                    <li>Only 15% of the world’s terrestrial ecosystems are formally protected under conservation areas.
+                    </li>
+                    <li>25% of Earth’s total land area is significantly degraded, affecting over 1.5 billion people
+                        globally.</li>
+                    <li>Drylands cover 41% of Earth’s surface and are home to more than 2 billion people, vulnerable to
+                        desertification and land degradation.</li>
+                    <li>Data sources include: UN Biodiversity, FAO Forestry, IUCN Red List, Global Forest Watch, and the
+                        World Bank.</li>
                 </ul>
 
                 <h3 class="page-label">Page Highlights</h3>
                 <ul>
                     <li>Dedicated hero section with thematic visuals illustrating SDG 15 priorities.</li>
-                    <li>Content segments presenting forest degradation, endangered species, and rehabilitation case studies.</li>
+                    <li>Content segments presenting forest degradation, endangered species, and rehabilitation case
+                        studies.</li>
                     <li>Interactive glossary for key SDG 15 terms to enhance understanding.</li>
                     <li>Embedded educational video and animated infographics optimized for responsive display.</li>
                 </ul>
@@ -414,61 +429,65 @@
             <section id="ref">
                 <h2 class="header-for-content">References</h2>
                 <div class="content">
-<div class="refs">
-    Food and Agriculture Organization (FAO). (2023). <i>Global Forest Resources Assessment</i>. Retrieved from
-    <a href="https://www.fao.org/forest-resources-assessment/en/" target="_blank" rel="noopener">
-        https://www.fao.org/forest-resources-assessment/en/
-    </a>
-</div>
+                    <div class="refs">
+                        Food and Agriculture Organization (FAO). (2023). <i>Global Forest Resources Assessment</i>.
+                        Retrieved from
+                        <a href="https://www.fao.org/forest-resources-assessment/en/" target="_blank" rel="noopener">
+                            https://www.fao.org/forest-resources-assessment/en/
+                        </a>
+                    </div>
 
-<div class="refs">
-    United Nations. (2023). <i>Life on Land – SDG 15 Progress Report</i>. Retrieved from
-    <a href="https://sdgs.un.org/goals/goal15" target="_blank" rel="noopener">
-        https://sdgs.un.org/goals/goal15
-    </a>
-</div>
+                    <div class="refs">
+                        United Nations. (2023). <i>Life on Land – SDG 15 Progress Report</i>. Retrieved from
+                        <a href="https://sdgs.un.org/goals/goal15" target="_blank" rel="noopener">
+                            https://sdgs.un.org/goals/goal15
+                        </a>
+                    </div>
 
-<div class="refs">
-    Global Forest Watch. (2023). <i>Forest Monitoring Data</i>. Retrieved from
-    <a href="https://www.globalforestwatch.org/" target="_blank" rel="noopener">
-        https://www.globalforestwatch.org/
-    </a>
-</div>
+                    <div class="refs">
+                        Global Forest Watch. (2023). <i>Forest Monitoring Data</i>. Retrieved from
+                        <a href="https://www.globalforestwatch.org/" target="_blank" rel="noopener">
+                            https://www.globalforestwatch.org/
+                        </a>
+                    </div>
 
-<div class="refs">
-    IUCN Red List. (2024). <i>Threatened Species Index</i>. Retrieved from
-    <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener">
-        https://www.iucnredlist.org/
-    </a>
-</div>
+                    <div class="refs">
+                        IUCN Red List. (2024). <i>Threatened Species Index</i>. Retrieved from
+                        <a href="https://www.iucnredlist.org/" target="_blank" rel="noopener">
+                            https://www.iucnredlist.org/
+                        </a>
+                    </div>
 
-<div class="refs">
-    World Bank. (2024). <i>Forest Area (% of land area)</i>. Retrieved from
-    <a href="https://data.worldbank.org/indicator/AG.LND.FRST.ZS" target="_blank" rel="noopener">
-        https://data.worldbank.org/indicator/AG.LND.FRST.ZS
-    </a>
-</div>
+                    <div class="refs">
+                        World Bank. (2024). <i>Forest Area (% of land area)</i>. Retrieved from
+                        <a href="https://data.worldbank.org/indicator/AG.LND.FRST.ZS" target="_blank" rel="noopener">
+                            https://data.worldbank.org/indicator/AG.LND.FRST.ZS
+                        </a>
+                    </div>
 
-<div class="refs">
-    Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES). (2019). <i>Global Assessment Report on Biodiversity and Ecosystem Services</i>. Retrieved from
-    <a href="https://ipbes.net/global-assessment" target="_blank" rel="noopener">
-        https://ipbes.net/global-assessment
-    </a>
-</div>
+                    <div class="refs">
+                        Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
+                        (2019). <i>Global Assessment Report on Biodiversity and Ecosystem Services</i>. Retrieved from
+                        <a href="https://ipbes.net/global-assessment" target="_blank" rel="noopener">
+                            https://ipbes.net/global-assessment
+                        </a>
+                    </div>
 
-<div class="refs">
-    UNEP-WCMC & IUCN. (2023). <i>Protected Planet Report</i>. Retrieved from
-    <a href="https://www.protectedplanet.net/en/resources/protected-planet-report-2020" target="_blank" rel="noopener">
-        https://www.protectedplanet.net/en/resources/protected-planet-report-2020
-    </a>
-</div>
+                    <div class="refs">
+                        UNEP-WCMC & IUCN. (2023). <i>Protected Planet Report</i>. Retrieved from
+                        <a href="https://www.protectedplanet.net/en/resources/protected-planet-report-2020"
+                            target="_blank" rel="noopener">
+                            https://www.protectedplanet.net/en/resources/protected-planet-report-2020
+                        </a>
+                    </div>
 
-<div class="refs">
-    UNCCD. (2022). <i>Global Land Outlook 2</i>. Retrieved from
-    <a href="https://www.unccd.int/resources/global-land-outlook/glo2" target="_blank" rel="noopener">
-        https://www.unccd.int/resources/global-land-outlook/glo2
-    </a>
-</div>
+                    <div class="refs">
+                        UNCCD. (2022). <i>Global Land Outlook 2</i>. Retrieved from
+                        <a href="https://www.unccd.int/resources/global-land-outlook/glo2" target="_blank"
+                            rel="noopener">
+                            https://www.unccd.int/resources/global-land-outlook/glo2
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>
@@ -492,89 +511,89 @@
             </ul>
         </aside>
     </div>
-    
+
     <!-- Footer section with links to student pages and external resources -->
-<footer class="section footer">
-    <div class="footer-cont-main">
-        <div class="footer-logo">
-            <img src="img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
-                    <img src="img/facebook-f.svg" alt="Facebook">
-                </a>
-                <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
-                    <img src="img/x-twitter.svg" alt="X">
-                </a>
-                <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
-                    <img src="img/youtube.svg" alt="YouTube" class="youtube">
-                </a>
+    <footer class="section footer">
+        <div class="footer-cont-main">
+            <div class="footer-logo">
+                <img src="img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
+                        <img src="img/facebook-f.svg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
+                        <img src="img/x-twitter.svg" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
+                        <img src="img/youtube.svg" alt="YouTube" class="youtube">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Website Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Volunteer</a></li>
+                        <li><a href="./table.html">Table</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="/pages/table.html">Team</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="volunteer.html">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="https://www.globalgoals.org/terms-conditions/">Conditions</a></li>
+                        <li><a href="https://www.globalgoals.org/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://www.globalgoals.org/cookies/">Cookies</a></li>
+                        <li><a href="https://www.globalgoals.org/anti-corruption/">Anti Corruption</a></li>
+                        <li><a href="https://www.globalgoals.org/asset-licence/">Asset License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="cont-pages">
+                    <h4>Content Pages</h4>
+                    <ul>
+                        <li><a href="content_ST2.html">Content 01</a></li>
+                        <li><a href="content_ST2,2.html">Content 02</a></li>
+                        <li><a href="content_ST3,3.html">Content 03</a></li>
+                        <li><a href="content_ST3.html">Content 04</a></li>
+                        <li><a href="content_ST4.html">Content 05</a></li>
+                        <li><a href="content_ST1.html">Content 06</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="our-team">
+                    <h4>Student Pages</h4>
+                    <ul>
+                        <li><a href="pageEditor_ST1.html">Student 01</a></li>
+                        <li><a href="pageEditor_ST2.html">Student 02</a></li>
+                        <li><a href="pageEditor_ST3.html">Student 03</a></li>
+                        <li><a href="pageEditor_ST4.html">Student 04</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="footer-cont">
-            <div class="use-links">
-                <h4>Website Links</h4>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="shop.html">Volunteer</a></li>
-                    <li><a href="./table.html">Table</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="/pages/table.html">Team</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
-                    <li><a href="volunteer.html">Profile</a></li>
-                </ul>
+        <div class="section footer-2">
+            <div class="copyright">
+                <div class="copy-cont">
+                    <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
+                        <b>Design By Group 5</b>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="footer-cont">
-            <div class="use-links">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="https://www.globalgoals.org/terms-conditions/">Conditions</a></li>
-                    <li><a href="https://www.globalgoals.org/privacy-policy/">Privacy Policy</a></li>
-                    <li><a href="https://www.globalgoals.org/cookies/">Cookies</a></li>
-                    <li><a href="https://www.globalgoals.org/anti-corruption/">Anti Corruption</a></li>
-                    <li><a href="https://www.globalgoals.org/asset-licence/">Asset License</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-cont">
-            <div class="cont-pages">
-                <h4>Content Pages</h4>
-                <ul>
-                    <li><a href="content_ST2.html">Content 01</a></li>
-                    <li><a href="content_ST2,2.html">Content 02</a></li>
-                    <li><a href="content_ST3,3.html">Content 03</a></li>
-                    <li><a href="content_ST3.html">Content 04</a></li>
-                    <li><a href="content_ST4.html">Content 05</a></li>
-                    <li><a href="content_ST1.html">Content 06</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-cont">
-            <div class="our-team">
-                <h4>Student Pages</h4>
-                <ul>
-                    <li><a href="pageEditor_ST1.html">Student 01</a></li>
-                    <li><a href="pageEditor_ST2.html">Student 02</a></li>
-                    <li><a href="pageEditor_ST3.html">Student 03</a></li>
-                    <li><a href="pageEditor_ST4.html">Student 04</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="section footer-2">
-        <div class="copyright">
-            <div class="copy-cont">
-                <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
-                    <b>Design By Group 5</b>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
     <!-- Scroll-to-top floating button -->
-<button class="scroll-to-top" onclick="scrollToTop()">
-    <i class="fas fa-arrow-up"></i>
-</button>
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- JavaScript includes -->
     <script src="/js/script.js"></script>
