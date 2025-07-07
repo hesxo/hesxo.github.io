@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversity and Ecosystems</title>
+    <link rel="stylesheet" href="css/style-content.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Eco<span>Xo</span></a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="table.html" class="nav-link">Table</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#content" class="nav-link">Content</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="profile-btn" onclick="handleProfileClick()">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </button>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="index.html#about" class="mobile-nav-link">About Us</a></li>
+                <li><a href="table.html" class="mobile-nav-link">Table</a></li>
+                <li><a href="index.html#content" class="mobile-nav-link">Content</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-profile-btn" onclick="handleProfileClick()">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="sidebar">
+                <h2>Content Navigation</h2>
+                <a href="#threats" class="sidebar-nav-item">
+                    <span class="text">Threats to Biodiversity</span>
+                </a>
+                <a href="#types" class="sidebar-nav-item">
+                    <span class="text">Types of Biodiversity</span>
+                </a>
+                <a href="#ecosystem" class="sidebar-nav-item">
+                    <span class="text">Ecosystem Services</span>
+                </a>
+                <a href="#conservation" class="sidebar-nav-item">
+                    <span class="text">Conservation Strategies</span>
+                </a>
+                <a href="#wildlife" class="sidebar-nav-item">
+                    <span class="text">Wildlife Protection</span>
+                </a>
+                <a href="#sustainable" class="sidebar-nav-item">
+                    <span class="text">Sustainable Practices</span>
+                </a>
+                <a href="#community" class="sidebar-nav-item">
+                    <span class="text">Community Action</span>
+                </a>
+                <a href="#involvement" class="sidebar-nav-item">
+                    <span class="text">Get Involved</span>
+                </a>
+            </div>
+
+            <div class="main-content">
+                <section id="threats" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Threats to Biodiversity</h1>
+                        <p class="content-description">
+                            Understanding the major threats facing our planet's biodiversity is crucial for developing effective conservation strategies. From habitat destruction to climate change, these challenges require immediate action to protect life on Earth.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Forest landscape">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12%</span>
+                            <span class="stat-label">Species Risk Increase</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">80%</span>
+                            <span class="stat-label">Deforestation from Agriculture</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1M</span>
+                            <span class="stat-label">Species at Risk</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Habitat Destruction</h3>
+                            <p>Deforestation and land conversion remain the primary drivers of biodiversity loss. Agricultural expansion, urban development, and infrastructure projects continue to fragment and destroy critical habitats worldwide.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Climate Change</h3>
+                            <p>Rising temperatures and changing precipitation patterns force species to migrate or face extinction. Extreme weather events and shifting environmental conditions disrupt ecosystem balance and threaten vulnerable species.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Pollution & Contamination</h3>
+                            <p>Chemical pollution from industrial and agricultural sources contaminates terrestrial ecosystems. Plastic waste and toxic substances accumulate in natural systems, affecting wildlife health and ecosystem function.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Invasive Species</h3>
+                            <p>Non-native species introduced through human activities can outcompete native flora and fauna, disrupting local ecosystems and causing significant ecological and economic damage.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="types" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Types of Biodiversity</h1>
+                        <p class="content-description">
+                            Biodiversity encompasses the variety of life at all levels, from genes to ecosystems. Understanding these different types helps us appreciate the complexity and interconnectedness of life on Earth.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="img/1.webp" alt="Diverse ecosystem">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8.7M</span>
+                            <span class="stat-label">Estimated Species</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Levels of Diversity</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">36</span>
+                            <span class="stat-label">Biodiversity Hotspots</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Genetic Diversity</h3>
+                            <p>The variety of genes within species populations. This diversity provides the raw material for evolution and adaptation, allowing species to survive environmental changes and maintain healthy populations.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Species Diversity</h3>
+                            <p>The number and variety of species in an area. This includes both the total number of species (richness) and their relative abundance (evenness) within ecosystems.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Ecosystem Diversity</h3>
+                            <p>The variety of habitats, communities, and ecological processes. This encompasses different biomes, from tropical rainforests to arctic tundra, each supporting unique assemblages of species.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Functional Diversity</h3>
+                            <p>The range of ecological roles and functions performed by species within ecosystems. This includes different feeding strategies, reproductive methods, and habitat requirements.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="ecosystem" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Ecosystem Services</h1>
+                        <p class="content-description">
+                            Ecosystems provide essential services that support human life and well-being. From clean air and water to climate regulation and food production, these services are fundamental to our survival and prosperity.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ecosystem services">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">$125T</span>
+                            <span class="stat-label">Annual Economic Value</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Service Categories</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">75%</span>
+                            <span class="stat-label">Food Crops Depend on Pollinators</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Provisioning Services</h3>
+                            <p>Direct products obtained from ecosystems including food, fresh water, timber, fiber, and genetic resources. These tangible benefits form the foundation of human survival and economic activity.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Regulating Services</h3>
+                            <p>Benefits from ecosystem processes that regulate environmental conditions, including climate regulation, water purification, disease control, and pollination services.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Cultural Services</h3>
+                            <p>Non-material benefits including recreational, spiritual, educational, and aesthetic values. These services contribute to human well-being and cultural identity.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Supporting Services</h3>
+                            <p>Fundamental processes that maintain ecosystem function, including nutrient cycling, primary production, and habitat provision. These services underpin all other ecosystem services.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="conservation" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Conservation Strategies</h1>
+                        <p class="content-description">
+                            Effective conservation requires diverse approaches tailored to specific threats and ecosystems. From protected areas to community-based conservation, these strategies work together to preserve biodiversity for future generations.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Conservation efforts">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">18%</span>
+                            <span class="stat-label">Land Protected Globally</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">230K</span>
+                            <span class="stat-label">Protected Areas Worldwide</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30%</span>
+                            <span class="stat-label">Target for 2030</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Protected Areas</h3>
+                            <p>Establishing and effectively managing national parks, reserves, and other protected areas to safeguard critical habitats and endangered species from human disturbance.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Habitat Restoration</h3>
+                            <p>Rehabilitating degraded ecosystems through reforestation, wetland restoration, and invasive species removal to restore ecological function and biodiversity.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Species Recovery Programs</h3>
+                            <p>Targeted conservation efforts for endangered species including captive breeding, reintroduction programs, and habitat management specifically designed for species recovery.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Community Conservation</h3>
+                            <p>Engaging local communities in conservation efforts through education, sustainable livelihood programs, and participatory management approaches that benefit both people and wildlife.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="wildlife" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Wildlife Protection</h1>
+                        <p class="content-description">
+                            Protecting wildlife requires comprehensive approaches that address both direct threats and underlying causes. From anti-poaching efforts to habitat corridors, these initiatives safeguard individual species and entire ecosystems.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Wildlife protection">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">41K</span>
+                            <span class="stat-label">Species on Red List</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">26%</span>
+                            <span class="stat-label">Mammals Threatened</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">14%</span>
+                            <span class="stat-label">Birds at Risk</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Anti-Poaching Efforts</h3>
+                            <p>Combating illegal wildlife trade through law enforcement, ranger training, and community engagement to protect endangered species from poaching and trafficking.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Habitat Corridors</h3>
+                            <p>Creating connected networks of protected areas that allow wildlife to move freely between habitats, maintaining genetic diversity and population viability.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Human-Wildlife Conflict</h3>
+                            <p>Developing strategies to reduce conflicts between humans and wildlife through compensation programs, barrier methods, and community education initiatives.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Monitoring & Research</h3>
+                            <p>Conducting scientific research and monitoring programs to understand wildlife populations, track conservation success, and adapt management strategies based on evidence.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sustainable" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Sustainable Practices</h1>
+                        <p class="content-description">
+                            Sustainable practices balance human needs with environmental protection, ensuring that resource use today doesn't compromise the ability of future generations to meet their own needs while maintaining healthy ecosystems.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2013&q=80" alt="Sustainable practices">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">25%</span>
+                            <span class="stat-label">Reduction in Resource Use</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50%</span>
+                            <span class="stat-label">Waste Reduction Potential</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-label">Energy Efficiency Gains</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Sustainable Agriculture</h3>
+                            <p>Implementing farming practices that maintain soil health, reduce chemical inputs, and support biodiversity while producing food efficiently and sustainably.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Circular Economy</h3>
+                            <p>Designing economic systems that minimize waste and maximize resource efficiency through recycling, reuse, and sustainable consumption patterns.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Renewable Energy</h3>
+                            <p>Transitioning to clean energy sources like solar, wind, and hydroelectric power to reduce carbon emissions and environmental impact while meeting energy needs.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Green Technology</h3>
+                            <p>Developing and implementing technologies that reduce environmental impact, improve resource efficiency, and support sustainable development goals.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="community" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Community Action</h1>
+                        <p class="content-description">
+                            Local communities play a vital role in biodiversity conservation through grassroots initiatives, education programs, and sustainable practices. Community engagement ensures conservation efforts are culturally appropriate and locally supported.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Community action">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">80%</span>
+                            <span class="stat-label">Biodiversity in Indigenous Lands</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300M</span>
+                            <span class="stat-label">People in Community Conservation</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">65%</span>
+                            <span class="stat-label">Success Rate with Community Involvement</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Indigenous Knowledge</h3>
+                            <p>Incorporating traditional ecological knowledge and practices into conservation strategies, recognizing the valuable insights of indigenous communities who have stewarded landscapes for generations.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Education Programs</h3>
+                            <p>Developing environmental education initiatives that raise awareness about biodiversity, teach sustainable practices, and inspire community participation in conservation efforts.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Citizen Science</h3>
+                            <p>Engaging volunteers in scientific research and monitoring projects, allowing communities to contribute valuable data while learning about local ecosystems and conservation needs.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Local Stewardship</h3>
+                            <p>Supporting community-led conservation initiatives that protect local natural areas while providing economic benefits through eco-tourism, sustainable harvesting, and restoration projects.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="involvement" class="content-section">
+                    <div class="content-header">
+                        <h1 class="content-title">Get Involved</h1>
+                        <p class="content-description">
+                            Everyone can contribute to biodiversity conservation through individual actions, community participation, and support for conservation organizations. Small actions can collectively make a significant impact on protecting life on Earth.
+                        </p>
+                    </div>
+
+                    <img class="content-image" src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Get involved">
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1B</span>
+                            <span class="stat-label">People Can Make a Difference</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">Simple Daily Actions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Impact When We Act Together</span>
+                        </div>
+                    </div>
+
+                    <div class="content-details">
+                        <div class="detail-card">
+                            <h3>Personal Actions</h3>
+                            <p>Adopt sustainable lifestyle choices including reducing consumption, choosing eco-friendly products, supporting sustainable businesses, and making environmentally conscious decisions in daily life.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Volunteer Opportunities</h3>
+                            <p>Participate in local conservation projects, habitat restoration, wildlife monitoring, and environmental education programs to directly contribute to biodiversity protection efforts.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Support Conservation</h3>
+                            <p>Donate to and support conservation organizations, participate in fundraising events, and advocate for environmental policies that protect biodiversity and natural habitats.</p>
+                        </div>
+                        <div class="detail-card">
+                            <h3>Spread Awareness</h3>
+                            <p>Share knowledge about biodiversity conservation through social media, community presentations, and educational activities to inspire others to take action for environmental protection.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-cont-main">
+            <div class="footer-logo">
+                <img src="img/sustainable-development-goals-un-seeklogo2.png" alt="Footer Logo" class="footer-img">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
+                        <img src="img/facebook-f.svg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
+                        <img src="img/x-twitter.svg" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
+                        <img src="img/youtube.svg" alt="YouTube" class="youtube">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Website Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="https://www.globalgoals.org/terms-conditions/">Conditions</a></li>
+                        <li><a href="https://www.globalgoals.org/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://www.globalgoals.org/cookies/">Cookies</a></li>
+                        <li><a href="https://www.globalgoals.org/anti-corruption/">Anti Corruption</a></li>
+                        <li><a href="https://www.globalgoals.org/asset-licence/">Asset License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="cont-pages">
+                    <h4>Content Pages</h4>
+                    <ul>
+                        <li><a href="content01.html">Content 01</a></li>
+                        <li><a href="Content02.html">Content 02</a></li>
+                        <li><a href="content03.html">Content 03</a></li>
+                        <li><a href="content04.html">Content 04</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="our-team">
+                    <h4>Student Pages</h4>
+                    <ul>
+                        <li><a href="student01.html">Student 01</a></li>
+                        <li><a href="student02.html">Student 02</a></li>
+                        <li><a href="student03.html">Student 03</a></li>
+                        <li><a href="student04.html">Student 04</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
+                    <b>Design By Group I5</b>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
