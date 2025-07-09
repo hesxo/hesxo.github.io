@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation - Pamindu Hennadige</title>
+  <link rel="stylesheet" href="pageEditor_validator.css">
+  <style>
+    section img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #235347;
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Validation Report - Pamindu Hennadige</h1>
+  </header>
+
+  <section class="stud">
+    <h2>Pamindu Hennadige, Student 3</h2>
+  </section>
+
+  <div class="container">
+    <main>
+      <section>
+        <h2 id="feedbackVal">Feedback Page Validation Report</h2>
+        <p>The feedback page passed HTML and CSS validation with no major issues. All input elements are labeled correctly, and form structures are semantic. Minor improvements in alt attributes and fieldset grouping were added after review.</p>
+        <img src="validationSnapshots/validation_feedback.png" alt="Feedback Page Validation Screenshot">
+        <h3>Back to Page Editor page</h3>
+        <p><a href="pageEditor_ST3.html#feedback">Go to Feedback section</a></p>
+      </section>
+
+      <section>
+        <h2 id="teamVal">Team Page Validation Report</h2>
+        <p>The team page validation showed all semantic elements were in order. Hover interactions and profile descriptions were properly structured. Some image `alt` texts were updated for better accessibility compliance.</p>
+        <img src="validationSnapshots/validation_team.png" alt="Team Page Validation Screenshot">
+        <h3>Back to Page Editor page</h3>
+        <p><a href="pageEditor_ST3.html#team">Go to Team section</a></p>
+      </section>
+
+      <section>
+        <h2 id="contentVal">Content Page Validation Report</h2>
+        <p>The content page was successfully validated. No critical errors were found. ARIA roles and heading structures are clear. Minor suggestions related to image `alt` text improvement were implemented post-validation.</p>
+        <img src="validationSnapshots/validation_content.png" alt="Content Page Validation Screenshot">
+        <h3>Back to Page Editor page</h3>
+        <p><a href="pageEditor_ST3.html#content">Go to Content section</a></p>
+      </section>
+
+      <p class="top"><a href="#top">Go top</a></p>
+    </main>
+
+    <aside>
+      <h3>Core pages validated:</h3>
+      <ul class="top-level-ul">
+        <li>Pamindu Hennadige</li>
+        <ul>
+          <li><a href="#feedbackVal">Feedback page validation</a></li>
+          <li><a href="#teamVal">Team page validation</a></li>
+          <li><a href="#contentVal">Content page validation</a></li>
+        </ul>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Climate Action Project - Validation Summary</p>
+  </footer>
+</body>
+</html>
