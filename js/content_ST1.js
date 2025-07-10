@@ -1,7 +1,5 @@
-// =============================================
 // JavaScript Enhancements for Smooth Scrolling,
 // Scroll Effects, and Animations
-// =============================================
 
 // Enable smooth scrolling behavior when internal links are clicked
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -17,7 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll the page to the top smoothly (used by scroll-to-top button)
+// Scroll the page to the top smoothly used by scroll-to-top button
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -54,12 +52,11 @@ window.addEventListener('scroll', () => {
         : 'rgba(45, 80, 22, 0.95)';
 });
 
-// Show or hide scroll-to-top button based on scroll position
+// hide scroll-to-top button based on scroll position
 window.addEventListener('scroll', () => {
     const scrollBtn = document.querySelector('.scroll-to-top');
     const heroSection = document.querySelector('.hero-sectionc');
     if (!scrollBtn || !heroSection) return; // Ensure both elements exist
-
     const heroBottom = heroSection.getBoundingClientRect().bottom; // Get bottom of hero section
     scrollBtn.classList.toggle('hidden', heroBottom > 0); // Hide button while still in hero
 });
