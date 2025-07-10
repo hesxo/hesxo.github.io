@@ -1,0 +1,114 @@
+/* heading for the team section */
+.heading-holder {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 30px;
+  color: #235347;
+}
+
+/* Heading text style */
+.heading-text {
+  font-size: 30px;
+}
+
+/* Layout using grid */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+/* Individual profile card container */
+.profile-slot {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(5, 167, 75, 0.5);
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Inner content for profile card */
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Profile image settings */
+.pictures {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Description text */
+.description {
+  position: absolute;
+  left: 100%;
+  opacity: 0;
+  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+/* Hover effects for profile card */
+.profile-slot:hover {
+  width: 700px;
+  height: 180px;
+  border-radius: 100px;
+  background: linear-gradient(to right, #235347, #051f20);
+  box-shadow: 0 4px 8px rgba(5, 167, 75, 0.5);
+}
+
+/* hover background slot a2 */
+#a2:hover {
+  background: linear-gradient(to left, #235347, #051f20);
+}
+
+/* hover background slot a4 */
+#a4:hover {
+  background: linear-gradient(to left, #235347, #051f20);
+}
+
+.profile-slot:hover .profile-card {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.profile-slot:hover .pictures {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-slot:hover .description {
+  position: static;
+  opacity: 1;
+  left: auto;
+  margin: 10px;
+  color: white;
+}
