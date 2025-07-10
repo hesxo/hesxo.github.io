@@ -74,7 +74,7 @@ input:invalid:not(:placeholder-shown) {
 
 /* Body background */
 body {
-  background-image: url(https://github.com/hesxo/hesxo.github.io/blob/main/img/feedback_background.jpg) !important;
+  background-image: (./img/feedback_background.jpg) !important;
   background-size: cover;
 }
 
