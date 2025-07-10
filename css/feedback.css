@@ -75,7 +75,7 @@ input:invalid:not(:placeholder-shown) {
 /* Body background */
 body {
   background-image: url('./img/feedback_background.jpg') !important;
-  z-index: auto;
+  z-index: 0;
   background-size: cover;
 }
 
