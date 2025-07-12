@@ -1,13 +1,11 @@
-/*Global Styles and CSS Variables */
-
-/* Reset default margin, padding, and box sizing */
+/* Global Styles and Theme Configuration */ 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Define global color and gradient variables */
+/* Color variables and gradients used throughout the site */
 :root {
     --primary-green: #2d5016;
     --forest-green: #4a7c59;
@@ -25,7 +23,7 @@
     --glass-border: rgba(255, 255, 255, 0.2);
 }
 
-/* Apply base font styles and layout for body */
+/* Base font and layout styles for the page */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -36,7 +34,7 @@ body {
 }
 
 
-/* Main wrapper with glass effect and vertical stacking */
+/* Main container with glass effect and vertical layout */
 .main-container {
     background: rgba(240, 248, 240, 0.95);
     backdrop-filter: blur(10px);
@@ -47,7 +45,7 @@ body {
     justify-content: flex-start;
 }
 
-/* Flex container for sidebar and main content */
+/* Layout that holds sidebar and main content */
 .blog-layout {
     display: flex;
     max-width: 1400px;
@@ -58,7 +56,7 @@ body {
 }
 
 
-/* Sidebar styling with blur, border and sticky position */
+/* Sidebar navigation card with sticky positioning and blur */
 .sidebar-nav {
     width: 320px;
     padding: 2rem;
@@ -75,7 +73,7 @@ body {
     align-self: flex-start;
 }
 
-/* Sidebar heading/list/link styling */
+/* Sidebar section header with gradient text */
 .sidebar-nav h3 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
@@ -89,17 +87,17 @@ body {
     gap: 0.5rem;
 }
 
-/* Sidebar heading/list/link styling */
+/* List container for sidebar links */
 .sidebar-nav ul {
     list-style: none;
 }
 
-/* Sidebar heading/list/link styling */
+/* List items spacing */
 .sidebar-nav li {
     margin-bottom: 0.75rem;
 }
 
-/* Sidebar heading/list/link styling */
+/* Style for navigation links in sidebar */
 .sidebar-nav a {
     color: var(--text-light);
     text-decoration: none;
@@ -112,6 +110,7 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Hover effects for sidebar links */
 .sidebar-nav a:hover {
     background: var(--gradient-forest);
     color: white;
@@ -123,7 +122,7 @@ body {
     width: 20px;
 }
 
-/* Main content container */
+/* Content area styles */
 .content {
     flex: 1;
     padding: 2rem;
@@ -133,7 +132,7 @@ body {
     justify-content: flex-start;
 }
 
-/* Hero section with gradient and SVG background */
+/* Hero section with gradient background and overlay pattern */
 .hero-sectionc {
     text-align: center;
     padding: 4rem 2rem 6rem;
@@ -146,58 +145,8 @@ body {
     margin-top: 2rem;
 }
 
-.hero-sectionc::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='leaves' width='50' height='50' patternUnits='userSpaceOnUse'%3E%3Cpath d='M25,10 Q35,20 25,30 Q15,20 25,10' fill='white' opacity='0.1'/%3E%3Cpath d='M10,35 Q20,45 10,55 Q0,45 10,35' fill='white' opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23leaves)'/%3E%3C/svg%3E");
-    opacity: 0.3;
-}
-
-.hero-contentc {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* Hero text and image presentation */
-.hero-titlec {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    line-height: 0.9;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-/* Hero text and image presentation */
-.hero-descriptionc {
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin: 0 auto 2rem;
-    opacity: 0.95;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Hero text and image presentation */
-.hero-image {
-    width: 100%;
-    max-width: 900px;
-    height: 400px;
-    background:
-        url('../img/360_F_1115009878_knzNAdu7KgXa6YQ8DdLNf3UAhoDe7U8A.jpg') center/cover;
-    border-radius: 20px;
-    margin-top: 2rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-sectionc::before {
+/* Leaf-pattern SVG background inside hero section */
+.hero-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -208,21 +157,24 @@ body {
     opacity: 0.3;
 }
 
-.hero-contentc {
+/* Layered content above hero background */
+.hero-contentc{
     position: relative;
     z-index: 2;
 }
 
 
-.hero-titlec {
+/* Main heading styles in hero */
+.hero-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1.5rem;
-    line-height: 0.9;
+    line-height: 1.1;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.hero-descriptionc {
+/* Supporting paragraph text in hero */
+.hero-description {
     font-size: 1.2rem;
     max-width: 900px;
     margin: 0 auto 2rem;
@@ -231,13 +183,13 @@ body {
     text-align: justify;
 }
 
-/* Hero text and image presentation */
-.hero-imagec {
+/* Background image section within hero */
+.hero-image {
     width: 100%;
     max-width: 900px;
     height: 400px;
     background:
-        url('../img/360_F_1115009878_knzNAdu7KgXa6YQ8DdLNf3UAhoDe7U8A.jpg') center/cover;
+        url('../img/a6f0230c6b13649dbe707904e22ee6542cc08523-6016x4016.avif') center/cover;
     border-radius: 20px;
     margin-top: 2rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -246,7 +198,14 @@ body {
     justify-content: center;
 }
 
-/* Section headings and paragraphs */
+
+/* Section spacing and scroll margin for in-page anchors */
+section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 120px;
+}
+
+/* Section title styling with gradient text */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -260,7 +219,7 @@ body {
     gap: 1rem;
 }
 
-/* Section headings and paragraphs */
+/* Main text block under section title */
 .section-content {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -269,7 +228,7 @@ body {
     text-align: justify;
 }
 
-/* Info cards and layout grid */
+/* Responsive card grid layout for items */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -277,7 +236,7 @@ body {
     margin: 3rem 0;
 }
 
-/* Info cards and layout grid */
+/* Individual card styles with hover effect and elevation */
 .info-card {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -305,7 +264,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-/* Info cards and layout grid */
+/* Card header or title style */
 .card-title {
     font-size: 1.4rem;
     font-weight: 700;
@@ -316,13 +275,13 @@ body {
     gap: 0.75rem;
 }
 
-/* Info cards and layout grid */
+/* Description or details inside cards */
 .card-content {
     color: var(--text-light);
     line-height: 1.6;
 }
 
-/* Threat section cards */
+/* Responsive card grid layout for items */
 .threat-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -330,7 +289,7 @@ body {
     margin: 2rem 0;
 }
 
-/* Threat section cards */
+/* Individual card styles with hover effect and elevation */
 .threat-card {
     background: linear-gradient(135deg, rgba(220, 20, 60, 0.1), rgba(255, 69, 0, 0.1));
     border: 2px solid rgba(220, 20, 60, 0.2);
@@ -344,7 +303,7 @@ body {
     box-shadow: 0 15px 40px rgba(220, 20, 60, 0.2);
 }
 
-/* Threat section cards */
+/* Card header or title style */
 .threat-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -355,7 +314,7 @@ body {
     gap: 0.5rem;
 }
 
-/* Services section styling */
+/* Responsive card grid layout for items */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -363,7 +322,7 @@ body {
     margin: 3rem 0;
 }
 
-/* Services section styling */
+/* Individual card styles with hover effect and elevation */
 .service-category {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -378,7 +337,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-/* Services section styling */
+/* Card header or title style */
 .service-title {
     font-size: 1.3rem;
     font-weight: 700;
@@ -389,14 +348,14 @@ body {
     gap: 0.75rem;
 }
 
-/* Services section styling */
+/* Description or details inside cards */
 .service-examples {
     color: var(--text-light);
     font-style: italic;
     margin-top: 0.5rem;
 }
 
-/* Conservation strategies layout */
+/* Responsive card grid layout for items */
 .strategy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -404,7 +363,7 @@ body {
     margin: 3rem 0;
 }
 
-/* Conservation strategies layout */
+/* Individual card styles with hover effect and elevation */
 .strategy-card {
     background: linear-gradient(135deg, rgba(45, 80, 22, 0.05), rgba(74, 124, 89, 0.05));
     border: 2px solid var(--light-green);
@@ -418,14 +377,14 @@ body {
     transform: translateY(-5px);
 }
 
-/* Conservation strategies layout */
+/* Card header or title style */
 .strategy-icon {
     font-size: 2rem;
     color: var(--forest-green);
     margin-bottom: 1rem;
 }
 
-/* Conservation strategies layout */
+/* Card header or title style */
 .strategy-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -433,7 +392,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Image showcase cards */
+/* Responsive card grid layout for items */
 .image-showcase {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -441,7 +400,7 @@ body {
     margin: 3rem 0;
 }
 
-/* Image showcase cards */
+/* Individual card styles with hover effect and elevation */
 .image-item {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -455,7 +414,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-/* Image showcase cards */
+/* Description or details inside cards */
 .image-placeholder {
     width: 100%;
     height: 200px;
@@ -467,7 +426,7 @@ body {
     font-weight: 600;
 }
 
-/* Image showcase cards */
+/* Description or details inside cards */
 .image-caption {
     padding: 1.5rem;
     font-weight: 600;
@@ -475,7 +434,8 @@ body {
 }
 
 
-/* Floating button for scrolling to top */
+
+/* Floating scroll to top button */
 .scroll-to-top {
     position: fixed;
     bottom: 2rem;
@@ -497,7 +457,7 @@ body {
     box-shadow: 0 8px 25px rgba(45, 80, 22, 0.4);
 }
 
-/* Responsive styles for tablets and mobile */
+/* Responsive layout adjustments for smaller screens */
 @media (max-width: 1024px) {
     .blog-layout {
         flex-direction: column;
@@ -530,7 +490,7 @@ body {
     }
 }
 
-/* Responsive styles for tablets and mobile */
+/* Responsive layout adjustments for smaller screens */
 @media (max-width: 768px) {
     .header {
         padding: 1rem;
@@ -551,7 +511,7 @@ body {
     }
 }
 
-/* Fade-in animation effect */
+/* Fade in animation on scroll */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -564,6 +524,7 @@ body {
     }
 }
 
+/* Fade in animation on scroll */
 .animate-in {
     animation: fadeInUp 0.6s ease forwards;
 }
