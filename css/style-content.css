@@ -349,6 +349,7 @@ img {
 /* === CORRECTED CONTENT SECTION RULES === */
 .content-section {
     display: none;
+    scroll-margin-top: var(--nav-height);
 }
 
 /* Show the first section by default */
