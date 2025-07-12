@@ -5,8 +5,8 @@ a.nav-link {
 a.nav-link.scrolled {
   color: var(--foreground) !important;
 }
-.nav-link:hover,
-.nav-link.active {
+
+.nav-link:hover {
   color: var(--white) !important;
 }
 
@@ -74,7 +74,7 @@ input:invalid:not(:placeholder-shown) {
 
 /* Body background */
 body {
-  background-image: url('/img/feedback_background.jpg') !important;
+  background-image: url(content_images/feedback_background.jpg) !important;
   background-size: cover;
 }
 
@@ -82,7 +82,7 @@ body {
 .hero {
   text-align: center;
   font-size: 25px;
-  color: white; 
+  color: white;
   padding: 100px 40px 30px 40px;
 }
 
