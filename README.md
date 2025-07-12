@@ -7,8 +7,6 @@ This project is a modern, responsive website dedicated to raising awareness abou
 - **Home Page:** Overview of the Life on Land initiative, with a hero section, mission statement, and featured content.
 - **Content Pages:** In-depth articles on biodiversity loss, ecosystem degradation, conservation efforts, and more.
 - **Interactive Table:** Sortable table presenting conservation data.
-- **Gallery:** Visual showcase of related images and videos.
-- **Team & Feedback:** Meet the team and provide feedback.
 - **Modern Navigation:** Responsive navigation bar for desktop and mobile.
 - **Footer:** Useful links, content navigation, and social media integration.
 
