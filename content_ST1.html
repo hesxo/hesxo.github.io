@@ -1,58 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodiversity and Ecosystems</title>
     <link rel="stylesheet" href="css/style-content.css">
+    <link rel="icon" type="image/svg+xml" href="./img/favpng_8f8cd75d77ca8c919fc57950f5169416.png">
+    <link rel="stylesheet" href="css/global.css">
     <script src="./js/script.js"></script>
 </head>
 
 <body>
+<header>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Eco<span>Xo</span></a>
+            <!-- Logo and main navigation links -->
+            <a href="splash.html" class="logo">Eco<span>Xo</span></a>
 
+            <!-- Desktop Navigation -->
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="home.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#about" class="nav-link">About Us</a>
+                    <a href="volunteer.html" class="nav-link">Volunteer</a>
                 </li>
                 <li class="nav-item">
-                    <a href="table.html" class="nav-link">Table</a>
+                    <a href="table.html" class="nav-link active">Table</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html#content" class="nav-link">Content</a>
+                    <a href="team.html" class="nav-link">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="sitemap.html" class="nav-link">Sitemap</a>
                 </li>
-            </ul>
-            <button class="profile-btn" onclick="handleProfileClick()">
-                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
-            </button>
+                <li class="nav-item">
+                    <a href="feedback.html" class="nav-link">Feedback</a>
+                </li>
 
+            </ul>
+            <a href="profile.html" class="profile-btn">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+
+            <!-- Mobile menu toggle button -->
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
                 <span class="hamburger"></span>
             </button>
-        </div>
 
-        <div class="mobile-nav" id="mobileNav">
-            <ul class="mobile-nav-menu">
-                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-                <li><a href="index.html#about" class="mobile-nav-link">About Us</a></li>
-                <li><a href="table.html" class="mobile-nav-link">Table</a></li>
-                <li><a href="index.html#content" class="mobile-nav-link">Content</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            </ul>
-            <button class="mobile-profile-btn" onclick="handleProfileClick()">
-                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
-            </button>
+            <!-- Mobile navigation menu for smaller screens -->
+            <div class="mobile-nav" id="mobileNav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="home.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
+                    <li><a href="table.html" class="mobile-nav-link active">Table</a></li>
+                    <li><a href="team.html" class="mobile-nav-link">Team</a></li>
+                    <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+                    <li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
+                </ul>
+                <a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
+                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
         </div>
     </nav>
+</header>
 
     <div class="main-wrapper">
         <div class="container">
@@ -448,10 +462,10 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="section footer">
         <div class="footer-cont-main">
             <div class="footer-logo">
-                <img src="img/sustainable-development-goals-un-seeklogo2.png" alt="Footer Logo" class="footer-img">
+                <img src="img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
                 <div class="social-icons">
                     <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
                         <img src="img/facebook-f.svg" alt="Facebook">
@@ -468,12 +482,13 @@
                 <div class="use-links">
                     <h4>Website Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="table.html">Table</a></li>
                         <li><a href="feedback.html">Feedback</a></li>
                         <li><a href="team.html">Team</a></li>
                         <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="profile.html">Profile</a></li>
                     </ul>
                 </div>
             </div>
@@ -493,10 +508,12 @@
                 <div class="cont-pages">
                     <h4>Content Pages</h4>
                     <ul>
-                        <li><a href="content01.html">Content 01</a></li>
-                        <li><a href="Content02.html">Content 02</a></li>
-                        <li><a href="content03.html">Content 03</a></li>
-                        <li><a href="content04.html">Content 04</a></li>
+                        <li><a href="content_ST1.html">Content 01</a></li>
+                        <li><a href="content_ST2.html">Content 02</a></li>
+                        <li><a href="content_ST3.html">Content 03</a></li>
+                        <li><a href="content_ST4.html">Content 04</a></li>
+                        <li><a href="content_ST2,2.html">Content 05</a></li>
+                        <li><a href="content_ST3,3.html">Content 06</a></li>
                     </ul>
                 </div>
             </div>
@@ -504,23 +521,24 @@
                 <div class="our-team">
                     <h4>Student Pages</h4>
                     <ul>
-                        <li><a href="student01.html">Student 01</a></li>
-                        <li><a href="student02.html">Student 02</a></li>
-                        <li><a href="student03.html">Student 03</a></li>
-                        <li><a href="student04.html">Student 04</a></li>
+                        <li><a href="pageEditor_ST1.html">Student 01</a></li>
+                        <li><a href="pageEditor_ST2.html">Student 02</a></li>
+                        <li><a href="pageEditor_ST3.html">Student 03</a></li>
+                        <li><a href="pageEditor_ST4.html">Student 04</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="section footer-2">
             <div class="copyright">
-                <p>© Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
-                    <b>Design By Group I5</b>
-                </p>
+                <div class="copy-cont">
+                    <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
+                        <b>Design By Group 5</b>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
