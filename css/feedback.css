@@ -82,7 +82,7 @@ body {
 .hero {
   text-align: center;
   font-size: 25px;
-  /* color: white; */
+  color: white; 
   padding: 100px 40px 30px 40px;
 }
 
