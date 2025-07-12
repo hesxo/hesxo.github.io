@@ -1,5 +1,5 @@
 /* Navigation link styles */
-a.nav-link {
+/*a.nav-link {
   color: var(--primary) !important;
 }
 
@@ -9,7 +9,7 @@ a.nav-link:hover {
 
 a.nav-link.scrolled {
   color: var(--foreground) !important;
-}
+}/*
 
 /* Required fields */
 .required-inputs {
