@@ -2,13 +2,6 @@
 a.nav-link {
   color: var(--primary) !important;
 }
-a.nav-link.scrolled {
-  color: var(--foreground) !important;
-}
-
-.nav-link:hover {
-  color: var(--white) !important;
-}
 
 /* Required fields */
 .required-inputs {
