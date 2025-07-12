@@ -11,7 +11,6 @@ This project is a modern, responsive website dedicated to raising awareness abou
 - **Footer:** Useful links, content navigation, and social media integration.
 
 ## Technologies Used
-
 - **HTML5** – Semantic markup for structure.
 - **CSS3** – Custom styles and responsive layouts.
 - **JavaScript** – Interactive features (sorting, scroll-to-top, etc.).
@@ -19,9 +18,9 @@ This project is a modern, responsive website dedicated to raising awareness abou
 
 ## File Structure
 
-- `/css/` – Stylesheets for each page and component.
-- `/img/` – Images and media assets.
-- `/js/` – JavaScript for interactivity.
+- `css/` – Stylesheets for each page and component.
+- `img/` – Images and media assets.
+- `js/` – JavaScript for interactivity.
 - `index.html` – Main landing page.
 - `content_ST1.html`, `content2.html`, etc. – Content pages.
 - `table.html` – Conservation data table.
