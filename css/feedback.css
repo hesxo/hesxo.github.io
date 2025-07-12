@@ -1,9 +1,15 @@
 /* Navigation link styles */
 :root {
   --primary: #007bff;
+  --white: #fff;
 }
+
 a.nav-link {
   color: var(--primary) !important;
+}
+
+.nav-link:hover {
+  color: var(--white) !important;
 }
 
 /* Required fields */
