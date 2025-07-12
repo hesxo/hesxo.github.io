@@ -62,7 +62,7 @@ input:invalid:not(:placeholder-shown) {
 
 /* Body background */
 body {
-  background-image: url('/img/feedback_background.jpg') !important;
+  background-image: url('../img/feedback_background.jpg') !important;
   background-size: cover;
 }
 
