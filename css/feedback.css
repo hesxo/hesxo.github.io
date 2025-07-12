@@ -1,4 +1,7 @@
 /* Navigation link styles */
+:root {
+  --primary: #007bff;
+}
 a.nav-link {
   color: var(--primary) !important;
 }
