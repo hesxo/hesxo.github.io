@@ -3,7 +3,7 @@ a.nav-link {
   color: var(--primary) !important;
 }
 
-.nav-link:hover {
+a.nav-link:hover {
   color: var(--white) !important;
 }
 
