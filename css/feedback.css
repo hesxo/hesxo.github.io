@@ -1,16 +1,3 @@
-/* Navigation link styles */
-/*a.nav-link {
-  color: var(--primary) !important;
-}
-
-a.nav-link:hover {
-  color: var(--white) !important;
-}
-
-a.nav-link.scrolled {
-  color: var(--foreground) !important;
-}/*
-
 /* Required fields */
 .required-inputs {
   color: red;
@@ -83,7 +70,7 @@ body {
 .hero {
   text-align: center;
   font-size: 25px;
-  color: white;
+  color: white; 
   padding: 100px 40px 30px 40px;
 }
 
