@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Economic Impacts & Global Action on Life on Land</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <style>
+      /* General Body Background Enhancement */
+      body {
+        background: linear-gradient(135deg, #f0fdf4, #e6f7ee); /* Subtle gradient */
+        min-height: 100vh; /* Ensure gradient covers full height */
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Main content area and sidebar container */
+      main {
+        display: flex; /* Use flexbox for layout */
+        flex-grow: 1; /* Allow main to take available vertical space */
+        padding: 20px; /* Add padding to main container */
+        gap: 50px; /* Space between sidebar and content */
+        align-items: flex-start; /* Align items to the top */
+        max-width: 1400px; /* Max width for the entire main content area */
+        margin: 0 auto; /* Center the main content area */
+      }
+
+      /* Content Area Adjustment to prevent overlap */
+      .content-area {
+        padding: 0; /* Remove previous padding as it's now on main */
+        flex-grow: 1; /* Allows content area to take available space */
+      }
+
+      /* Enhanced styling for content sections */
+      .tile-card {
+        background-color: #ffffff;
+        border: 1px solid #e0e4e2;
+        border-radius: 18px; /* Slightly more rounded */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+        margin-bottom: 40px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover */
+      }
+
+      .tile-card:hover {
+        transform: translateY(-8px); /* Lift card on hover */
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+      }
+
+      /* Section H2 Styling */
+      .tile-card h2 {
+        color: #1c583a; /* Dark green color */
+        font-size: 2.4em; /* Slightly larger font size */
+        margin-bottom: 25px; /* Increased margin-bottom */
+        text-shadow: 1px 3px 10px rgba(44, 160, 92, 0.4); /* Stronger text shadow */
+        letter-spacing: 0.05em; /* Added letter spacing */
+        text-transform: uppercase; /* Uppercase text */
+        border-bottom: 3px solid #4CAF50; /* Underline effect */
+        padding-bottom: 10px; /* Padding for the underline */
+        display: inline-block; /* To make border-bottom wrap content */
+        animation: fadeIn 1s ease-out; /* Fade in animation */
+      }
+
+      .tile-card h3 {
+        color: #2ca05c;
+        font-size: 1.5em;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      .tile-card p {
+        color: #4a5568;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        max-width: 800px;
+      }
+
+      .tile-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 700px;
+      }
+
+      .tile-card ul li {
+        background-color: #f0fdf4;
+        border-left: 5px solid #4CAF50;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        text-align: left;
+        color: #2c5282;
+        font-size: 1.1em;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+      }
+
+      .tile-card ul li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        background-color: #e9fbe9; /* Slightly change background on hover */
+      }
+
+      /* Boxicon Styling and Hover Effect */
+      .tile-card .bx {
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .tile-card:hover .bx {
+        transform: scale(1.1); /* Slightly enlarge icon on card hover */
+        color: #1c583a !important; /* Darker green for emphasis */
+      }
+
+      /* Content Navigation Bar Styling */
+      .side-navbar {
+        position: sticky;
+        top: 100px;
+        width: 250px; /* Fixed width for better control */
+        height: fit-content;
+        background-color: #ffffff; /* White background */
+        border: 1px solid #d4e7d9;
+        border-left: 8px solid #4CAF50; /* Thicker, prominent left border */
+        border-radius: 18px;
+        /* float: left; Removed float */
+        margin-left: 0; /* Removed margin-left as flexbox handles spacing */
+        padding: 25px 20px; /* Increased padding */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer, more consistent shadow */
+        transition: all 0.3s ease-in-out;
+      }
+
+      .side-navbar:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Slightly deeper shadow on hover */
+      }
+
+      .side-navbar h2 {
+        font-size: 1.7em; /* Slightly larger heading */
+        color: #1c583a;
+        margin-bottom: 18px; /* Increased margin */
+        text-shadow: 1px 1px 5px rgba(44, 160, 92, 0.2);
+      }
+
+      .side-navbar hr {
+        border: none;
+        border-top: 1px solid #d4e7d9;
+        margin-bottom: 25px; /* Increased margin */
+      }
+
+      .side-navbar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .side-navbar li {
+        margin-bottom: 12px; /* Increased spacing between list items */
+      }
+
+      .side-navbar a {
+        color: #4a5568; /* Softer grey for links */
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s ease;
+        display: block;
+        padding: 8px 10px; /* Increased padding for better click area */
+        border-radius: 6px; /* Rounded corners for link backgrounds */
+      }
+
+      .side-navbar a:hover {
+        color: #1c583a; /* Darker green on hover */
+        background-color: #f0fdf4; /* Light green background on hover */
+        transform: translateX(5px);
+      }
+
+      .side-navbar a.active {
+        color: #ffffff; /* White text for active link */
+        background-color: #4CAF50; /* Primary green background for active link */
+        font-weight: 700;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for active link */
+        transform: translateX(0); /* No slide for active link */
+      }
+
+      .side-navbar a.active:hover {
+        background-color: #3e8e41; /* Slightly darker green on active hover */
+      }
+
+
+      .further-reading {
+        width: 100%;
+        max-width: 1085px; /* Adjust as needed for responsiveness */
+        color: #2c5282;
+        margin: 0 auto 30px auto; /* Center the block */
+        padding: 25px;
+        border: 1px solid rgb(224, 228, 226);
+        border-radius: 20px;
+        background-color: mintcream;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: left; /* Align text to left within this block */
+      }
+
+      .further-reading h3 {
+        color: #1c583a;
+        margin-bottom: 15px;
+        font-size: 1.8em;
+      }
+
+      .further-reading ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+
+      .further-reading ul li {
+        margin-bottom: 10px;
+      }
+
+      .further-reading a {
+        color: #3182ce;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .further-reading a:hover {
+        color: #2c5282;
+        text-decoration: underline;
+      }
+
+      /* Top Button Styling */
+      .topButton {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        z-index: 1000;
+      }
+
+      .topButton:hover {
+        background-color: #3e8e41;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Navbar scrolled effect (from global.css/js, ensuring consistency) */
+      .navbar.scrolled {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow to scrolled navbar */
+      }
+
+      /* Header Styling */
+      .header {
+        text-align: center;
+        margin-top: 40px; /* Increased margin-top */
+        margin-bottom: 60px; /* Increased margin-bottom */
+        padding: 30px; /* Added padding */
+        background: linear-gradient(135deg, #e0f2f1, #c8e6c9); /* Light gradient background */
+        border-radius: 25px; /* Rounded corners */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Prominent shadow */
+        max-width: 900px; /* Max width for better presentation */
+        margin-left: auto; /* Center the header */
+        margin-right: auto; /* Center the header */
+        animation: fadeInDown 1s ease-out; /* Animation for header */
+      }
+
+      .header h1 {
+        font-family: 'Outfit', sans-serif; /* Use Outfit font from global.css */
+        font-size: 3.2em; /* Larger main heading */
+        color: #1c583a; /* Dark green color */
+        margin-bottom: 10px; /* Space below main heading */
+        text-shadow: 2px 3px 10px rgba(44, 160, 92, 0.4); /* Stronger text shadow */
+        animation: slideInLeft 1s ease-out; /* Animation for h1 */
+      }
+
+      .header h2 {
+        font-family: 'Outfit', sans-serif; /* Use Outfit font from global.css */
+        font-size: 1.8em; /* Larger sub-heading */
+        color: #2ca05c; /* Lighter green color */
+        margin-top: 0;
+        animation: slideInRight 1s ease-out; /* Animation for h2 */
+      }
+
+      /* Keyframe Animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column; /* Stack items vertically on small screens */
+          padding: 15px;
+          gap: 30px; /* Adjust gap for mobile */
+        }
+
+        .content-area {
+          margin-left: 0; /* Remove margin-left on small screens */
+          padding: 0; /* Remove padding as it's on main */
+        }
+
+        .side-navbar {
+          position: static;
+          width: 100%;
+          margin-left: 0;
+          border-left: none;
+          border-top: 10px solid #8eb69b;
+          border-radius: 18px;
+          margin-bottom: 0; /* Remove bottom margin as gap handles it */
+        }
+
+        .tile-card {
+          padding: 20px;
+        }
+
+        .tile-card h2 {
+          font-size: 1.8em; /* Adjusted for mobile */
+          letter-spacing: 0.02em;
+          padding-bottom: 8px;
+        }
+
+        .tile-card h3 {
+          font-size: 1.3em;
+        }
+
+        .tile-card ul li {
+          font-size: 1em;
+          padding: 12px 15px;
+        }
+
+        .further-reading {
+          width: auto;
+          margin-left: 15px;
+          margin-right: 15px;
+          padding: 20px;
+        }
+
+        .topButton {
+          width: 40px;
+          height: 40px;
+          font-size: 1.5em;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .header {
+          margin-top: 20px;
+          margin-bottom: 30px;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+          font-size: 2.2em;
+        }
+
+        .header h2 {
+          font-size: 1.4em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page Header with navigation bar -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <!-- Site Logo -->
+                <a href="splash.html" class="logo">Eco<span>Xo</span></a>
+
+                <!-- Navigation Menu for Desktop -->
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="volunteer.html" class="nav-link">Volunteer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="table.html" class="nav-link active">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sitemap.html" class="nav-link">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html" class="nav-link">Feedback</a>
+                    </li>
+    
+                </ul>
+
+                <!-- Profile Button -->
+                <a href="profile.html" class="profile-btn">
+                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+                </a>
+    
+    
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+    
+            <!-- Mobile Navigation Links -->
+            <div class="mobile-nav" id="mobileNav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="home.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
+                    <li><a href="table.html" class="mobile-nav-link active">Table</a></li>
+                    <li><a href="team.html" class="mobile-nav-link">Team</a></li>
+                    <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+                    <li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
+                </ul>
+                <a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
+                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <nav class="side-navbar">
+        <h2>Content Navigation</h2>
+        <hr>
+        <ul>
+          <li><a href="#economic-overview">Economic Overview</a></li>
+          <li><a href="#scale-of-impact">Scale of Economic Impact</a></li>
+          <li><a href="#sectors-at-risk">Key Economic Sectors at Risk</a></li>
+          <li><a href="#ripple-effect">The Ripple Effect</a></li>
+          <li><a href="#sector-specific-impacts">Sector-Specific Impacts</a></li>
+          <li><a href="#agriculture-food">Agriculture and Food Security</a></li>
+          <li><a href="#water-security">Water Security and Management</a></li>
+          <li><a href="#health-wellbeing">Health and Wellbeing</a></li>
+          <li><a href="#urban-development">Urban Development and Infrastructure</a></li>
+          <li><a href="#path-forward">The Path Forward</a></li>
+          <li><a href="#solutions-opportunities">Solutions and Opportunities</a></li>
+          <li><a href="#additional-elements">Additional Website Elements</a></li>
+          <li><a href="#interactive-features">Interactive Features</a></li>
+          <li><a href="#data-visualizations">Data Visualizations</a></li>
+          <li><a href="#resource-library">Resource Library</a></li>
+          <li><a href="#call-to-action">Call-to-Action Elements</a></li>
+        </ul>
+      </nav>
+
+      <div class="content-area" id="top">
+        <header class="header">
+          <h1>Economic Impacts & Global Action</h1>
+          <h2>SDG 15: Life on Land</h2>
+        </header>
+
+        <a class="topButton" href="#top">^</a>
+
+        <!-- Economic Overview - "The Hidden Cost of Ecosystem Loss" -->
+        <section id="economic-overview" class="tile-card">
+          <h2>The Hidden Cost of Ecosystem Loss</h2>
+          <i class='bx bx-globe' style='font-size: 80px; color: #2f855a; margin-bottom: 20px;'></i>
+          <h3>Title: "The $20 Trillion Crisis: How Ecosystem Degradation Threatens Global Economy"</h3>
+          <p>
+            Ecosystem degradation poses an existential threat to the global economy, with annual losses estimated to be in the trillions.
+            These costs are often hidden, becoming apparent only when vital ecosystem services—like clean water, fertile soil, and stable climates—are diminished or lost entirely.
+            Understanding this crisis is crucial for every business, government, and individual, as our collective prosperity is inextricably linked to the health of our natural world.
+          </p>
+        </section>
+
+        <!-- Section 1: The Scale of Economic Impact -->
+        <section id="scale-of-impact" class="tile-card">
+          <h2>The Scale of Economic Impact</h2>
+          <i class='bx bx-dollar-circle' style='font-size: 80px; color: #c53030; margin-bottom: 20px;'></i>
+          <p>
+            The economic impact of ecosystem loss is staggering, far exceeding the GDP of many major economies.
+            This section delves into the quantifiable and unquantifiable costs, highlighting the urgency of addressing environmental degradation.
+          </p>
+          <ul>
+            <li><strong>The Trillion-Dollar Loss:</strong> Global ecosystem service losses are estimated at a monumental $4.7-$20.2 trillion annually, a figure that underscores the immense value of nature's contributions to human well-being and economic activity.</li>
+            <li><strong>Hidden Costs:</strong> Ecosystem services, such as pollination, water purification, and climate regulation, are often taken for granted. Their true economic value becomes painfully clear only when these services are impaired or disappear, leading to increased costs for human-engineered solutions.</li>
+            <li><strong>Economic Dependency:</strong> Virtually every industry, from agriculture and manufacturing to tourism and pharmaceuticals, relies directly or indirectly on healthy ecosystems. Disruptions in these natural systems can trigger widespread economic instability.</li>
+            <li><strong>Comparative Analysis:</strong> To put these losses into perspective, the estimated annual costs of ecosystem degradation are comparable to, or even exceed, the entire Gross Domestic Product (GDP) of several major global economies, emphasizing the systemic risk posed by environmental decline.</li>
+          </ul>
+        </section>
+
+        <!-- Section 2: Key Economic Sectors at Risk -->
+        <section id="sectors-at-risk" class="tile-card">
+          <h2>Key Economic Sectors at Risk</h2>
+          <i class='bx bx-building-house' style='font-size: 80px; color: #3182ce; margin-bottom: 20px;'></i>
+          <p>
+            Ecosystem degradation disproportionately affects key economic sectors, threatening livelihoods and global supply chains.
+            Understanding these vulnerabilities is the first step towards building resilience.
+          </p>
+          <ul>
+            <li><strong>Agriculture:</strong> This sector faces approximately $400 billion in annual losses due to soil degradation alone, impacting food security and the livelihoods of millions of farmers worldwide.</li>
+            <li><strong>Tourism:</strong> A $7.6 trillion global industry, tourism is heavily dependent on pristine natural landscapes, biodiversity, and healthy ecosystems. Degradation of these assets directly threatens its economic viability and employment.</li>
+            <li><strong>Pharmaceuticals:</strong> Over 40% of all medicines currently in use are derived from natural sources. The loss of biodiversity, particularly in unexplored ecosystems, jeopardizes the discovery of future life-saving drugs and treatments.</li>
+            <li><strong>Insurance:</strong> The insurance industry is experiencing a significant rise in claims related to ecosystem-driven disasters, such as floods, droughts, and wildfires. This trend highlights the increasing financial risks associated with environmental instability.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: The Ripple Effect -->
+        <section id="ripple-effect" class="tile-card">
+          <h2>The Ripple Effect</h2>
+          <i class='bx bx-line-chart' style='font-size: 80px; color: #63b3ed; margin-bottom: 20px;'></i>
+          <p>
+            The economic consequences of ecosystem loss extend far beyond direct impacts, creating a ripple effect across global supply chains, financial markets, and employment.
+          </p>
+          <ul>
+            <li><strong>Supply Chain Disruptions:</strong> Ecosystem loss can severely disrupt global trade and supply chains, particularly for industries reliant on natural resources. This leads to increased costs, reduced availability of goods, and economic instability.</li>
+            <li><strong>Financial Markets:</strong> Central banks and financial institutions are increasingly recognizing ecosystem risks as systemic threats to financial stability. This includes risks related to stranded assets, credit defaults, and market volatility driven by environmental factors.</li>
+            <li><strong>Employment:</strong> Millions of jobs, especially in sectors like agriculture, fisheries, forestry, and tourism, are directly threatened by environmental degradation. This can lead to widespread unemployment and social unrest.</li>
+            <li><strong>Regional Variations:</strong> The impacts of ecosystem loss are not uniform; different economies face varying risks depending on their geographical location, economic structure, and reliance on specific ecosystem services. This necessitates tailored regional and local solutions.</li>
+          </ul>
+        </section>
+
+        <!-- Page 2: Sector-Specific Impacts - "Industries Under Threat" -->
+        <section id="sector-specific-impacts" class="tile-card">
+          <h2>Industries Under Threat</h2>
+          <i class='bx bx-industry' style='font-size: 80px; color: #2c5382; margin-bottom: 20px;'></i>
+          <p>
+            This section provides a detailed analysis of how specific industries are uniquely impacted by ecosystem degradation, offering insights into the challenges and opportunities for adaptation and transformation. From the foundational sectors like agriculture to critical urban infrastructure, the health of our natural environment underpins economic stability and growth. Understanding these intricate dependencies is vital for developing resilient strategies and fostering a sustainable future for all industries.
+          </p>
+        </section>
+
+        <!-- Section 1: Agriculture and Food Security -->
+        <section id="agriculture-food" class="tile-card">
+          <h2>Agriculture and Food Security</h2>
+          <i class='bx bx-leaf' style='font-size: 80px; color: #dd6c20; margin-bottom: 20px;'></i>
+          <p>
+            The foundation of human sustenance, agriculture, is highly vulnerable to environmental changes.
+            Ecosystem health directly influences crop yields, livestock health, and overall food system resilience.
+          </p>
+          <ul>
+            <li><strong>Pollination Crisis:</strong> The decline in pollinator populations puts an estimated $235 billion in annual pollination services at risk, directly threatening the production of many fruits, vegetables, and nuts essential for global food security.</li>
+            <li><strong>Soil Degradation:</strong> Approximately 24 billion tons of fertile soil are lost annually due to erosion, deforestation, and unsustainable farming practices. This reduces agricultural productivity and increases reliance on costly synthetic fertilizers.</li>
+            <li><strong>Climate Vulnerability:</strong> Extreme weather events, including prolonged droughts, intense floods, and unpredictable temperature swings, are increasingly threatening crop yields and livestock, leading to food shortages and price volatility.</li>
+            <li><strong>Genetic Diversity Loss:</strong> The disappearance of wild crop relatives and traditional crop varieties reduces the genetic pool available for developing resilient and disease-resistant crops, crucial for adapting to future environmental challenges.</li>
+          </ul>
+        </section>
+
+        <!-- Section 2: Water Security and Management -->
+        <section id="water-security" class="tile-card">
+          <h2>Water Security and Management</h2>
+          <i class='bx bx-water' style='font-size: 80px; color: #4a5568; margin-bottom: 20px;'></i>
+          <p>
+            Access to clean and sufficient water is fundamental for all life and economic activity.
+            Ecosystem degradation directly impacts water cycles, quality, and availability, posing significant challenges for communities and industries.
+          </p>
+          <ul>
+            <li><strong>Freshwater Scarcity:</strong> Deforestation, wetland destruction, and pollution reduce natural water filtration and storage capacities, leading to increased freshwater scarcity in many regions globally.</li>
+            <li><strong>Water Quality Decline:</strong> Runoff from agricultural and industrial activities, coupled with inadequate wastewater treatment, contaminates water sources, impacting human health, aquatic ecosystems, and increasing water treatment costs.</li>
+            <li><strong>Flood and Drought Risk:</strong> The loss of natural infrastructure like forests and wetlands, which act as natural sponges, exacerbates the risks and severity of both floods and droughts, leading to significant economic damages and displacement.</li>
+            <li><strong>Hydropower Vulnerability:</strong> Sedimentation from eroded lands and altered river flows due to ecosystem degradation can significantly impact the efficiency and longevity of hydropower facilities, affecting energy security.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Health and Wellbeing -->
+        <section id="health-wellbeing" class="tile-card">
+          <h2>Health and Wellbeing</h2>
+          <i class='bx bx-heart' style='font-size: 80px; color: #48bb78; margin-bottom: 20px;'></i>
+          <p>
+            The health of ecosystems is intrinsically linked to human health and well-being.
+            Environmental degradation can lead to new diseases, nutritional deficiencies, and diminished mental health.
+          </p>
+          <ul>
+            <li><strong>Disease Emergence:</strong> Habitat loss and fragmentation bring wildlife and human populations into closer contact, increasing the risk of zoonotic disease emergence and transmission, as seen with recent pandemics.</li>
+            <li><strong>Nutritional Deficiencies:</strong> Biodiversity loss, particularly the reduction in variety of crops, wild foods, and marine life, can lead to less diverse diets and increased nutritional deficiencies in vulnerable populations.</li>
+            <li><strong>Mental Health Impacts:</strong> Reduced access to green spaces and nature, coupled with the psychological stress of environmental crises, negatively impacts mental health and overall well-being.</li>
+            <li><strong>Air Quality Degradation:</strong> The loss of forests and other natural vegetation, which act as natural air filters, contributes to increased air pollution, leading to respiratory illnesses and other health problems in urban and industrial areas.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4: Urban Development and Infrastructure -->
+        <section id="urban-development" class="tile-card">
+          <h2>Urban Development and Infrastructure</h2>
+          <i class='bx bx-city' style='font-size: 80px; color: #805ad5; margin-bottom: 20px;'></i>
+          <p>
+            Rapid urbanization and infrastructure development often come at the cost of natural ecosystems, leading to increased vulnerability to environmental hazards and reduced quality of life in cities.
+          </p>
+          <ul>
+            <li><strong>Infrastructure Damage:</strong> Extreme weather events, intensified by climate change and ecosystem loss (e.g., coastal erosion due to mangrove destruction), cause significant damage to urban infrastructure, leading to costly repairs and disruptions.</li>
+            <li><strong>Green Space Loss:</strong> The expansion of urban areas often results in the loss of vital green spaces, reducing urban biodiversity, limiting recreational opportunities, and diminishing natural cooling and air purification services.</li>
+            <li><strong>Heat Island Effect:</strong> Lack of natural cooling provided by green spaces and water bodies contributes to the urban heat island effect, increasing urban temperatures and energy consumption for air conditioning.</li>
+            <li><strong>Wastewater Management:</strong> Natural filtration systems, such as wetlands, are often destroyed or degraded by urban development, placing increased strain on artificial wastewater treatment facilities and leading to pollution of water bodies.</li>
+          </ul>
+        </section>
+
+        <!-- Page 3: The Path Forward - "Solutions and Opportunities" -->
+        <section id="path-forward" class="tile-card">
+          <h2>The Path Forward: Solutions and Opportunities</h2>
+          <i class='bx bx-trending-up' style='font-size: 80px; color: #d69e2e; margin-bottom: 20px;'></i>
+          <p>
+            Addressing ecosystem degradation requires a multifaceted approach that integrates conservation, sustainable practices, and innovative solutions across all sectors.
+            This section explores the pathways towards a nature-positive economy.
+          </p>
+        </section>
+
+        <!-- Section 1: Solutions and Opportunities -->
+        <section id="solutions-opportunities" class="tile-card">
+          <h2>Solutions and Opportunities</h2>
+          <i class='bx bx-bulb' style='font-size: 80px; color: #ed8936; margin-bottom: 20px;'></i>
+          <p>
+            The transition to a sustainable future presents significant economic opportunities.
+            By investing in nature and adopting regenerative practices, we can foster economic growth while restoring ecological balance.
+          </p>
+          <ul>
+            <li><strong>Investing in Nature:</strong> The economic case for conservation and restoration is compelling. Investments in natural capital yield high returns through enhanced ecosystem services, disaster risk reduction, and new economic opportunities.</li>
+            <li><strong>Circular Economy:</strong> Shifting from a linear "take-make-dispose" model to a circular economy reduces resource consumption and waste, minimizing environmental impact and creating new business models focused on reuse, repair, and recycling.</li>
+            <li><strong>Sustainable Finance:</strong> Mainstreaming nature into financial decisions involves integrating environmental risks and opportunities into investment strategies, leading to the growth of green bonds, impact investing, and nature-based solutions financing.</li>
+            <li><strong>Technological Innovation:</strong> Leveraging cutting-edge technologies, such as remote sensing, AI, and biotechnology, can significantly enhance monitoring, restoration efforts, and sustainable land management practices.</li>
+          </ul>
+        </section>
+
+        <!-- Page 4: Global Action - "A Collective Call to Action" -->
+        <section id="global-action" class="tile-card">
+          <h2>Global Action: A Collective Call to Action</h2>
+          <i class='bx bx-world' style='font-size: 80px; color: #f6ad55; margin-bottom: 20px;'></i>
+          <p>
+            Addressing the global challenge of ecosystem degradation requires unprecedented international cooperation, robust policy frameworks, and the active participation of all stakeholders.
+          </p>
+        </section>
+
+        <!-- Section 1: Policy and Governance -->
+        <section id="policy-governance" class="tile-card">
+          <h2>Policy and Governance</h2>
+          <i class='bx bx-gavel' style='font-size: 80px; color: #ecc94b; margin-bottom: 20px;'></i>
+          <p>
+            Strong policies and effective governance are essential to create an enabling environment for nature conservation and sustainable development.
+          </p>
+          <ul>
+            <li><strong>International Agreements:</strong> Conventions like the CBD (Convention on Biological Diversity), UNCCD (United Nations Convention to Combat Desertification), and UNFCCC (United Nations Framework Convention on Climate Change) play crucial roles in setting global targets and fostering international cooperation for environmental protection.</li>
+            <li><strong>National Strategies:</strong> Integrating biodiversity and ecosystem services into national development plans, economic policies, and sectoral strategies is vital for effective implementation and achieving sustainable outcomes.</li>
+            <li><strong>Indigenous Knowledge:</strong> Recognizing and integrating the traditional knowledge and practices of indigenous peoples and local communities, who have long been stewards of biodiversity, is crucial for effective conservation.</li>
+            <li><strong>Legal Frameworks:</strong> Strengthening environmental protection laws, ensuring their enforcement, and establishing clear property rights and land tenure systems are fundamental for preventing degradation and promoting sustainable land use.</li>
+          </ul>
+        </section>
+
+        <!-- Section 2: Business and Innovation -->
+        <section id="business-innovation" class="tile-card">
+          <h2>Business and Innovation</h2>
+          <i class='bx bx-briefcase' style='font-size: 80px; color: #4299e1; margin-bottom: 20px;'></i>
+          <p>
+            Businesses have a critical role to play in driving nature-positive change through sustainable practices, responsible investments, and innovative solutions.
+          </p>
+          <ul>
+            <li><strong>Nature-Positive Business Models:</strong> Companies are increasingly adopting business models that aim to halt and reverse nature loss, focusing on regenerative agriculture, sustainable sourcing, and ecosystem restoration initiatives.</li>
+            <li><strong>Impact Measurement:</strong> Developing and utilizing robust tools for assessing environmental footprint and impact allows businesses to identify risks, measure progress, and communicate their sustainability performance transparently.</li>
+            <li><strong>Green Technologies:</strong> Investment in and deployment of green technologies, such as renewable energy, sustainable waste management, and precision agriculture, are key for reducing environmental impact and fostering sustainable land management.</li>
+            <li><strong>Corporate Responsibility:</strong> A growing number of corporations are shifting towards regenerative practices, integrating environmental and social considerations into their core operations and supply chains, beyond mere compliance.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Community Engagement -->
+        <section id="community-engagement" class="tile-card">
+          <h2>Community Engagement</h2>
+          <i class='bx bx-group' style='font-size: 80px; color: #9f7aea; margin-bottom: 20px;'></i>
+          <p>
+            Local communities are at the forefront of conservation efforts. Empowering them through participation, education, and support is vital for long-term success.
+          </p>
+          <ul>
+            <li><strong>Local Conservation:</strong> Grassroots initiatives led by local communities often have the most direct and profound impact on conservation outcomes, leveraging local knowledge and fostering a sense of ownership.</li>
+            <li><strong>Citizen Science:</strong> Public participation in data collection and monitoring programs empowers individuals to contribute to scientific research and provides valuable data for conservation efforts and policy-making.</li>
+            <li><strong>Education and Awareness:</strong> Building a nature-literate society through environmental education and public awareness campaigns is crucial for fostering a deeper understanding of ecosystem values and promoting sustainable behaviors.</li>
+            <li><strong>Youth Involvement:</strong> Empowering the next generation of environmental leaders through educational programs, mentorship, and opportunities for active participation ensures a sustained commitment to conservation and sustainable development.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4: Looking Forward -->
+        <section id="looking-forward" class="tile-card">
+          <h2>Looking Forward</h2>
+          <i class='bx bx-time-five' style='font-size: 80px; color: #d53f8c; margin-bottom: 20px;'></i>
+          <p>
+            The coming years represent a critical window for action. Collective commitment and integrated approaches are essential to achieve a nature-positive future.
+          </p>
+          <ul>
+            <li><strong>2030 Targets:</strong> The current decade is critical for accelerating ecosystem restoration efforts to meet ambitious global targets, including those outlined in the UN Decade on Ecosystem Restoration.</li>
+            <li><strong>Integrated Approaches:</strong> Effective solutions require combining climate action with biodiversity conservation, recognizing their interconnectedness and leveraging synergies for greater impact.</li>
+            <li><strong>Stakeholder Collaboration:</strong> Achieving large-scale change necessitates strong collaboration among governments, businesses, civil society, and local communities, fostering partnerships that drive innovation and implementation.</li>
+            <li><strong>Individual Action:</strong> Every consumer and citizen has a role to play through conscious consumption choices, advocating for sustainable policies, and participating in local conservation initiatives.</li>
+          </ul>
+        </section>
+
+        <!-- Additional Website Elements -->
+        <section id="additional-elements" class="tile-card">
+          <h2>Additional Website Elements</h2>
+          <i class='bx bx-extension' style='font-size: 80px; color: #f6ad55; margin-bottom: 20px;'></i>
+          <p>
+            To enhance user engagement and provide comprehensive resources, the website will feature interactive tools, compelling data visualizations, and a rich resource library.
+          </p>
+        </section>
+
+        <!-- Interactive Features -->
+        <section id="interactive-features" class="tile-card">
+          <h2>Interactive Features</h2>
+          <i class='bx bx-mouse' style='font-size: 80px; color: #ecc94b; margin-bottom: 20px;'></i>
+          <p>
+            These interactive tools will allow users to explore data, visualize impacts, and understand conservation efforts in a dynamic way.
+          </p>
+          <ul>
+            <li><strong>Economic Impact Calculator:</strong> A tool that allows users to estimate the local economic value of various ecosystem services in their region, highlighting the tangible benefits of nature.</li>
+            <li><strong>Global Action Map:</strong> An interactive map showcasing conservation initiatives, restoration projects, and protected areas worldwide, allowing users to explore efforts by region or ecosystem type.</li>
+            <li><strong>Corporate Commitment Tracker:</strong> A database tracking nature-related commitments made by corporations, providing transparency and accountability on their environmental pledges and progress.</li>
+            <li><strong>Policy Timeline:</strong> An interactive timeline illustrating major environmental policy milestones, international agreements, and legislative changes related to land conservation and biodiversity.</li>
+          </ul>
+        </section>
+
+        <!-- Data Visualizations -->
+        <section id="data-visualizations" class="tile-card">
+          <h2>Data Visualizations</h2>
+          <i class='bx bx-chart' style='font-size: 80px; color: #4299e1; margin-bottom: 20px;'></i>
+          <p>
+            Visual representations of complex data will make the economic and ecological impacts more accessible and understandable to a broad audience.
+          </p>
+          <ul>
+            <li><strong>Economic Loss Infographics:</strong> Visually compelling infographics illustrating the monetary value of ecosystem service losses across different sectors and regions, making abstract figures more concrete.</li>
+            <li><strong>Sector Risk Assessment:</strong> Interactive charts and graphs showing industry vulnerability levels to ecosystem degradation, helping businesses and policymakers understand specific risks.</li>
+            <li><strong>Funding Flow Diagrams:</strong> Visualizations depicting how conservation finance moves globally, from donors to projects, highlighting investment gaps and opportunities.</li>
+            <li><strong>Progress Indicators:</strong> Dashboards and charts tracking progress toward key 2030 targets for biodiversity, land restoration, and sustainable development, providing a clear overview of global efforts.</li>
+          </ul>
+        </section>
+
+        <!-- Resource Library -->
+        <section id="resource-library" class="tile-card">
+          <h2>Resource Library</h2>
+          <i class='bx bx-book-open' style='font-size: 80px; color: #9f7aea; margin-bottom: 20px;'></i>
+          <p>
+            A comprehensive collection of research, policy documents, and case studies will serve as a valuable resource for academics, policymakers, and practitioners.
+          </p>
+          <ul>
+            <li><strong>Research Reports:</strong> A curated collection of academic studies, scientific papers, and expert analyses on ecosystem economics, biodiversity, and land degradation.</li>
+            <li><strong>Policy Documents:</strong> Access to key government strategies, action plans, and international policy frameworks related to environmental conservation and sustainable land management.</li>
+            <li><strong>Case Studies:</strong> Detailed examples of successful interventions, nature-based solutions, and conservation projects from around the world, highlighting best practices and lessons learned.</li>
+            <li><strong>Tools and Frameworks:</strong> Practical resources, methodologies, and guidelines for implementing solutions, conducting environmental assessments, and integrating natural capital into decision-making.</li>
+          </ul>
+        </section>
+
+        <!-- Call-to-Action Elements -->
+        <section id="call-to-action" class="tile-card">
+          <h2>Call-to-Action Elements</h2>
+          <i class='bx bx-target-lock' style='font-size: 80px; color: #d53f8c; margin-bottom: 20px;'></i>
+          <p>
+            Clear and actionable steps for different stakeholders to contribute to a nature-positive future.
+          </p>
+          <ul>
+            <li><strong>For Businesses:</strong> Practical steps and frameworks for integrating natural capital into business operations, supply chain management, and investment decisions.</li>
+            <li><strong>For Governments:</strong> Policy recommendations, implementation guides, and best practices for developing and enforcing effective environmental regulations and conservation programs.</li>
+            <li><strong>For Individuals:</strong> Tangible personal actions that citizens can take to support ecosystem conservation, reduce their environmental footprint, and advocate for sustainable practices.</li>
+            <li><strong>For Investors:</strong> Information on opportunities in nature-positive investments, green finance, and sustainable funds that contribute to environmental restoration and conservation.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="section footer">
+        <div class="footer-cont-main">
+            <div class="footer-logo">
+                <img src="img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
+                        <img src="img/facebook-f.svg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
+                        <img src="img/x-twitter.svg" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
+                        <img src="img/youtube.svg" alt="YouTube" class="youtube">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Link Section: Website Pages -->
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Website Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="table.html">Table</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Link Section: Useful External Links -->
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="https://www.globalgoals.org/terms-conditions/">Conditions</a></li>
+                        <li><a href="https://www.globalgoals.org/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://www.globalgoals.org/cookies/">Cookies</a></li>
+                        <li><a href="https://www.globalgoals.org/anti-corruption/">Anti Corruption</a></li>
+                        <li><a href="https://www.globalgoals.org/asset-licence/">Asset License</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Link Section: Project Content Pages -->
+            <div class="footer-cont">
+                <div class="cont-pages">
+                    <h4>Content Pages</h4>
+                    <ul>
+                      <li><a href="content_ST1.html">Content 01</a></li>
+                      <li><a href="content_ST2.html">Content 02</a></li>
+                      <li><a href="content_ST3.html">Content 03</a></li>
+                      <li><a href="content_ST4.html">Content 04</a></li>
+                      <li><a href="content_ST2,2.html">Content 05</a></li>
+                      <li><a href="content_ST3,3.html">Content 06</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Link Section: Individual Student Pages -->
+            <div class="footer-cont">
+                <div class="our-team">
+                    <h4>Student Pages</h4>
+                    <ul>
+                        <li><a href="pageEditor_ST1.html">Student 01</a></li>
+                        <li><a href="pageEditor_ST2.html">Student 02</a></li>
+                        <li><a href="pageEditor_ST3.html">Student 03</a></li>
+                        <li><a href="pageEditor_ST4.html">Student 04</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="section footer-2">
+            <div class="copyright">
+                <div class="copy-cont">
+                    <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
+                        <b>Design By Group 5</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.side-navbar a');
+
+        function activateNavLink() {
+          let current = '';
+
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            // Adjust offset for sticky header and padding
+            if (pageYOffset >= sectionTop - 150 && pageYOffset < sectionTop + sectionHeight - 150) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+              link.classList.add('active');
+            }
+          });
+        }
+
+        // Add scroll event listener to update active link
+        window.addEventListener('scroll', activateNavLink);
+
+        // Also activate on initial load
+        activateNavLink();
+      });
+    </script>
+  </body>
+</html>
