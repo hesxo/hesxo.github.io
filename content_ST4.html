@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata and external resources -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hasal Dharmagunawardana">
+    <meta name="description"
+        content="Explore SDG 15: Life on Land. Protect, restore, and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.">
+    <meta name="keywords"
+        content="SDG 15, Life on Land, Sustainable Development Goals, Ecosystem Protection, Forest Conservation, Biodiversity, Desertification Combat, Sustainable Forestry">
+    <title>Life on Land</title>
+    <link rel="icon" type="image/svg+xml" href="./img/favpng_8f8cd75d77ca8c919fc57950f5169416.png">
+    <link rel="stylesheet" href="global.css">
+
+</head>
+
+<body>
+    <!-- Page Header with navigation bar -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <!-- Site Logo -->
+                <a href="splash.html" class="logo">Eco<span>Xo</span></a>
+
+                <!-- Navigation Menu for Desktop -->
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="volunteer.html" class="nav-link">Volunteer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="table.html" class="nav-link active">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sitemap.html" class="nav-link">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html" class="nav-link">Feedback</a>
+                    </li>
+    
+                </ul>
+
+                <!-- Profile Button -->
+                <a href="profile.html" class="profile-btn">
+                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+                </a>
+    
+    
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+    
+            <!-- Mobile Navigation Links -->
+            <div class="mobile-nav" id="mobileNav">
+                <ul class="mobile-nav-menu">
+                    <li><a href="home.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="volunteer.html" class="mobile-nav-link">Volunteer</a></li>
+                    <li><a href="table.html" class="mobile-nav-link active">Table</a></li>
+                    <li><a href="team.html" class="mobile-nav-link">Team</a></li>
+                    <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
+                    <li><a href="feedback.html" class="mobile-nav-link">Feedback</a></li>
+                </ul>
+                <a href="profile.html" class="mobile-profile-btn" style="display: flex; align-items: center;">
+                    <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Side Navigation */
+        .sidenav {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2c3e50;
+            overflow-y: auto;
+            padding-top: 20px;
+            z-index: 1000;
+        }
+
+        .sidenav .logo {
+            color: #27ae60;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 20px 20px;
+            border-bottom: 1px solid #34495e;
+            margin-bottom: 20px;
+        }
+
+        .sidenav a {
+            display: block;
+            color: #bdc3c7;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        .sidenav a:hover {
+            background-color: #34495e;
+            color: #27ae60;
+            border-left-color: #27ae60;
+        }
+
+        .sidenav a.active {
+            background-color: #27ae60;
+            color: white;
+            border-left-color: #2ecc71;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            padding: 40px 60px;
+            max-width: none;
+            width: calc(100% - 250px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ecf0f1;
+            padding: 60px 0;
+            margin: -40px -60px 40px;
+            border-bottom: 4px solid #27ae60;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 4px solid #27ae60;
+            padding-left: 20px;
+        }
+
+        .section h3 {
+            color: #27ae60;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Simple Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .card h4 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            background-color: #f8f9fa;
+            padding: 40px 60px;
+            margin: 40px -60px;
+        }
+
+        .success-stories h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .success-card {
+            background-color: white;
+            padding: 20px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .success-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .success-card p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Call to Action */
+        .cta {
+            background-color: #27ae60;
+            color: white;
+            padding: 40px 60px;
+            margin: 40px -60px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 20px;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .cta p {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .action-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .action-item {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .action-item h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .action-item p {
+            color: white;
+            margin-bottom: 0;
+        }
+
+        /* Go to Top Button */
+        .go-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 15px 18px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+            display: none;
+        }
+
+        .go-top:hover {
+            background-color: #2c3e50;
+        }
+
+        .go-top.show {
+            display: block;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidenav {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            .sidenav .logo {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #34495e;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+
+            .sidenav a {
+                padding: 8px 15px;
+                margin: 5px;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+
+            .sidenav a:hover,
+            .sidenav a.active {
+                border-left: none;
+                border-bottom-color: #27ae60;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .hero {
+                padding: 40px 20px;
+                margin: -20px -20px 30px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .success-stories,
+            .cta {
+                padding: 30px 20px;
+                margin: 30px -20px;
+            }
+
+            .success-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Eco<span>Xo</span></a>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="table.html" class="nav-link">Table</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#content" class="nav-link">Content</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="profile-btn" onclick="handleProfileClick()">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="index.html#about" class="mobile-nav-link">About Us</a></li>
+                <li><a href="table.html" class="mobile-nav-link">Table</a></li>
+                <li><a href="index.html#content" class="mobile-nav-link">Content</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-profile-btn" onclick="handleProfileClick()">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+            <!-- Side Navigation -->
+            <div class="sidenav">
+                <div class="logo">Life on Land</div>
+                <a href="#hero">Home</a>
+                <a href="#conservation">Conservation</a>
+                <a href="#management">Management</a>
+                <a href="#policy">Policy</a>
+                <a href="#technology">Technology</a>
+                <a href="#community">Community</a>
+                <a href="#success">Success Stories</a>
+                <a href="#cta">Get Involved</a>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Hero Section -->
+                <section id="hero" class="hero">
+                    <h1>From Crisis to Conservation</h1>
+                    <p>Innovative solutions are being implemented worldwide to protect, restore, and sustainably manage our land-based ecosystems. From conservation strategies to cutting-edge technology, discover how we can ensure a thriving planet for future generations.</p>
+                </section>
+
+                <!-- Conservation & Protection -->
+                <section id="conservation" class="section">
+                    <h2>Conservation & Protection Strategies</h2>
+                    
+                    <h3>Protected Areas & Habitat Restoration</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>National Parks & Wildlife Reserves</h4>
+                            <p>Safe havens for endangered species and natural ecosystem processes</p>
+                        </div>
+                        <div class="card">
+                            <h4>Transboundary Conservation</h4>
+                            <p>International collaboration through peace parks and cross-border protected areas</p>
+                        </div>
+                        <div class="card">
+                            <h4>Community-Managed Areas</h4>
+                            <p>Local communities stewarding their traditional lands with proven conservation success</p>
+                        </div>
+                    </div>
+
+                    <h3>Wildlife Protection</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Anti-Poaching Programs</h4>
+                            <p>Combining advanced technology with community engagement to protect endangered species</p>
+                        </div>
+                        <div class="card">
+                            <h4>Wildlife Corridors</h4>
+                            <p>Creating pathways for safe animal movement between protected areas</p>
+                        </div>
+                        <div class="card">
+                            <h4>Species Recovery</h4>
+                            <p>Captive breeding and reintroduction programs for critically endangered species</p>
+                        </div>
+                    </div>
+
+                    <h3>Restoration Projects</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Forest Restoration</h4>
+                            <p>Large-scale reforestation with native species, soil rehabilitation, and water cycle restoration</p>
+                        </div>
+                        <div class="card">
+                            <h4>Wetland Recovery</h4>
+                            <p>Restoring natural water filters and biodiversity hotspots</p>
+                        </div>
+                        <div class="card">
+                            <h4>Grassland Rehabilitation</h4>
+                            <p>Preventing erosion and restoring carbon-storing root systems</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sustainable Land Management -->
+                <section id="management" class="section">
+                    <h2>Sustainable Land Management</h2>
+                    
+                    <h3>Agricultural Innovation</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Agroforestry</h4>
+                            <p>Integrating trees into farming systems for improved soil health and biodiversity</p>
+                        </div>
+                        <div class="card">
+                            <h4>Organic Farming</h4>
+                            <p>Eliminating synthetic chemicals while supporting beneficial wildlife</p>
+                        </div>
+                        <div class="card">
+                            <h4>Precision Agriculture</h4>
+                            <p>Using technology to optimize resource use and minimize environmental impact</p>
+                        </div>
+                    </div>
+
+                    <h3>Responsible Forestry</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Selective Logging</h4>
+                            <p>Maintaining forest structure while harvesting timber sustainably</p>
+                        </div>
+                        <div class="card">
+                            <h4>Forest Certification</h4>
+                            <p>Market-based incentives through FSC and PEFC standards</p>
+                        </div>
+                        <div class="card">
+                            <h4>Community Forest Management</h4>
+                            <p>Local stewardship with traditional knowledge integration</p>
+                        </div>
+                    </div>
+
+                    <h3>Fighting Desertification</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Soil Conservation</h4>
+                            <p>Preventing erosion through contour farming, terracing, and cover crops</p>
+                        </div>
+                        <div class="card">
+                            <h4>Drought-Resistant Crops</h4>
+                            <p>Varieties that thrive with less water and prevent soil degradation</p>
+                        </div>
+                        <div class="card">
+                            <h4>Water Harvesting</h4>
+                            <p>Capturing rainwater for ecosystem restoration and agriculture</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Policy & Governance -->
+                <section id="policy" class="section">
+                    <h2>Policy & Governance Solutions</h2>
+                    
+                    <h3>International Frameworks</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>CITES</h4>
+                            <p>Regulating wildlife trade to prevent species overexploitation</p>
+                        </div>
+                        <div class="card">
+                            <h4>Convention on Biological Diversity</h4>
+                            <p>Comprehensive biodiversity conservation framework</p>
+                        </div>
+                        <div class="card">
+                            <h4>UN Climate Framework</h4>
+                            <p>Addressing climate-ecosystem connections through nature-based solutions</p>
+                        </div>
+                    </div>
+
+                    <h3>National & Local Action</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Environmental Protection Laws</h4>
+                            <p>Legal foundations for ecosystem conservation</p>
+                        </div>
+                        <div class="card">
+                            <h4>Land Use Planning</h4>
+                            <p>Preventing habitat fragmentation through smart development</p>
+                        </div>
+                        <div class="card">
+                            <h4>Indigenous Rights</h4>
+                            <p>Recognizing traditional knowledge and territorial stewardship</p>
+                        </div>
+                    </div>
+
+                    <h3>Economic Incentives</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Payment for Ecosystem Services</h4>
+                            <p>Compensating landowners for conservation activities</p>
+                        </div>
+                        <div class="card">
+                            <h4>Green Financing</h4>
+                            <p>Mobilizing private capital through green bonds and sustainable investments</p>
+                        </div>
+                        <div class="card">
+                            <h4>Carbon Markets</h4>
+                            <p>Creating economic value for forest conservation and restoration</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technology & Innovation -->
+                <section id="technology" class="section">
+                    <h2>Technology & Innovation</h2>
+                    
+                    <h3>Monitoring & Data</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Satellite Systems</h4>
+                            <p>Real-time tracking of deforestation, fires, and ecosystem health</p>
+                        </div>
+                        <div class="card">
+                            <h4>Artificial Intelligence</h4>
+                            <p>Analyzing wildlife data to optimize conservation strategies</p>
+                        </div>
+                        <div class="card">
+                            <h4>Environmental DNA</h4>
+                            <p>Detecting species presence without direct observation</p>
+                        </div>
+                    </div>
+
+                    <h3>Sustainable Technologies</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Renewable Energy</h4>
+                            <p>Reducing pressure on ecosystems through clean power alternatives</p>
+                        </div>
+                        <div class="card">
+                            <h4>Waste Management</h4>
+                            <p>Preventing pollution while recovering valuable materials</p>
+                        </div>
+                        <div class="card">
+                            <h4>Water Treatment</h4>
+                            <p>Ensuring clean water for both human needs and ecosystem health</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community Solutions -->
+                <section id="community" class="section">
+                    <h2>Community-Based Solutions</h2>
+                    
+                    <h3>Indigenous Knowledge</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Traditional Practices</h4>
+                            <p>Sustainable resource management developed over millennia</p>
+                        </div>
+                        <div class="card">
+                            <h4>Land Rights Protection</h4>
+                            <p>Supporting indigenous peoples as effective biodiversity guardians</p>
+                        </div>
+                        <div class="card">
+                            <h4>Cultural Integration</h4>
+                            <p>Combining traditional wisdom with modern conservation science</p>
+                        </div>
+                    </div>
+
+                    <h3>Education & Engagement</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Environmental Education</h4>
+                            <p>Building ecological understanding across all age groups</p>
+                        </div>
+                        <div class="card">
+                            <h4>Citizen Science</h4>
+                            <p>Engaging volunteers in conservation monitoring and research</p>
+                        </div>
+                        <div class="card">
+                            <h4>Youth Leadership</h4>
+                            <p>Empowering young people in environmental decision-making</p>
+                        </div>
+                    </div>
+
+                    <h3>Collaborative Partnerships</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Multi-Stakeholder Initiatives</h4>
+                            <p>Bringing together government, business, and communities</p>
+                        </div>
+                        <div class="card">
+                            <h4>Corporate Sustainability</h4>
+                            <p>Leveraging business resources for conservation impact</p>
+                        </div>
+                        <div class="card">
+                            <h4>Public-Private Partnerships</h4>
+                            <p>Combining resources for large-scale conservation projects</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Success Stories -->
+                <section id="success" class="success-stories">
+                    <h2>Success Stories Highlights</h2>
+                    
+                    <h3>Global Examples</h3>
+                    <div class="success-grid">
+                        <div class="success-card">
+                            <h3>Rwanda</h3>
+                            <p>Landscape restoration transforming degraded areas into thriving ecosystems</p>
+                        </div>
+                        <div class="success-card">
+                            <h3>Mexico</h3>
+                            <p>Community-based forest management protecting biodiversity while supporting livelihoods</p>
+                        </div>
+                        <div class="success-card">
+                            <h3>Namibia</h3>
+                            <p>Expanding protected areas through innovative conservation models</p>
+                        </div>
+                        <div class="success-card">
+                            <h3>Brazil</h3>
+                            <p>Sustainable agriculture balancing production with ecosystem protection</p>
+                        </div>
+                    </div>
+
+                    <h3>Key Achievements</h3>
+                    <div class="success-grid">
+                        <div class="success-card">
+                            <h3>Restoration</h3>
+                            <p>Millions of hectares restored through reforestation programs</p>
+                        </div>
+                        <div class="success-card">
+                            <h3>Species Recovery</h3>
+                            <p>Endangered species populations recovering through targeted protection</p>
+                        </div>
+                        <div class="success-card">
+                            <h3>Community Benefits</h3>
+                            <p>Communities benefiting economically from conservation initiatives</p>
+                        </div>
+                        <div class="success-card">
+                            <h3>Technology</h3>
+                            <p>Technology enabling unprecedented ecosystem monitoring and protection</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section id="cta" class="cta">
+                    <h2>Get Involved</h2>
+                    <p>The solutions exist—from proven conservation strategies to innovative technologies. Success requires action at every level:</p>
+                    
+                    <div class="action-items">
+                        <div class="action-item">
+                            <h3>Individuals</h3>
+                            <p>Support sustainable products, participate in local conservation</p>
+                        </div>
+                        <div class="action-item">
+                            <h3>Communities</h3>
+                            <p>Engage in ecosystem stewardship and traditional knowledge sharing</p>
+                        </div>
+                        <div class="action-item">
+                            <h3>Businesses</h3>
+                            <p>Invest in sustainable practices and ecosystem restoration</p>
+                        </div>
+                        <div class="action-item">
+                            <h3>Governments</h3>
+                            <p>Implement protective policies and international cooperation</p>
+                        </div>
+                    </div>
+
+                    <h3>The Path Forward</h3>
+                    <p>We have the knowledge, tools, and examples needed to protect life on land. What remains is the collective will to implement these solutions at the scale and speed required to address urgent ecosystem challenges.</p>
+                    <p><strong>Together, we can ensure a thriving planet for future generations.</strong></p>
+                </section>
+            </div>
+
+            <!-- Go to Top Button -->
+            <button class="go-top" onclick="scrollToTop()" title="Go to top">↑</button>
+
+            <script>
+                // Go to top button functionality
+                window.addEventListener('scroll', function() {
+                    const goTopButton = document.querySelector('.go-top');
+                    if (window.pageYOffset > 300) {
+                        goTopButton.classList.add('show');
+                    } else {
+                        goTopButton.classList.remove('show');
+                    }
+                });
+
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('.sidenav a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 20,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+
+                // Active navigation highlighting
+                window.addEventListener('scroll', function() {
+                    const sections = document.querySelectorAll('.section, .hero, .success-stories, .cta');
+                    const navLinks = document.querySelectorAll('.sidenav a');
+                    
+                    let current = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        if (window.pageYOffset >= sectionTop - 100) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+            </script>
+    </main>
+
+    <footer class="section footer">
+        <div class="footer-cont-main">
+            <div class="footer-logo">
+                <img src="img/sustainable-development-goals-un-seeklogo.png" alt="Footer Logo" class="footer-img">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
+                        <img src="img/facebook-f.svg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
+                        <img src="img/x-twitter.svg" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
+                        <img src="img/youtube.svg" alt="YouTube" class="youtube">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Website Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="https://www.globalgoals.org/terms-conditions/">Conditions</a></li>
+                        <li><a href="https://www.globalgoals.org/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://www.globalgoals.org/cookies/">Cookies</a></li>
+                        <li><a href="https://www.globalgoals.org/anti-corruption/">Anti Corruption</a></li>
+                        <li><a href="https://www.globalgoals.org/asset-licence/">Asset License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="cont-pages">
+                    <h4>Content Pages</h4>
+                    <ul>
+                        <li><a href="content_ST1.html">Content 01</a></li>
+                        <li><a href="Content_ST2.html">Content 02</a></li>
+                        <li><a href="content_ST3.html">Content 03</a></li>
+                        <li><a href="content_ST4.html">Content 04</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="our-team">
+                    <h4>Student Pages</h4>
+                    <ul>
+                        <li><a href="pageEditor_ST1.html">Student 01</a></li>
+                        <li><a href="pageEditor_ST2.html">Student 02</a></li>
+                        <li><a href="pageEditor_ST3.html">Student 03</a></li>
+                        <li><a href="pageEditor_ST4.html">Student 04</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section footer-2">
+            <div class="copyright">
+                <div class="copy-cont">
+                    <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
+                        <b>Design By Group I5</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+</body>
+</html>
