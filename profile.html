@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life on Land</title>
+    <link rel="icon" type="image/svg+xml" href="img/x-twitter.svg">
+    <link rel="stylesheet" href="global.css">
+
+    <style>
+        :root {
+            --primary: #278f52;
+            --primary-dark: #125712 ; 
+            --secondary: #1e6e3d;
+            --success: #73e498;
+            --gray-50: #dffde9e0;
+            --gray-100: #b1f5bb;
+            --gray-200: #bff8d7;
+            --gray-300: #b6ffce;
+            --gray-600: #000000;
+            --gray-700: #273449;
+            --radius: 12px;
+            --radius-sm: 6px;
+            --radius-lg: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--gray-100) 0%, #e0e7ff 100%);
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 300px;
+            border-radius: 100%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: #dfc9b9;
+        }
+
+        .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-name { font-size: 24px; font-weight: bold; margin-bottom: 8px; }
+        .profile-title { color: #000000; margin-bottom: 16px; }
+        .profile-description { color: #e0e7ff; font-size: 14px; margin-bottom: 24px; line-height: 1.5; }
+        .profile-details { display: flex; flex-direction: column; gap: 12px; }
+        .profile-row { display: flex; justify-content: space-between; align-items: center; }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+        }
+
+        .badge-available { background: var(--success); }
+
+        .skills-title, .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--gray-700);
+        }
+
+        .skill-item { margin-bottom: 16px; }
+        .skill-header { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
+        .skill-name { color: var(--gray-700); }
+        .skill-percentage { color: var(--gray-600); }
+
+        .progress-bar {
+            width: 100%;
+            height: 7px;
+            background: var(--gray-100);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--secondary);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .main-content { display: grid; gap: 24px; }
+        .content-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .icon-container {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .icon-purple { background: #f3e8ff; }
+        .icon-green { background: #dcfce7; }
+        .icon-red { background: #fef2f2; }
+        .icon-blue { background: #dbeafe; }
+
+        .goal-item, .stat-box {
+            padding: 12px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            margin-bottom: 12px;
+        }
+
+        .goal-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .goal-content { display: flex; align-items: center; }
+        .goal-number { font-size: 14px; font-weight: 500; color: var(--gray-700); margin-right: 8px; }
+        .goal-text, .goal-status { font-size: 14px; color: var(--gray-600); }
+        .goal-status { font-size: 12px; }
+
+        .availability-banner {
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 16px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 16px;
+        }
+
+        .availability-title { font-weight: 500; margin-bottom: 4px; }
+        .availability-subtitle { font-size: 12px; opacity: 0.9; }
+        .availability-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .stat-box { text-align: center; margin-bottom: 0; }
+        .stat-number { font-size: 24px; font-weight: bold; color: var(--primary); }
+        .stat-label { font-size: 12px; color: var(--gray-600); }
+
+        .frustrations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .frustration-item {
+            padding: 12px;
+            border-radius: var(--radius-lg);
+            border-left:4px solid;
+            margin-bottom: 12px;
+        }
+
+        .frustration-green { background: #d9ffce; border-left-color: #2d461a; }
+        
+
+        .frustration-title { font-size: 14px; font-weight: 700; color: var(--gray-700); margin-bottom: 4px; }
+
+        .experience-item {
+            border-left: 2px solid var(--gray-200);
+            padding-left: 16px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: var(--secondary);
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .experience-role { font-weight: 500; color: var(--gray-700); margin-bottom: 4px; }
+        .experience-company { font-size: 14px; color: var(--secondary); font-weight: 500; margin-bottom: 2px; }
+        .experience-period { font-size: 12px; color: var(--gray-600); margin-bottom: 4px; }
+        .experience-desc { font-size: 14px; color: var(--gray-600); }
+
+        .contact-form { display: flex; flex-direction: column; gap: 12px; }
+
+        .form-input {
+            padding: 12px;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            background: var(--gray-50);
+            font-size: 14px;
+        }
+
+        .form-input:focus { outline: none; border-color: var(--secondary); }
+
+        .send-button {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .send-button:hover { opacity: 0.9; }
+
+        .social-links { display: flex; justify-content: center; gap: 16px; }
+
+        .social-link {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 4px 8px;
+        }
+
+        .social-link:hover { color: var(--gray-700); }
+
+        @media (max-width: 1024px) {
+            .container { grid-template-columns: 1fr; }
+            .content-row, .frustrations-grid, .availability-stats { grid-template-columns: 1fr; }
+        }
+
+        .calendar-container {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .calendar-label {
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+
+        .calendar-input {
+            padding: 10px;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            background: var(--gray-50);
+            font-size: 14px;
+        }
+
+        .main-content{
+            margin-top: 65px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Eco<span>Xo</span></a>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="table.html" class="nav-link">Table</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#content" class="nav-link">Content</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="profile-btn" onclick="handleProfileClick()">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-menu">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="index.html#about" class="mobile-nav-link">About Us</a></li>
+                <li><a href="table.html" class="mobile-nav-link">Table</a></li>
+                <li><a href="index.html#content" class="mobile-nav-link">Content</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-profile-btn" onclick="handleProfileClick()">
+                <i class='bx bx-user'></i> Profile <i class='bx bx-right-arrow-alt'></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="sidebar">
+                <div class="card profile-card">
+                    <div class="profile-image">
+                        <img src="img/bcbc326202b15bcc99285d183a239bc2.jpg" alt="Portfolio photo">
+                    </div>
+                    <h1 class="profile-name">Harshi Hewage</h1>
+                    <p class="profile-title"><b>21 years old</b></p>
+                    <p class="profile-description">
+                        "Strong people don't put others down. They lift them up."
+                    </p>
+                    <div class="profile-details">
+                        <div class="profile-row">
+                            <span>Work</span>
+                            <span class="badge">Student</span>
+                        </div>
+                        <div class="profile-row">
+                            <span>Family</span>
+                            <span class="badge">Single</span>
+                        </div>
+                        <div class="profile-row">
+                            <span>Location</span>
+                            <span class="badge">Kandy</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card">
+                    <h3 class="skills-title">Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Critical Thinking</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Environmental Awareness</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Effective Communication</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Renewable Energy-Literacy</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+
+            <div class="main-content">
+                <div class="content-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon-container icon-purple">🎯</div>
+                            <h3 class="card-title">Goals</h3>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-content">
+                                <span class="goal-number">Goal 1</span>
+                                <span class="goal-text">Reduce personal carbon footprints</span>
+                            </div>
+                            <span class="goal-status">Not started</span>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-content">
+                                <span class="goal-number">Goal 2</span>
+                                <span class="goal-text">Plant trees and grow a small garden</span>
+                            </div>
+                            <span class="goal-status">In progress</span>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-content">
+                                <span class="goal-number">Goal 3</span>
+                                <span class="goal-text">Eating healthy</span>
+                            </div>
+                            <span class="goal-status">Completed</span>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-content">
+                                <span class="goal-number">Goal 4</span>
+                                <span class="goal-text">Practice Mental Wellness</span>
+                            </div>
+                            <span class="goal-status">In progress</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                    <div class="card-header">
+                        <div class="icon-container icon-green">📅</div>
+                        <h3 class="card-title">Volunteering availability</h3>
+                    </div>
+                    <div class="availability-banner">
+                        <p class="availability-title">Available for new projects</p>
+                        <p class="availability-subtitle">Starting January 2025</p>
+                    </div>
+                    <div class="availability-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">25h</div>
+                            <div class="stat-label">Per week</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">Remote</div>
+                            <div class="stat-label">Preferred</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-container">
+                        <label for="volunteer-date" class="calendar-label">Select a preferred date:</label>
+                        <input type="date" id="volunteer-date" name="volunteer-date" class="calendar-input">
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon-container icon-red">😁</div>
+                        <h3 class="card-title">Interests</h3>
+                
+                    </div>
+                <div class="frustrations-grid">
+
+                    <div>
+                        <div class="frustration-item frustration-green">
+                            <div class="frustration-title">Tree planting and reforestation</div>
+                        </div>
+
+                        <div class="frustration-item frustration-green">
+                            <div class="frustration-title">Wildlife conservation</div>
+                        </div>
+
+                        <div class="frustration-item frustration-green">
+                            <div class="frustration-title">Reduce paper and wood consumption</div>
+                        </div>
+
+                        <div class="frustration-item frustration-green">
+                            <div class="frustration-title">Be a responsible pet owner</div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                </div>
+                
+                
+                <div class="content-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon-container icon-blue">💼</div>
+                            <h3 class="card-title">Experience</h3>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-role">Tree Planting Campaign</div>
+                            <div class="experience-company">Green Earth SriLanka</div>
+                            <div class="experience-period">2025</div>
+                            <div class="experience-desc">Community based event planted over 300 trees</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-role">Hygiene Awareness</div>
+                            <div class="experience-company">Youth Health Foundation</div>
+                            <div class="experience-period">2022</div>
+                            <div class="experience-desc">Led workshops for school children on personal hygiene and safe drinking water</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-role">Fundraising Event</div>
+                            <div class="experience-company">UNICEF and Rotary International</div>
+                            <div class="experience-period">2017</div>
+                            <div class="experience-desc">Joined together to deliver life saving medicines, clean water and more</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="icon-container icon-green">📬</div>
+                            <h3 class="card-title">Contact me</h3>
+                        </div>
+                        <form class="contact-form">
+                            <label for="name">Enter your name:</label>
+                            <input type="text" class="form-input" id="name" name="name" placeholder="Name" required>
+                            
+                            <label for="email">Enter your email:</label>
+                            <input type="text" class="form-input" id="email" placeholder="Email" required>
+                            
+                            <label for="message">Enter your Message</label>
+                            <input type="text" class="form-input" id="message" placeholder="Message">
+
+                            <button type="submit" class="send-button">Send Message</button>
+                        </form>
+                        <div class="social-links">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="section footer">
+        <div class="footer-cont-main">
+            <div class="footer-logo">
+                <img src="img/logo.jpeg" alt="Footer Logo" class="footer-img">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/SustDev" class="social-icon" aria-label="Facebook">
+                        <img src="img/facebook-f.svg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/SustDev" class="social-icon" aria-label="X">
+                        <img src="img/x-twitter.svg" alt="X">
+                    </a>
+                    <a href="https://www.youtube.com/user/uncsd2012/featured" class="social-icon" aria-label="YouTube">
+                        <img src="img/youtube.svg" alt="YouTube" class="youtube">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Website Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="use-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="https://www.globalgoals.org/terms-conditions/">Conditions</a></li>
+                        <li><a href="https://www.globalgoals.org/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="https://www.globalgoals.org/cookies/">Cookies</a></li>
+                        <li><a href="https://www.globalgoals.org/anti-corruption/">Anti Corruption</a></li>
+                        <li><a href="https://www.globalgoals.org/asset-licence/">Asset License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="cont-pages">
+                    <h4>Content Pages</h4>
+                    <ul>
+                        <li><a href="content_ST1.html">Content 01</a></li>
+                        <li><a href="Content_ST2.html">Content 02</a></li>
+                        <li><a href="content_ST3.html">Content 03</a></li>
+                        <li><a href="content_ST4.html">Content 04</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont">
+                <div class="our-team">
+                    <h4>Student Pages</h4>
+                    <ul>
+                        <li><a href="pageEditor_ST1.html">Student 01</a></li>
+                        <li><a href="pageEditor_ST2.html">Student 02</a></li>
+                        <li><a href="pageEditor_ST3.html">Student 03</a></li>
+                        <li><a href="pageEditor_ST4.html">Student 04</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section footer-2">
+            <div class="copyright">
+                <div class="copy-cont">
+                    <p>&copy; Copyright <b>United Nations</b>.2025, All rights Reserved.<br>
+                        <b>Design By Group I5</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="global.js"></script>
+</body>
+</html>
