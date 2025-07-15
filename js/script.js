@@ -133,6 +133,15 @@ function sortContent() {
 		}, i * 100);
 	});
 }
+// Highlights the active navigation link:
+// - Adds 'active' class to the clicked link
+// - Removes 'active' class from all other links
+document.querySelectorAll('.nav-link').forEach(link => {
+	link.addEventListener('click', () => {
+		document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+		link.classList.add('active');
+	});
+});
 
 // Adds smooth scroll behavior to anchor links.
 // When a user clicks a link that references a section (e.g. #about),

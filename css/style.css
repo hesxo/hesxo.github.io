@@ -78,6 +78,14 @@ img {
 	margin: 0 auto;
 	padding: 0 1.5rem;
 }
+.nav-link.active,
+.mobile-nav-link.active {
+	background: linear-gradient(90deg, var(--primary), var(--accent));
+	color: var(--white) !important;
+	transform: translateY(-2px);
+	font-weight: 600;
+	box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
 
 /* Logo */
 .logo {
