@@ -1,19 +1,33 @@
+/* --- GLOBAL AND BODY STYLES --- */
+
+/* Universal selector to reset default browser margins and padding, and set box-sizing. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height. */
 }
 
+/* Styles for the body, creating a full-height, centered layout with a gradient background. */
 body {
     min-height: 100vh;
+    /* Minimum height of the viewport. */
     background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 100%);
+    /* A soft gradient from light green to light blue. */
     font-family: 'Arial', sans-serif;
     overflow: hidden;
+    /* Prevents scrollbars from appearing, especially from animations. */
     display: flex;
     align-items: center;
+    /* Vertically centers the content. */
     justify-content: center;
+    /* Horizontally centers the content. */
 }
 
+
+/* --- MAIN SPLASH SCREEN LAYOUT --- */
+
+/* The main container for all splash screen elements. */
 .splash-container {
     position: relative;
     width: 100%;
@@ -22,62 +36,87 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* Stacks children vertically. */
 }
 
+/* The main title text with a gradient fill and animations. */
 .logo-title {
     font-size: 8rem;
     font-weight: 900;
     background: linear-gradient(45deg, #4a90a4, #7cb342, #4a90a4);
+    /* Gradient for the text color. */
     background-size: 300% 300%;
+    /* Larger background size for the shifting animation. */
     -webkit-background-clip: text;
+    /* Clips the background to the text shape (for WebKit browsers). */
     -webkit-text-fill-color: transparent;
+    /* Makes the actual text color transparent to reveal the background. */
     background-clip: text;
     margin-bottom: 2rem;
+    /* Applies two animations: one for the gradient shift and one for fading in. */
     animation: gradientShift 3s ease-in-out infinite, fadeInDown 1s ease-out;
     text-shadow: 0 4px 20px rgba(74, 144, 164, 0.3);
 }
 
+
+/* --- CENTRAL ANIMATED CIRCLE & LANDSCAPE --- */
+
+/* The main circular element that contains the landscape animation. */
 .central-circle {
     position: relative;
     width: 350px;
     height: 350px;
     border-radius: 50%;
+    /* Creates the circle shape. */
     border: 8px solid #4a90a4;
     background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
     margin: 2rem 0;
+    /* Applies pulsing and floating up animations. */
     animation: pulse 2s ease-in-out infinite, floatUp 1.2s ease-out;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 20px rgba(255,255,255,0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.5);
+    /* Outer and inner shadow for depth. */
 }
 
+/* Container for the landscape layers, clipped to the circle's shape. */
 .landscape {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
+    /* Hides parts of layers that go outside the circle. */
 }
 
+/* The sun element within the landscape. */
 .sun {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
+    /* Centers the sun horizontally. */
     width: 80px;
     height: 80px;
     background: radial-gradient(circle, #fff9c4 0%, #ffd700 100%);
     border-radius: 50%;
     animation: sunGlow 2s ease-in-out infinite alternate;
+    /* Glowing animation. */
     z-index: 10;
+    /* Ensures the sun is in front of the layers. */
 }
 
+/* Base style for the floating landscape layers. */
 .layer {
     position: absolute;
     width: 120%;
+    /* Wider than the container to allow for horizontal movement. */
     left: -10%;
     border-radius: 50px;
+    /* Rounded tops for the layers. */
     animation: layerFloat 4s ease-in-out infinite;
+    /* Gentle up-and-down floating animation. */
 }
 
+/* Individual landscape layers with different colors, positions, and animation delays. */
 .layer1 {
     bottom: 60%;
     height: 60px;
@@ -106,6 +145,10 @@ body {
     animation-delay: 1.5s;
 }
 
+
+/* --- ORBITING AND FLOATING ELEMENTS --- */
+
+/* A small dot that orbits around the central circle. */
 .orbit-dot {
     position: absolute;
     width: 12px;
@@ -115,30 +158,31 @@ body {
     top: 50%;
     left: 50%;
     transform-origin: 0 0;
+    /* Sets the rotation point for the orbit animation. */
     animation: orbit 8s linear infinite;
     box-shadow: 0 0 10px rgba(124, 179, 66, 0.8);
 }
 
+/* Base style for floating badges around the main title. */
 .team-badge {
     position: absolute;
     padding: 12px 24px;
     background: linear-gradient(45deg, #7cb342, #8bc34a);
     color: white;
     border-radius: 25px;
+    /* Pill shape. */
     font-weight: 600;
     font-size: 0.9rem;
     box-shadow: 0 8px 25px rgba(124, 179, 66, 0.3);
     animation: floatBadge 3s ease-in-out infinite;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.team-badge:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(124, 179, 66, 0.4);
-}
 
+
+/* Positioning and animation delays for each individual badge. */
 .badge-1 {
     top: 25%;
     left: 10%;
@@ -163,6 +207,10 @@ body {
     animation-delay: 3s;
 }
 
+
+/* --- TEXT AND LOADING INDICATOR --- */
+
+/* Mission statement text below the central circle. */
 .mission-text {
     max-width: 800px;
     text-align: center;
@@ -171,126 +219,198 @@ body {
     line-height: 1.6;
     margin-top: 2rem;
     animation: fadeInUp 1.5s ease-out;
+    /* Fades in from the bottom. */
     font-weight: 500;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Container for the loading dots at the bottom of the screen. */
 .loading-dots {
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+    /* Centers the dots. */
     display: flex;
     gap: 8px;
+    /* Space between dots. */
 }
 
+/* Individual loading dot. */
 .dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: #7cb342;
     animation: loadingDot 1.5s ease-in-out infinite;
+    /* Pulsing animation. */
 }
 
-.dot:nth-child(2) { 
-    animation-delay: 0.2s; 
+/* Staggered animation delays for the loading dots to create a wave effect. */
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
-.dot:nth-child(3) { 
-    animation-delay: 0.4s; 
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
 }
 
-/* Animations */
+
+/* --- KEYFRAME ANIMATIONS --- */
+
+/* Animates the background gradient of the logo title. */
 @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
+/* Fades an element in while moving it down from above. */
 @keyframes fadeInDown {
     from {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Fades an element in while moving it up from below. */
 @keyframes floatUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Creates a subtle pulsing effect by scaling an element. */
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
 }
 
+/* Creates a glowing effect for the sun by changing its box-shadow. */
 @keyframes sunGlow {
-    0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
-    100% { box-shadow: 0 0 30px rgba(255, 215, 0, 1); }
+    0% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+    }
 }
 
+/* Creates a gentle up-and-down floating effect for the landscape layers. */
 @keyframes layerFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
+/* Defines the circular orbit path for the dot. */
 @keyframes orbit {
-    from { 
-        transform: translate(-50%, -50%) rotate(0deg) translateX(190px) rotate(0deg); 
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(190px) rotate(0deg);
     }
-    to { 
-        transform: translate(-50%, -50%) rotate(360deg) translateX(190px) rotate(-360deg); 
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(190px) rotate(-360deg);
     }
 }
 
+/* Creates a floating effect for the badges. */
 @keyframes floatBadge {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
+/* Fades an element in while moving it up, similar to floatUp. */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Creates a pulsing/breathing animation for the loading dots. */
 @keyframes loadingDot {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.5); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
 }
 
-/* Responsive Design */
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Adjusts styles for screens with a max-width of 768px (tablets and mobile devices). */
 @media (max-width: 768px) {
     .logo-title {
         font-size: 4rem;
+        /* Reduces title size for smaller screens. */
     }
-    
+
     .central-circle {
         width: 250px;
+        /* Reduces circle size. */
         height: 250px;
     }
-    
+
     .team-badge {
         font-size: 0.8rem;
+        /* Reduces badge font size and padding. */
         padding: 10px 20px;
     }
-    
+
     .mission-text {
         font-size: 1rem;
+        /* Reduces text size and adds horizontal padding. */
         padding: 0 2rem;
     }
 }
